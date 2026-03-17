@@ -1,15 +1,14 @@
 
-  
 
 /* @author Aljur Pogoy
  * @moderators: Kenneth Panio, Liane Cagara 
  * @admins: Aljur Pogoy, Kenneth Panio, GeoTeam.
- * @LastPatch Date: January 7, 2026. 12:01 UTC+
 */
 
 require("tsconfig-paths").register();
 require("ts-node").register();
 require("./core/global");
+require("events").EventEmitter.defaultMaxListeners = 25;
 const { MongoClient } = require("mongodb");
 const fs = require("fs-extra");
 const path = require("path");
@@ -107,7 +106,6 @@ function getUserRole(uid) {
   const developers = global.config.developers.map(String);
   const moderators = global.config.moderators.map(String);
   const admins = global.config.admins.map(String);
-global.config.vips.map(String);
   const vips = (global.config.vips || []).map(String);
   if (vips.includes(uid)) return 4;
   if (developers.includes(uid)) return 3;
@@ -251,7 +249,8 @@ loadCommands();
 let appState;
 
 try {
-  appState = JSON.parse(fs.readFileSync("./appstate.dev.json", "utf8"));
+  const appStatePath = process.env.APPSTATE || "./appstate.dev.json";
+  appState = JSON.parse(fs.readFileSync(appStatePath, "utf8"));
 } catch (error) {
   console.error("Error loading appstate.json:", error);
 }
@@ -770,6 +769,10 @@ const startBot = async () => {
       console.error("Fatal error during Facebook login:", err);
       process.exit(1);
     }
+    const http = require("http");
+    const https = require("https");
+    http.globalAgent.setMaxListeners(30);
+    https.globalAgent.setMaxListeners(30);
     api.setOptions({
       forceLogin: true,
       listenEvents: true,
@@ -789,9 +792,18 @@ const startBot = async () => {
 
 const express = require("express");
 const app = express();
-app.get("/", (req, res) => {
-  res.send(" Bot is running on Render!");
+
+app.get("/stats", (req, res) => {
+  res.json({
+    uptime: process.uptime(),
+    commands: global.commands.size,
+    usersTracked: global.usersData.size,
+    topCommands: global.getUsageStats().sort((a,b) => b[1]-a[1]).slice(0,10),
+    maintenanceMode: global.maintenanceMode,
+    dbConnected: !!global.db
+  });
 });
+
 
 /** 
 * Use 3000 or 4000 to reserved render hosting site.
