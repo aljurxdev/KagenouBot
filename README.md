@@ -52,22 +52,6 @@ The Seven Shadows are Cid Kagenou's elite shadow organization. Each member posse
 
 ---
 
-## Running the Bot
-
-### Installation
-
-```
-npm install
-```
-
-### Start Bot
-
-```
-node run.js
-```
-
-
-
 
 # Note 📜
 - Some command are pterodactyl 
@@ -161,6 +145,9 @@ console.log(test)
 ---
 
 ## What's New in KagenouBot
+
+### Dashboard web 
+- It now supports dashboard website where you can manage the bot using web dashboard.
 
 ### MongoDB Integration
 - KagenouBot now includes MongoDB support for storing user data, command configurations, and bot settings.
