@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>KagenouBot — Shadow Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <!-- css was uglify, so don't ask any questions about this -->
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#f4f4f2;--surface:#fff;--border:#e6e6e3;--text:#181818;--muted:#888882;--accent:#181818;--green:#16a34a;--red:#dc2626;--amber:#d97706;--radius:14px;--shadow:0 1px 2px rgba(0,0,0,.06),0 4px 12px rgba(0,0,0,.04);--nav-h:60px}body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;min-height:100dvh;-webkit-font-smoothing:antialiased}.auth-wrap{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:999;padding:20px}.auth-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:32px 28px;width:100%;max-width:360px;box-shadow:var(--shadow)}.auth-icon{width:48px;height:48px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}.auth-icon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2}.auth-card h2{font-size:22px;font-weight:600;letter-spacing:-.3px}.auth-card p{font-size:14px;color:var(--muted);margin:6px 0 24px}.auth-err{font-size:13px;color:var(--red);margin-top:10px;min-height:16px}.app{display:flex;flex-direction:column;min-height:100dvh}.topbar{position:sticky;top:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:var(--nav-h)}.topbar-brand{display:flex;align-items:center;gap:10px}.topbar-logo{width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.topbar-logo svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2}.topbar-brand h1{font-size:15px;font-weight:600}.topbar-right{display:flex;align-items:center;gap:10px}.status-pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--muted);background:var(--bg);border:1px solid var(--border);border-radius:99px;padding:4px 10px}.dot{width:7px;height:7px;border-radius:50%;background:var(--muted);flex-shrink:0}.dot.on{background:var(--green);box-shadow:0 0 0 3px rgba(22,163,74,.18)}.icon-btn{width:36px;height:36px;border-radius:9px;border:1px solid var(--border);background:var(--bg);display:flex;align-items:center;justify-content:center;cursor:pointer}.icon-btn svg{width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:2}.icon-btn:hover svg{stroke:var(--red)}.content{flex:1;padding:20px 16px 100px;max-width:680px;margin:0 auto;width:100%}.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:100;background:var(--surface);border-top:1px solid var(--border);display:flex;padding-bottom:env(safe-area-inset-bottom)}.bnav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 8px;font-size:11px;font-weight:500;color:var(--muted);border:0;background:0;cursor:pointer;transition:color .15s}.bnav-item svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8}.bnav-item.active{color:var(--accent)}.section{display:none}.section.active{display:block}.section-title{font-size:20px;font-weight:600;letter-spacing:-.3px;margin-bottom:4px}.section-sub{font-size:13.5px;color:var(--muted);margin-bottom:20px}.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}.stat-card.full{grid-column:1 / -1}.stat-card.dark{background:var(--accent);border-color:var(--accent);color:#fff}.stat-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px}.stat-card.dark .stat-lbl{color:rgba(255,255,255,.55)}.stat-val{font-size:30px;font-weight:600;letter-spacing:-.5px;font-family:'DM Mono',monospace;line-height:1}.stat-sub{font-size:12px;color:var(--muted);margin-top:4px}.stat-card.dark .stat-sub{color:rgba(255,255,255,.55)}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:16px}.card-hdr{padding:14px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}.card-hdr h3{font-size:14px;font-weight:600}.card-hdr span{font-size:12px;color:var(--muted)}.cmd-row{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--border)}.cmd-row:last-child{border-bottom:0}.cmd-name{font-family:'DM Mono',monospace;font-size:12.5px;flex:1}.cmd-bar-w{flex:2;height:4px;background:var(--bg);border-radius:99px;overflow:hidden}.cmd-bar{height:100%;background:var(--accent);border-radius:99px;transition:width .5s ease}.cmd-cnt{font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;min-width:30px;text-align:right}.fg{margin-bottom:14px}.fg label{display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}input[type=text],input[type=password],textarea,select{width:100%;padding:11px 14px;border:1px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;background:var(--bg);color:var(--text);outline:0;transition:border-color .15s,background .15s;-webkit-appearance:none}input:focus,textarea:focus,select:focus{border-color:var(--accent);background:var(--surface)}textarea{resize:vertical;min-height:100px}.thread-list{border:1px solid var(--border);border-radius:10px;max-height:220px;overflow-y:auto;background:var(--bg)}.thread-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .12s}.thread-item:last-child{border-bottom:0}.thread-item:hover{background:var(--surface)}.thread-item input[type=checkbox]{width:17px;height:17px;accent-color:var(--accent);flex-shrink:0;cursor:pointer}.thread-item-info{flex:1;min-width:0}.thread-item-name{font-size:13.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.thread-item-id{font-size:11px;color:var(--muted);font-family:'DM Mono',monospace}.thread-actions{display:flex;gap:8px;margin-bottom:8px}.thread-loading{text-align:center;padding:24px;color:var(--muted);font-size:13px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 18px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;border:0;transition:opacity .15s,transform .1s;width:100%}.btn:active{transform:scale(.97)}.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0}.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{opacity:.87}.btn-outline{background:transparent;border:1px solid var(--border);color:var(--text)}.btn-outline:hover{background:var(--bg)}.btn-ghost{background:var(--bg);color:var(--muted);border:1px solid var(--border)}.btn-sm{padding:7px 13px;font-size:12.5px;width:auto}.btn-danger{background:#fef2f2;color:var(--red);border:1px solid #fecaca}.send-result{border-radius:10px;padding:12px 14px;font-size:13.5px;margin-top:12px;display:none}.send-result.ok{background:#f0fdf4;color:var(--green);border:1px solid #bbf7d0}.send-result.err{background:#fef2f2;color:var(--red);border:1px solid #fecaca}.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--border)}.toggle-row:last-child{border-bottom:0}.toggle-info h4{font-size:14px;font-weight:500}.toggle-info p{font-size:12.5px;color:var(--muted);margin-top:2px}.switch{position:relative;width:44px;height:26px;flex-shrink:0}.switch input{opacity:0;width:0;height:0}.slider{position:absolute;inset:0;background:var(--border);border-radius:99px;cursor:pointer;transition:background .2s}.slider::before{content:'';position:absolute;width:20px;height:20px;left:3px;top:3px;background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 4px rgba(0,0,0,.2)}input:checked+.slider{background:var(--accent)}input:checked+.slider::before{transform:translateX(18px)}.banned-list{display:flex;flex-direction:column}.banned-row{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border);gap:12px}.banned-row:last-child{border-bottom:0}.banned-uid{font-family:'DM Mono',monospace;font-size:12.5px;font-weight:500}.banned-reason{font-size:12px;color:var(--muted);margin-top:2px}#toast{position:fixed;bottom:calc(var(--nav-h) + 12px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%) translateY(8px);background:var(--accent);color:#fff;padding:11px 20px;border-radius:99px;font-size:13.5px;font-weight:500;box-shadow:0 4px 20px rgba(0,0,0,.18);opacity:0;transition:all .25s ease;z-index:9999;pointer-events:none;white-space:nowrap;max-width:calc(100vw - 40px);text-overflow:ellipsis;overflow:hidden}#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}#toast.err{background:var(--red)}.empty{text-align:center;padding:36px 16px;color:var(--muted);font-size:13.5px}.spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+  </style>
+</head>
+<body>
+
+<div class="auth-wrap" id="authWrap">
+  <div class="auth-card">
+    <div class="auth-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    </div>
+    <h2>Shadow Garden</h2>
+    <p>Sign in to manage your bot.</p>
+    <div class="fg">
+      <label>Password</label>
+      <input type="password" id="pwInput" placeholder="Enter password…"/>
+    </div>
+    <button class="btn btn-primary" id="loginBtn" onclick="login()">Sign In</button>
+    <div class="auth-err" id="authErr"></div>
+  </div>
+</div>
+
+<div class="app" id="appShell" style="display:none">
+
+  
+  <header class="topbar">
+    <div class="topbar-brand">
+      <div class="topbar-logo">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <h1 id="topbarName">Shadow Garden</h1>
+    </div>
+    <div class="topbar-right">
+      <div class="status-pill"><span class="dot" id="statusDot"></span><span id="statusTxt">—</span></div>
+      <button class="icon-btn" onclick="logout()" title="Logout">
+        <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  
+  <div class="content">
+
+    
+    <div class="section active" id="s-stats">
+      <div class="section-title">Overview</div>
+      <div class="section-sub">Live bot activity.</div>
+      <div class="stat-grid">
+        <div class="stat-card dark">
+          <div class="stat-lbl">Uptime</div>
+          <div class="stat-val" id="sUptime" style="font-size:20px;padding-top:4px">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-lbl">Commands</div>
+          <div class="stat-val" id="sCmds">—</div>
+          <div class="stat-sub">Loaded</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-lbl">Users</div>
+          <div class="stat-val" id="sUsers">—</div>
+          <div class="stat-sub">Tracked</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-lbl">Database</div>
+          <div class="stat-val" id="sDb" style="font-size:15px;padding-top:6px">—</div>
+          <div class="stat-sub" id="sDbSub">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-lbl">Non-Prefix</div>
+          <div class="stat-val" id="sNp">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-lbl">Events</div>
+          <div class="stat-val" id="sEv">—</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hdr"><h3>Top Commands</h3><span id="topCmdLbl">—</span></div>
+        <div id="topCmdBody"><div class="empty">Loading…</div></div>
+      </div>
+    </div>
+
+    
+    <div class="section" id="s-message">
+      <div class="section-title">Send Message</div>
+      <div class="section-sub">Pick threads and send a message.</div>
+
+      <div class="card">
+        <div class="card-hdr">
+          <h3>Select Threads</h3>
+          <button class="btn btn-ghost btn-sm" onclick="loadThreads()">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            Refresh
+          </button>
+        </div>
+        <div style="padding:12px 16px">
+          <div class="thread-actions">
+            <button class="btn btn-ghost btn-sm" onclick="selectAllThreads(true)">Select All</button>
+            <button class="btn btn-ghost btn-sm" onclick="selectAllThreads(false)">Clear</button>
+          </div>
+          <div class="thread-list" id="threadList">
+            <div class="thread-loading">Tap Refresh to load threads…</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr"><h3>Message</h3></div>
+        <div style="padding:14px 16px">
+          <div class="fg">
+            <label>Message</label>
+            <textarea id="msgText" placeholder="Type your message…"></textarea>
+          </div>
+          <button class="btn btn-primary" id="sendBtn" onclick="sendMessage()">
+            <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send to Selected
+          </button>
+          <div class="send-result" id="sendResult"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr"><h3>Broadcast to All Groups</h3></div>
+        <div style="padding:14px 16px">
+          <div class="fg">
+            <label>Message</label>
+            <textarea id="broadcastText" placeholder="Type broadcast message…"></textarea>
+          </div>
+          <button class="btn btn-primary" id="broadcastBtn" onclick="broadcast()">
+            <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            Broadcast to All
+          </button>
+          <div class="send-result" id="broadcastResult"></div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="section" id="s-manage">
+      <div class="section-title">Manage Bot</div>
+      <div class="section-sub">Control maintenance and commands.</div>
+      <div class="card">
+        <div class="toggle-row">
+          <div class="toggle-info">
+            <h4>Maintenance Mode</h4>
+            <p>Only admins can use commands when on.</p>
+          </div>
+          <label class="switch"><input type="checkbox" id="maintToggle" onchange="toggleMaint(this)"/><span class="slider"></span></label>
+        </div>
+      </div>
+      <div class="card">
+        <div class="toggle-row">
+          <div class="toggle-info">
+            <h4>Reload Commands</h4>
+            <p>Hot-reload all commands from disk.</p>
+          </div>
+          <button class="btn btn-outline btn-sm" id="reloadBtn" onclick="reloadCmds()">
+            <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            Reload
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="section" id="s-banned">
+      <div class="section-title">Banned Users</div>
+      <div class="section-sub">View and remove bans.</div>
+      <div class="card">
+        <div class="card-hdr">
+          <h3>Banned List</h3>
+          <button class="btn btn-ghost btn-sm" onclick="loadBanned()">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            Refresh
+          </button>
+        </div>
+        <div class="banned-list" id="bannedList">
+          <div class="empty">Loading…</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <nav class="bottom-nav">
+    <button class="bnav-item active" onclick="showSection('stats', this)">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      Stats
+    </button>
+    <button class="bnav-item" onclick="showSection('message', this)">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Message
+    </button>
+    <button class="bnav-item" onclick="showSection('manage', this)">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+      Manage
+    </button>
+    <button class="bnav-item" onclick="showSection('banned', this)">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+      Banned
+    </button>
+  </nav>
+
+</div>
+
+<div id="toast"></div>
+
+<script>
+  let TOKEN = localStorage.getItem('sg_tok') || '';
+  let uptimeBase = 0, uptimeTick = null;
+
+  window.onload = () => {
+    document.getElementById('pwInput').addEventListener('keydown', e => { if (e.key === 'Enter') login(); });
+    if (TOKEN) {
+      api('/data/stats').then(d => {
+        if (d.ok) { showApp(); initDashboard(d); }
+        else showLogin();
+      }).catch(showLogin);
+    }
+  };
+
+  function showLogin() { document.getElementById('authWrap').style.display = 'flex'; document.getElementById('appShell').style.display = 'none'; }
+  function showApp()   { document.getElementById('authWrap').style.display = 'none';  document.getElementById('appShell').style.display = 'flex'; }
+
+  async function login() {
+    const pw    = document.getElementById('pwInput').value;
+    const errEl = document.getElementById('authErr');
+    const btn   = document.getElementById('loginBtn');
+    errEl.textContent = '';
+    if (!pw) { errEl.textContent = 'Please enter a password.'; return; }
+    btn.innerHTML = '<span class="spinner"></span>';
+    btn.disabled = true;
+    try {
+      const res = await fetch('/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: pw }) });
+      const d = await res.json();
+      if (!d.ok) { errEl.textContent = d.error || 'Incorrect password.'; return; }
+      TOKEN = d.token;
+      localStorage.setItem('sg_tok', TOKEN);
+      showApp();
+      const stats = await api('/data/stats');
+      initDashboard(stats);
+    } catch { errEl.textContent = 'Could not reach the server.'; }
+    finally { btn.innerHTML = 'Sign In'; btn.disabled = false; }
+  }
+
+  async function logout() {
+    await fetch('/logout', { method: 'POST', headers: { 'x-session-token': TOKEN } }).catch(() => {});
+    TOKEN = ''; localStorage.removeItem('sg_tok');
+    document.getElementById('pwInput').value = '';
+    showLogin();
+  }
+
+  async function api(path, options = {}) {
+    const res = await fetch(path, {
+      ...options,
+      headers: { 'x-session-token': TOKEN, 'Content-Type': 'application/json', ...(options.headers || {}) }
+    });
+    const d = await res.json();
+    if (res.status === 401) { showLogin(); throw new Error('Unauthorized'); }
+    return d;
+  }
+
+  function initDashboard(stats) {
+    renderStats(stats);
+    setInterval(() => api('/data/stats').then(renderStats).catch(() => {}), 15000);
+    loadBanned();
+  }
+
+  function renderStats(d) {
+    if (!d?.ok) return;
+    document.getElementById('topbarName').textContent = d.botName || 'Shadow Garden';
+    document.getElementById('sCmds').textContent    = d.commands ?? '—';
+    document.getElementById('sUsers').textContent   = d.usersTracked ?? '—';
+    document.getElementById('sNp').textContent      = d.nonPrefixCommands ?? '—';
+    document.getElementById('sEv').textContent      = d.eventCommands ?? '—';
+    document.getElementById('sDb').innerHTML        = d.dbConnected
+      ? '<span style="color:var(--green)">● Connected</span>'
+      : '<span style="color:var(--amber)">● JSON</span>';
+    document.getElementById('sDbSub').textContent   = d.dbConnected ? 'MongoDB' : 'No URI';
+    document.getElementById('statusDot').className  = 'dot on';
+    document.getElementById('statusTxt').textContent= 'Online';
+    document.getElementById('maintToggle').checked  = d.maintenanceMode || false;
+
+    uptimeBase = d.uptime;
+    if (uptimeTick) clearInterval(uptimeTick);
+    let elapsed = 0;
+    const tick = () => {
+      elapsed++;
+      const s = Math.floor(uptimeBase + elapsed);
+      const days = Math.floor(s / 86400);
+      const h = Math.floor((s % 86400) / 3600);
+      const m = Math.floor((s % 3600) / 60);
+      const sec = s % 60;
+      const pad = n => String(n).padStart(2, '0');
+      document.getElementById('sUptime').textContent =
+        days > 0 ? `${days}d ${pad(h)}:${pad(m)}:${pad(sec)}` : `${pad(h)}:${pad(m)}:${pad(sec)}`;
+    };
+    tick(); uptimeTick = setInterval(tick, 1000);
+
+    const list = d.topCommands || [];
+    const max  = list[0]?.count || 1;
+    document.getElementById('topCmdLbl').textContent = `${list.length} tracked`;
+    document.getElementById('topCmdBody').innerHTML = list.length === 0
+      ? '<div class="empty">No usage recorded yet.</div>'
+      : list.map(({ name, count }) => `
+          <div class="cmd-row">
+            <span class="cmd-name">${d.prefix || '/'}${name}</span>
+            <div class="cmd-bar-w"><div class="cmd-bar" style="width:${Math.round(count/max*100)}%"></div></div>
+            <span class="cmd-cnt">${count}</span>
+          </div>`).join('');
+  }
+
+  function showSection(id, btn) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.bnav-item').forEach(b => b.classList.remove('active'));
+    document.getElementById('s-' + id).classList.add('active');
+    btn.classList.add('active');
+    if (id === 'banned') loadBanned();
+    if (id === 'message') loadThreads();
+    window.scrollTo(0, 0);
+  }
+
+  async function loadThreads() {
+    const el = document.getElementById('threadList');
+    el.innerHTML = '<div class="thread-loading">Loading threads…</div>';
+    try {
+      const d = await api('/data/threads');
+      if (!d.ok || !d.threads.length) { el.innerHTML = '<div class="thread-loading">No group threads found.</div>'; return; }
+      el.innerHTML = d.threads.map(t => `
+        <label class="thread-item">
+          <input type="checkbox" class="thread-cb" value="${t.threadID}"/>
+          <div class="thread-item-info">
+            <div class="thread-item-name">${escHtml(t.name)}</div>
+            <div class="thread-item-id">${t.threadID}</div>
+          </div>
+        </label>`).join('');
+    } catch { el.innerHTML = '<div class="thread-loading">Failed to load. Is the bot connected?</div>'; }
+  }
+
+  function selectAllThreads(val) {
+    document.querySelectorAll('.thread-cb').forEach(cb => cb.checked = val);
+  }
+
+  async function sendMessage() {
+    const selected = [...document.querySelectorAll('.thread-cb:checked')].map(cb => cb.value);
+    const message  = document.getElementById('msgText').value.trim();
+    const resultEl = document.getElementById('sendResult');
+    resultEl.style.display = 'none';
+
+    if (!selected.length) { toast('Select at least one thread.', true); return; }
+    if (!message)         { toast('Message cannot be empty.', true); return; }
+
+    const btn = document.getElementById('sendBtn');
+    btn.innerHTML = '<span class="spinner"></span> Sending…'; btn.disabled = true;
+
+    try {
+      const d = await api('/data/message', { method: 'POST', body: JSON.stringify({ threadIDs: selected, message }) });
+      resultEl.className = 'send-result ' + (d.ok ? 'ok' : 'err');
+      resultEl.textContent = d.ok
+        ? `✓ Sent to ${d.sent} thread${d.sent !== 1 ? 's' : ''}${d.failed > 0 ? `, ${d.failed} failed` : ''}.`
+        : (d.error || 'Failed to send.');
+      resultEl.style.display = 'block';
+    } catch (e) {
+      resultEl.className = 'send-result err';
+      resultEl.textContent = 'Request failed.';
+      resultEl.style.display = 'block';
+    } finally {
+      btn.innerHTML = '<svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send to Selected';
+      btn.disabled = false;
+    }
+  }
+
+  async function broadcast() {
+    const message  = document.getElementById('broadcastText').value.trim();
+    const resultEl = document.getElementById('broadcastResult');
+    resultEl.style.display = 'none';
+    if (!message) { toast('Message cannot be empty.', true); return; }
+
+    const btn = document.getElementById('broadcastBtn');
+    btn.innerHTML = '<span class="spinner"></span> Broadcasting…'; btn.disabled = true;
+
+    try {
+      const d = await api('/data/broadcast', { method: 'POST', body: JSON.stringify({ message }) });
+      resultEl.className = 'send-result ' + (d.ok ? 'ok' : 'err');
+      resultEl.textContent = d.ok
+        ? `✓ Sent to ${d.sent} / ${d.total} groups${d.failed > 0 ? `, ${d.failed} failed` : ''}.`
+        : (d.error || 'Failed.');
+      resultEl.style.display = 'block';
+    } catch {
+      resultEl.className = 'send-result err';
+      resultEl.textContent = 'Request failed.';
+      resultEl.style.display = 'block';
+    } finally {
+      btn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Broadcast to All';
+      btn.disabled = false;
+    }
+  }
+
+  async function toggleMaint(el) {
+    const d = await api('/data/maintenance', { method: 'POST', body: JSON.stringify({ enabled: el.checked }) });
+    if (!d.ok) { toast(d.error || 'Failed.', true); el.checked = !el.checked; }
+    else toast(`Maintenance ${el.checked ? 'enabled' : 'disabled'}.`);
+  }
+
+  async function reloadCmds() {
+    const btn = document.getElementById('reloadBtn');
+    btn.innerHTML = '<span class="spinner" style="border-color:rgba(0,0,0,.2);border-top-color:var(--text)"></span>';
+    btn.disabled = true;
+    const d = await api('/data/reload', { method: 'POST' }).catch(() => ({ ok: false, error: 'Failed.' }));
+    btn.innerHTML = '<svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> Reload';
+    btn.disabled = false;
+    d.ok ? toast(`Reloaded — ${d.commands} commands.`) : toast(d.error || 'Failed.', true);
+    if (d.ok) api('/data/stats').then(renderStats).catch(() => {});
+  }
+
+  async function loadBanned() {
+    const el = document.getElementById('bannedList');
+    el.innerHTML = '<div class="empty">Loading…</div>';
+    const d = await api('/data/banned').catch(() => ({ ok: true, banned: [] }));
+    if (!d.banned?.length) { el.innerHTML = '<div class="empty">No banned users.</div>'; return; }
+    el.innerHTML = d.banned.map(u => `
+      <div class="banned-row">
+        <div>
+          <div class="banned-uid">${u.userId}</div>
+          <div class="banned-reason">${u.reason || 'No reason provided'}</div>
+        </div>
+        <button class="btn btn-danger btn-sm" onclick="unban('${u.userId}')">Unban</button>
+      </div>`).join('');
+  }
+
+  async function unban(userId) {
+    const d = await api('/data/banned/' + userId, { method: 'DELETE' }).catch(() => ({ ok: false }));
+    d.ok ? (toast(`${userId} unbanned.`), loadBanned()) : toast('Failed to unban.', true);
+  }
+
+  function escHtml(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  let toastTimer;
+  function toast(msg, isErr = false) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.className = 'show' + (isErr ? ' err' : '');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.className = '', 3000);
+  }
+</script>
+</body>
+</html>
