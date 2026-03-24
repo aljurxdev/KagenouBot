@@ -7,6 +7,7 @@
 require("tsconfig-paths").register();
 require("ts-node").register();
 require("./core/global");
+require("dotenv").config()
 require("events").EventEmitter.defaultMaxListeners = 25;
 const { MongoClient } = require("mongodb");
 const fs = require("fs-extra");
@@ -209,10 +210,16 @@ global.reloadCommands = reloadCommands;
 
 let appState;
 try {
-  const appStatePath = process.env.APPSTATE || "./appstate.dev.json";
-  appState = JSON.parse(fs.readFileSync(appStatePath, "utf8"));
+  if (process.env.APPSTATE) {
+    appState = JSON.parse(process.env.APPSTATE);
+    console.log("[APPSTATE] Loaded from environment variable.");
+  } else {
+    appState = JSON.parse(fs.readFileSync("./appstate.dev.json", "utf8"));
+    console.log("[APPSTATE] Loaded from appstate.dev.json file.");
+  }
 } catch (error) {
-  console.error("Error loading appstate.json:", error);
+  console.error("[APPSTATE] Failed to load appstate:", error.message);
+  process.exit(1);
 }
 try {
   const configData = JSON.parse(fs.readFileSync(configFile, "utf8"));
@@ -252,7 +259,7 @@ try {
 
 loadAuroraCommands();
 loadCommands();
-const uri = global.config.mongoUri || null;
+const uri = process.env.MONGO_URI || global.config.mongoUri || null;
 console.log("[DB] MongoDB URI:", uri);
 
 async function connectDB() {
