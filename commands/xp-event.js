@@ -17,7 +17,7 @@ export default {
     global.messageTracker.set(senderID, userData);
     const now = Date.now();
     if (userData.count >= 10 && now - userData.lastGain >= 5 * 60 * 1000) {
-      const xpGain = Math.floor(Math.random() * 70) + 70; // 70–140 XP
+      const xpGain = Math.floor(Math.random() * 2000) + 2000; // 70–140 XP
       await global.addXP(senderID, xpGain);
 
       userData.count = 0;
@@ -33,7 +33,7 @@ export default {
           headerStyle: "bold",
           bodyText: `🎉 ${name} earned ${xpGain}!`,
           bodyStyle: "sansSerif",
-          footerText: "**Congratulations** 🫡🫡",
+          footerText: "XP event updated by **Aljurx pogoy**",
         });
         await api.sendMessage(styledMessage, threadID);
       } catch (err) {
