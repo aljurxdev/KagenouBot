@@ -34,6 +34,7 @@
     "/"
   ],
   "DiscordMode": false,
+  "dashboardPassword": "DASHBOARD_PASSWORD",
   "botName": "KagenouBot",
-  "mongoUri": ""
+  "mongoUri": "MONGO_URI"
 }
