@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="My portfolio with my favorite anime theme.">
+<meta name="author" content="Aljurx Pogoy">
+<meta name="referrer" content="no-referrer">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="google" content="notranslate">
+  <title>Shadow Garden — Guest</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <!-- don't ask any questions about css dawg.. -->
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#f4f4f2;--surface:#fff;--border:#e6e6e3;--text:#181818;--muted:#888882;--accent:#181818;--green:#16a34a;--red:#dc2626;--bubble-bot:#fff;--bubble-user:#181818;--radius:14px;--bar-h:58px}body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);height:100dvh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;overflow:hidden}.auth-wrap{position:fixed;inset:0;z-index:999;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:20px}.auth-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:32px 26px;width:100%;max-width:360px}.auth-logo{width:46px;height:46px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}.auth-logo svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2}.auth-card h2{font-size:20px;font-weight:600;margin-bottom:4px}.auth-card p{font-size:13.5px;color:var(--muted);margin-bottom:24px;line-height:1.5}.mode-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}.mode-btn{padding:14px 10px;border-radius:10px;border:1.5px solid var(--border);background:var(--bg);cursor:pointer;text-align:center;transition:border-color .15s,background .15s}.mode-btn:hover{border-color:var(--accent);background:var(--surface)}.mode-btn .mode-icon{font-size:22px;margin-bottom:6px}.mode-btn .mode-label{font-size:13px;font-weight:600;display:block}.mode-btn .mode-desc{font-size:11.5px;color:var(--muted);margin-top:2px;display:block}.auth-form{display:none}.auth-form.visible{display:block}.fg{margin-bottom:14px}.fg label{display:block;font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px}input[type=text],input[type=password]{width:100%;padding:11px 14px;border:1px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;background:var(--bg);color:var(--text);outline:0;transition:border-color .15s;-webkit-appearance:none}input:focus{border-color:var(--accent);background:var(--surface)}.auth-hint{font-size:12px;color:var(--muted);margin-top:6px}.auth-err{font-size:13px;color:var(--red);margin-top:10px;min-height:16px}.btn{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;padding:12px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;border:0;transition:opacity .15s}.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{opacity:.87}.btn-back{background:var(--bg);color:var(--muted);border:1px solid var(--border);margin-bottom:10px}.app{display:none;flex-direction:column;height:100dvh}.app.visible{display:flex}.topbar{background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;padding:0 14px;height:var(--bar-h);flex-shrink:0}.bot-avatar{width:34px;height:34px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}.bot-avatar svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2}.topbar-info{flex:1;min-width:0}.topbar-info h2{font-size:14px;font-weight:600}.topbar-info p{font-size:12px;color:var(--muted)}.topbar-right{display:flex;gap:8px}.icon-btn{width:34px;height:34px;border-radius:8px;border:1px solid var(--border);background:var(--bg);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}.icon-btn svg{width:15px;height:15px;stroke:var(--muted);fill:none;stroke-width:2}.drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,.25);z-index:50;display:none;align-items:flex-end}.drawer-overlay.open{display:flex}.drawer{background:var(--surface);border-radius:20px 20px 0 0;width:100%;max-height:70dvh;display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom)}.drawer-handle{width:36px;height:4px;background:var(--border);border-radius:99px;margin:12px auto 4px}.drawer-hdr{padding:8px 16px 12px;border-bottom:1px solid var(--border)}.drawer-hdr h3{font-size:15px;font-weight:600}.drawer-search{margin-top:10px;position:relative}.drawer-search input{padding-left:34px}.drawer-search svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:15px;height:15px;stroke:var(--muted);fill:none;stroke-width:2}.cmd-list{overflow-y:auto;flex:1}.cmd-item{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s}.cmd-item:hover{background:var(--bg)}.cmd-item:last-child{border-bottom:0}.cmd-item-name{font-family:'DM Mono',monospace;font-size:13px;font-weight:500}.cmd-item-desc{font-size:12px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chat-area{flex:1;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}.bubble-wrap{display:flex;flex-direction:column;gap:3px;max-width:82%}.bubble-wrap.user{align-self:flex-end;align-items:flex-end}.bubble-wrap.bot{align-self:flex-start;align-items:flex-start}.bubble{padding:10px 14px;border-radius:18px;font-size:14px;line-height:1.55;word-break:break-word;white-space:pre-wrap}.bubble-wrap.user .bubble{background:var(--bubble-user);color:#fff;border-bottom-right-radius:5px}.bubble-wrap.bot .bubble{background:var(--bubble-bot);color:var(--text);border:1px solid var(--border);border-bottom-left-radius:5px}.bubble-time{font-size:10.5px;color:var(--muted);padding:0 4px}.attach-media{margin-top:6px;border-radius:12px;overflow:hidden;max-width:100%}.attach-media img{width:100%;max-height:320px;object-fit:contain;background:#000;display:block;border-radius:12px}.attach-media video{width:100%;max-height:300px;display:block;border-radius:12px;background:#000}.attach-card{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-top:6px;font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:8px}.attach-card svg{width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:2;flex-shrink:0}.typing{display:flex;align-items:center;gap:4px;padding:12px 14px;background:var(--bubble-bot);border:1px solid var(--border);border-radius:18px;border-bottom-left-radius:5px;width:fit-content}.typing span{width:7px;height:7px;background:var(--muted);border-radius:50%;animation:bounce .9s infinite}.typing span:nth-child(2){animation-delay:.15s}.typing span:nth-child(3){animation-delay:.3s}@keyframes bounce{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}.welcome{text-align:center;padding:32px 16px;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:10px}.welcome-icon{width:52px;height:52px;background:var(--bg);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center}.welcome-icon svg{width:24px;height:24px;stroke:var(--muted);fill:none;stroke-width:1.5}.welcome h3{font-size:16px;font-weight:600;color:var(--text)}.welcome p{font-size:13.5px;max-width:260px}.input-bar{background:var(--surface);border-top:1px solid var(--border);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;align-items:flex-end;flex-shrink:0}.input-bar textarea{flex:1;border:1px solid var(--border);border-radius:22px;padding:10px 14px;font-family:'DM Sans',sans-serif;font-size:14px;background:var(--bg);color:var(--text);outline:0;resize:none;max-height:120px;line-height:1.4;transition:border-color .15s}.input-bar textarea:focus{border-color:var(--accent);background:var(--surface)}.send-btn{width:42px;height:42px;border-radius:50%;background:var(--accent);border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity .15s}.send-btn:hover{opacity:.87}.send-btn:disabled{opacity:.4}.send-btn svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:2.5;margin-left:2px}.cmds-btn{width:42px;height:42px;border-radius:50%;background:var(--bg);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}.cmds-btn svg{width:17px;height:17px;stroke:var(--muted);fill:none;stroke-width:2}.spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+  </style>
+</head>
+<body>
+
+<div class="auth-wrap" id="authWrap">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    </div>
+    <h2>Shadow Garden</h2>
+    <p>Choose how you want to access the bot.</p>
+    <div class="mode-row" id="modePicker">
+      <div class="mode-btn" onclick="pickMode('admin')">
+        <span class="mode-label">Admin</span>
+        <span class="mode-desc">Full dashboard access</span>
+      </div>
+      <div class="mode-btn" onclick="pickMode('guest')">
+        <span class="mode-label">Guest Mode</span>
+        <span class="mode-desc">Try commands with your UID</span>
+      </div>
+    </div>
+    <div class="auth-form" id="adminForm">
+      <button class="btn btn-back" onclick="resetMode()">← Back</button>
+      <div class="fg">
+        <label>Admin Password</label>
+        <input type="password" id="adminPw" placeholder="Enter password…"/>
+      </div>
+      <button class="btn btn-primary" onclick="adminLogin()">Sign In</button>
+    </div>
+    <div class="auth-form" id="guestForm">
+      <button class="btn btn-back" onclick="resetMode()">← Back</button>
+      <div class="fg">
+        <label>Your Facebook UID</label>
+        <input type="text" id="guestUid" placeholder="e.g. 100012345678901" inputmode="numeric"/>
+        <div class="auth-hint">Your UID is used as your identity when running commands. No password needed.</div>
+      </div>
+      <button class="btn btn-primary" onclick="guestLogin()">Enter Guest Mode</button>
+    </div>
+    <div class="auth-err" id="authErr"></div>
+  </div>
+</div>
+
+<div class="app" id="app">
+  <header class="topbar">
+    <div class="bot-avatar">
+      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    </div>
+    <div class="topbar-info">
+      <h2 id="topBotName">Shadow Garden Bot</h2>
+      <p id="topSubtitle">Guest Mode</p>
+    </div>
+    <div class="topbar-right">
+      <div class="icon-btn" onclick="toggleDrawer()" title="Commands">
+        <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      </div>
+      <div class="icon-btn" onclick="logout()" title="Leave">
+        <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </div>
+    </div>
+  </header>
+
+  <div class="chat-area" id="chatArea">
+    <div class="welcome" id="welcomeMsg">
+      <div class="welcome-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <h3>Welcome to Guest Mode</h3>
+      <p>Type a command below or tap the list icon to browse available commands.</p>
+    </div>
+  </div>
+
+  <div class="input-bar">
+    <button class="cmds-btn" onclick="toggleDrawer()" title="Browse commands">
+      <svg viewBox="0 0 24 24"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+    </button>
+    <textarea id="cmdInput" rows="1" placeholder="Type a command… e.g. /help"></textarea>
+    <button class="send-btn" id="sendBtn" onclick="sendCommand()">
+      <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer(event)">
+  <div class="drawer">
+    <div class="drawer-handle"></div>
+    <div class="drawer-hdr">
+      <h3>Available Commands</h3>
+      <div class="drawer-search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="cmdSearch" placeholder="Search commands…" oninput="filterCmds()"/>
+      </div>
+    </div>
+    <div class="cmd-list" id="cmdList">
+      <div style="text-align:center;padding:24px;color:var(--muted);font-size:13px">Loading…</div>
+    </div>
+  </div>
+</div>
+<script
+    disable-devtool-auto
+    src='https://cdn.jsdelivr.net/npm/disable-devtool'
+    disable-menu='true'
+    detectors='xxx'
+    clear-log='true'
+    disable-select='true'
+    disable-copy='true'
+    disable-cut='true'
+    disable-paste='true'
+></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+<script>
+  let GUEST_TOKEN = localStorage.getItem('sg_guest_tok') || '';
+  let SESSION_UID = localStorage.getItem('sg_guest_uid') || '';
+  let allCmds = [];
+  let isRunning = false;
+  const ROLE_LABELS = ['User', 'Admin', 'Moderator', 'VIP', 'Developer'];
+  const ROLE_COLORS = ['', '#d97706', '#2563eb', '#7c3aed', '#16a34a'];
+
+  window.onload = () => {
+    ['adminPw', 'guestUid'].forEach(id => {
+      document.getElementById(id)?.addEventListener('keydown', e => {
+        if (e.key === 'Enter') id === 'adminPw' ? adminLogin() : guestLogin();
+      });
+    });
+    document.getElementById('cmdInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendCommand(); }
+    });
+    document.getElementById('cmdInput').addEventListener('input', autoResize);
+    if (GUEST_TOKEN) {
+      fetch('/guest/commands', { headers: { 'x-guest-token': GUEST_TOKEN } })
+        .then(r => r.json())
+        .then(d => { if (d.ok) enterApp(SESSION_UID); else clearSession(); })
+        .catch(clearSession);
+    }
+  };
+
+  function clearSession() {
+    GUEST_TOKEN = ''; SESSION_UID = '';
+    localStorage.removeItem('sg_guest_tok');
+    localStorage.removeItem('sg_guest_uid');
+  }
+
+  function pickMode(mode) {
+    document.getElementById('modePicker').style.display = 'none';
+    document.getElementById('authErr').textContent = '';
+    if (mode === 'admin') {
+      document.getElementById('adminForm').classList.add('visible');
+      setTimeout(() => document.getElementById('adminPw').focus(), 100);
+    } else {
+      document.getElementById('guestForm').classList.add('visible');
+      setTimeout(() => document.getElementById('guestUid').focus(), 100);
+    }
+  }
+
+  function resetMode() {
+    document.getElementById('modePicker').style.display = 'grid';
+    document.getElementById('adminForm').classList.remove('visible');
+    document.getElementById('guestForm').classList.remove('visible');
+    document.getElementById('authErr').textContent = '';
+  }
+
+  async function adminLogin() {
+    const pw  = document.getElementById('adminPw').value;
+    const err = document.getElementById('authErr');
+    err.textContent = '';
+    if (!pw) { err.textContent = 'Enter your password.'; return; }
+    const res = await fetch('/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: pw }) })
+      .then(r => r.json()).catch(() => ({ ok: false, error: 'Server unreachable.' }));
+    if (!res.ok) { err.textContent = res.error || 'Incorrect password.'; return; }
+    localStorage.setItem('sg_tok', res.token);
+    window.location.href = '/';
+  }
+
+  async function guestLogin() {
+    const uid = document.getElementById('guestUid').value.trim();
+    const err = document.getElementById('authErr');
+    err.textContent = '';
+    if (!uid || !/^\d+$/.test(uid)) { err.textContent = 'Enter a valid numeric UID.'; return; }
+    const res = await fetch('/guest/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ uid }) })
+      .then(r => r.json()).catch(() => ({ ok: false, error: 'Server unreachable.' }));
+    if (!res.ok) { err.textContent = res.error || 'Login failed.'; return; }
+    GUEST_TOKEN = res.token; SESSION_UID = res.uid;
+    localStorage.setItem('sg_guest_tok', GUEST_TOKEN);
+    localStorage.setItem('sg_guest_uid', SESSION_UID);
+    enterApp(uid);
+  }
+
+  async function logout() {
+    await fetch('/guest/logout', { method: 'POST', headers: { 'x-guest-token': GUEST_TOKEN } }).catch(() => {});
+    clearSession();
+    document.getElementById('app').classList.remove('visible');
+    document.getElementById('authWrap').style.display = 'flex';
+    resetMode();
+    document.getElementById('chatArea').innerHTML = `<div class="welcome" id="welcomeMsg"><div class="welcome-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Welcome to Guest Mode</h3><p>Type a command below or tap the list icon to browse available commands.</p></div>`;
+  }
+
+  async function enterApp(uid) {
+    document.getElementById('authWrap').style.display = 'none';
+    document.getElementById('app').classList.add('visible');
+    document.getElementById('topSubtitle').textContent = `Guest • UID: ${uid}`;
+    loadCommands();
+  }
+
+  async function loadCommands() {
+    const res = await fetch('/guest/commands', { headers: { 'x-guest-token': GUEST_TOKEN } })
+      .then(r => r.json()).catch(() => ({ ok: false, commands: [], userRole: 0 }));
+    allCmds = res.commands || [];
+    const roleLabel = ROLE_LABELS[res.userRole ?? 0] || 'User';
+    document.getElementById('topSubtitle').textContent = `${roleLabel} • UID: ${SESSION_UID}`;
+    renderCmds(allCmds);
+  }
+
+  function renderCmds(list) {
+    const el = document.getElementById('cmdList');
+    if (!list.length) { el.innerHTML = '<div style="text-align:center;padding:24px;color:var(--muted);font-size:13px">No commands available.</div>'; return; }
+    el.innerHTML = list.map(c => {
+      const roleBadge = c.role > 0
+        ? `<span style="font-size:10px;font-weight:600;padding:2px 7px;border-radius:99px;background:${ROLE_COLORS[c.role]}18;color:${ROLE_COLORS[c.role]};margin-left:6px">${ROLE_LABELS[c.role] || ''}</span>`
+        : '';
+      return `<div class="cmd-item" onclick="useCmd('${escHtml(c.usage)}')"><div style="flex:1;min-width:0"><div class="cmd-item-name" style="display:flex;align-items:center">${escHtml(c.usage)}${roleBadge}</div><div class="cmd-item-desc">${escHtml(c.description || 'No description.')}</div></div><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>`;
+    }).join('');
+  }
+
+  function filterCmds() {
+    const q = document.getElementById('cmdSearch').value.toLowerCase();
+    renderCmds(allCmds.filter(c => c.name.includes(q) || (c.description || '').toLowerCase().includes(q)));
+  }
+
+  function useCmd(usage) {
+    document.getElementById('cmdInput').value = usage + ' ';
+    closeDrawerFn();
+    document.getElementById('cmdInput').focus();
+    autoResize.call(document.getElementById('cmdInput'));
+  }
+
+  function toggleDrawer()  { document.getElementById('drawerOverlay').classList.toggle('open'); }
+  function closeDrawerFn() { document.getElementById('drawerOverlay').classList.remove('open'); }
+  function closeDrawer(e)  { if (e.target === document.getElementById('drawerOverlay')) closeDrawerFn(); }
+
+  async function sendCommand() {
+    if (isRunning) return;
+    const input = document.getElementById('cmdInput').value.trim();
+    if (!input) return;
+    isRunning = true;
+    document.getElementById('sendBtn').disabled = true;
+    document.getElementById('cmdInput').value = '';
+    autoResize.call(document.getElementById('cmdInput'));
+    document.getElementById('welcomeMsg')?.remove();
+    appendBubble('user', input);
+    const typingEl = appendTyping();
+    try {
+      const res = await fetch('/guest/run', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-guest-token': GUEST_TOKEN }, body: JSON.stringify({ input }) }).then(r => r.json());
+      typingEl.remove();
+      if (!res.ok && res.error?.includes('Session')) { clearSession(); logout(); return; }
+      if (!res.ok) { appendBubble('bot', `⚠️ ${res.error || 'Something went wrong.'}`); return; }
+      for (const entry of res.responses || []) {
+        appendBubble('bot', entry.body || '', entry.attachments || []);
+        await sleep(120);
+      }
+    } catch {
+      typingEl.remove();
+      appendBubble('bot', '⚠️ Could not reach the server.');
+    } finally {
+      isRunning = false;
+      document.getElementById('sendBtn').disabled = false;
+    }
+  }
+
+  function appendBubble(who, text, attachments = []) {
+    const area = document.getElementById('chatArea');
+    const wrap = document.createElement('div');
+    wrap.className = `bubble-wrap ${who}`;
+    const now = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    if (text && text.trim()) {
+      const b = document.createElement('div');
+      b.className = 'bubble';
+      b.textContent = text;
+      wrap.appendChild(b);
+    }
+    (attachments || []).filter(Boolean).forEach(a => {
+      if (a.kind === 'media' && a.dataUrl) {
+        const container = document.createElement('div');
+        container.className = 'attach-media';
+        if (a.mime?.startsWith('image/')) {
+          const img = document.createElement('img');
+          img.src = a.dataUrl; img.alt = 'Image'; img.loading = 'lazy';
+          container.appendChild(img);
+        } else if (a.mime?.startsWith('video/')) {
+          const vid = document.createElement('video');
+          vid.src = a.dataUrl; vid.controls = true; vid.autoplay = false; vid.playsInline = true;
+          container.appendChild(vid);
+        } else {
+          const link = document.createElement('a');
+          link.href = a.dataUrl;
+          link.download = `attachment.${a.mime?.split('/')[1] || 'bin'}`;
+          link.className = 'attach-card';
+          link.innerHTML = `<svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>Download (${a.mime || 'file'})</span>`;
+          container.appendChild(link);
+        }
+        wrap.appendChild(container);
+      } else if (a.kind === 'url') {
+        const container = document.createElement('div');
+        container.className = 'attach-media';
+        const img = document.createElement('img');
+        img.src = a.url; img.alt = 'Image'; img.loading = 'lazy';
+        img.onerror = () => {
+          container.innerHTML = '';
+          const card = document.createElement('div');
+          card.className = 'attach-card';
+          card.innerHTML = `<svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><a href="${a.url}" target="_blank" style="color:inherit">Open attachment</a>`;
+          container.appendChild(card);
+        };
+        container.appendChild(img);
+        wrap.appendChild(container);
+      } else {
+        const card = document.createElement('div');
+        card.className = 'attach-card';
+        card.innerHTML = `<svg viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg><span>${a.note || a.data || a.raw || 'Attachment'}</span>`;
+        wrap.appendChild(card);
+      }
+    });
+    const time = document.createElement('div');
+    time.className = 'bubble-time';
+    time.textContent = now;
+    wrap.appendChild(time);
+    area.appendChild(wrap);
+    area.scrollTop = area.scrollHeight;
+    return wrap;
+  }
+
+  function appendTyping() {
+    const area = document.getElementById('chatArea');
+    const wrap = document.createElement('div');
+    wrap.className = 'bubble-wrap bot';
+    wrap.innerHTML = '<div class="typing"><span></span><span></span><span></span></div>';
+    area.appendChild(wrap);
+    area.scrollTop = area.scrollHeight;
+    return wrap;
+  }
+
+  function autoResize() { this.style.height = 'auto'; this.style.height = Math.min(this.scrollHeight, 120) + 'px'; }
+  function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+  function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+</script>
+</body>
+</html>
