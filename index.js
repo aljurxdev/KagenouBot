@@ -424,7 +424,7 @@ const handleMessage = async (api, event) => {
           bodyStyle: 'sansSerif',
           footerText: '**Banned User**',
         });
-        //
+        return api.sendMessage(bannedUser, threadID, messageID);
       }
     } catch (error) {
       console.error("[DB] Error checking banned user in MongoDB:", error);
