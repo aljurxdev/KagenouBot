@@ -413,11 +413,19 @@ const handleMessage = async (api, event) => {
       const bannedUser = await bannedUsersCollection.findOne({ userId: senderID.toString() });
       if (bannedUser) {
         console.log(`[BAN_DEBUG] Banned user ${senderID} attempted command: ${commandName}, Reason: ${bannedUser.reason}`);
-        return api.sendMessage(
-  `You are banned from using bot commands.\nReason: ${bannedUser.reason}`,
-  threadID,
-  messageID
-);
+        const bannedMsg = AuroraBetaStyler.styleOutput({
+          headerText: 'Access Denied',
+          headerSymbol: '🚫',
+          headerStyle: 'bold',
+          bodyText:
+         `You are currently banned from using this bot.\n\n` +
+          `📌 Reason: ${bannedUser.reason || "No reason provided"}\n\n` +
+          `You can still use the bot using the Chatbot Web, login using your UID.\n\nHeres your UID: ${event.senderID}\n\nhttps://kagenoubot-production.up.railway.app`,
+          bodyStyle: 'sansSerif',
+          footerText: `**Banned Users**`,
+        });
+
+      return api.sendMessage(bannedMsg, threadID, messageID);
       }
     } catch (error) {
       console.error("[DB] Error checking banned user in MongoDB:", error);
