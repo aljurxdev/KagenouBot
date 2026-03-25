@@ -3,11 +3,26 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>KagenouBot — Shadow Garden</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="My portfolio with my favorite anime theme.">
+<meta name="author" content="Aljurx Pogoy">
+<meta name="referrer" content="no-referrer">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="google" content="notranslate">
+  <title>Shadow Garden</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-  <!-- css was uglify, so don't ask any questions about this -->
+  <!-- don't ask any questions about this dwg -->
   <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#f4f4f2;--surface:#fff;--border:#e6e6e3;--text:#181818;--muted:#888882;--accent:#181818;--green:#16a34a;--red:#dc2626;--amber:#d97706;--radius:14px;--shadow:0 1px 2px rgba(0,0,0,.06),0 4px 12px rgba(0,0,0,.04);--nav-h:60px}body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;min-height:100dvh;-webkit-font-smoothing:antialiased}.auth-wrap{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:999;padding:20px}.auth-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:32px 28px;width:100%;max-width:360px;box-shadow:var(--shadow)}.auth-icon{width:48px;height:48px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}.auth-icon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2}.auth-card h2{font-size:22px;font-weight:600;letter-spacing:-.3px}.auth-card p{font-size:14px;color:var(--muted);margin:6px 0 24px}.auth-err{font-size:13px;color:var(--red);margin-top:10px;min-height:16px}.app{display:flex;flex-direction:column;min-height:100dvh}.topbar{position:sticky;top:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:var(--nav-h)}.topbar-brand{display:flex;align-items:center;gap:10px}.topbar-logo{width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.topbar-logo svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2}.topbar-brand h1{font-size:15px;font-weight:600}.topbar-right{display:flex;align-items:center;gap:10px}.status-pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--muted);background:var(--bg);border:1px solid var(--border);border-radius:99px;padding:4px 10px}.dot{width:7px;height:7px;border-radius:50%;background:var(--muted);flex-shrink:0}.dot.on{background:var(--green);box-shadow:0 0 0 3px rgba(22,163,74,.18)}.icon-btn{width:36px;height:36px;border-radius:9px;border:1px solid var(--border);background:var(--bg);display:flex;align-items:center;justify-content:center;cursor:pointer}.icon-btn svg{width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:2}.icon-btn:hover svg{stroke:var(--red)}.content{flex:1;padding:20px 16px 100px;max-width:680px;margin:0 auto;width:100%}.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:100;background:var(--surface);border-top:1px solid var(--border);display:flex;padding-bottom:env(safe-area-inset-bottom)}.bnav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 8px;font-size:11px;font-weight:500;color:var(--muted);border:0;background:0;cursor:pointer;transition:color .15s}.bnav-item svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8}.bnav-item.active{color:var(--accent)}.section{display:none}.section.active{display:block}.section-title{font-size:20px;font-weight:600;letter-spacing:-.3px;margin-bottom:4px}.section-sub{font-size:13.5px;color:var(--muted);margin-bottom:20px}.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}.stat-card.full{grid-column:1 / -1}.stat-card.dark{background:var(--accent);border-color:var(--accent);color:#fff}.stat-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px}.stat-card.dark .stat-lbl{color:rgba(255,255,255,.55)}.stat-val{font-size:30px;font-weight:600;letter-spacing:-.5px;font-family:'DM Mono',monospace;line-height:1}.stat-sub{font-size:12px;color:var(--muted);margin-top:4px}.stat-card.dark .stat-sub{color:rgba(255,255,255,.55)}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:16px}.card-hdr{padding:14px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}.card-hdr h3{font-size:14px;font-weight:600}.card-hdr span{font-size:12px;color:var(--muted)}.cmd-row{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--border)}.cmd-row:last-child{border-bottom:0}.cmd-name{font-family:'DM Mono',monospace;font-size:12.5px;flex:1}.cmd-bar-w{flex:2;height:4px;background:var(--bg);border-radius:99px;overflow:hidden}.cmd-bar{height:100%;background:var(--accent);border-radius:99px;transition:width .5s ease}.cmd-cnt{font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;min-width:30px;text-align:right}.fg{margin-bottom:14px}.fg label{display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}input[type=text],input[type=password],textarea,select{width:100%;padding:11px 14px;border:1px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;background:var(--bg);color:var(--text);outline:0;transition:border-color .15s,background .15s;-webkit-appearance:none}input:focus,textarea:focus,select:focus{border-color:var(--accent);background:var(--surface)}textarea{resize:vertical;min-height:100px}.thread-list{border:1px solid var(--border);border-radius:10px;max-height:220px;overflow-y:auto;background:var(--bg)}.thread-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .12s}.thread-item:last-child{border-bottom:0}.thread-item:hover{background:var(--surface)}.thread-item input[type=checkbox]{width:17px;height:17px;accent-color:var(--accent);flex-shrink:0;cursor:pointer}.thread-item-info{flex:1;min-width:0}.thread-item-name{font-size:13.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.thread-item-id{font-size:11px;color:var(--muted);font-family:'DM Mono',monospace}.thread-actions{display:flex;gap:8px;margin-bottom:8px}.thread-loading{text-align:center;padding:24px;color:var(--muted);font-size:13px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 18px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;border:0;transition:opacity .15s,transform .1s;width:100%}.btn:active{transform:scale(.97)}.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0}.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{opacity:.87}.btn-outline{background:transparent;border:1px solid var(--border);color:var(--text)}.btn-outline:hover{background:var(--bg)}.btn-ghost{background:var(--bg);color:var(--muted);border:1px solid var(--border)}.btn-sm{padding:7px 13px;font-size:12.5px;width:auto}.btn-danger{background:#fef2f2;color:var(--red);border:1px solid #fecaca}.send-result{border-radius:10px;padding:12px 14px;font-size:13.5px;margin-top:12px;display:none}.send-result.ok{background:#f0fdf4;color:var(--green);border:1px solid #bbf7d0}.send-result.err{background:#fef2f2;color:var(--red);border:1px solid #fecaca}.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--border)}.toggle-row:last-child{border-bottom:0}.toggle-info h4{font-size:14px;font-weight:500}.toggle-info p{font-size:12.5px;color:var(--muted);margin-top:2px}.switch{position:relative;width:44px;height:26px;flex-shrink:0}.switch input{opacity:0;width:0;height:0}.slider{position:absolute;inset:0;background:var(--border);border-radius:99px;cursor:pointer;transition:background .2s}.slider::before{content:'';position:absolute;width:20px;height:20px;left:3px;top:3px;background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 4px rgba(0,0,0,.2)}input:checked+.slider{background:var(--accent)}input:checked+.slider::before{transform:translateX(18px)}.banned-list{display:flex;flex-direction:column}.banned-row{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border);gap:12px}.banned-row:last-child{border-bottom:0}.banned-uid{font-family:'DM Mono',monospace;font-size:12.5px;font-weight:500}.banned-reason{font-size:12px;color:var(--muted);margin-top:2px}#toast{position:fixed;bottom:calc(var(--nav-h) + 12px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%) translateY(8px);background:var(--accent);color:#fff;padding:11px 20px;border-radius:99px;font-size:13.5px;font-weight:500;box-shadow:0 4px 20px rgba(0,0,0,.18);opacity:0;transition:all .25s ease;z-index:9999;pointer-events:none;white-space:nowrap;max-width:calc(100vw - 40px);text-overflow:ellipsis;overflow:hidden}#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}#toast.err{background:var(--red)}.empty{text-align:center;padding:36px 16px;color:var(--muted);font-size:13.5px}.spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#f4f4f2;--surface:#fff;--border:#e6e6e3;--text:#181818;--muted:#888882;--accent:#181818;--green:#16a34a;--red:#dc2626;--amber:#d97706;--radius:14px;--shadow:0 1px 2px rgba(0,0,0,.06),0 4px 12px rgba(0,0,0,.04);--nav-h:60px}body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100dvh;-webkit-font-smoothing:antialiased}.auth-wrap{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:999;padding:20px}.auth-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:32px 28px;width:100%;max-width:360px;box-shadow:var(--shadow)}.auth-icon{width:48px;height:48px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}.auth-icon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2}.auth-card h2{font-size:22px;font-weight:600;letter-spacing:-.3px}.auth-card p{font-size:13.5px;color:var(--muted);margin:6px 0 20px}.auth-err{font-size:13px;color:var(--red);margin-top:10px;min-height:16px}.mode-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4px}.mode-btn{padding:14px 10px;border-radius:10px;border:1.5px solid var(--border);background:var(--bg);cursor:pointer;text-align:center;transition:border-color .15s,background .15s;font-family:'DM Sans',sans-serif}.mode-btn:hover{border-color:var(--accent);background:var(--surface)}.mode-icon{font-size:22px;display:block;margin-bottom:5px}.mode-label{font-size:13px;font-weight:600;display:block}.mode-desc{font-size:11.5px;color:var(--muted);display:block;margin-top:2px}.auth-sub-form{display:none}.auth-sub-form.visible{display:block}.btn-back{display:flex;align-items:center;gap:6px;width:100%;padding:9px 14px;border-radius:9px;font-size:13px;font-weight:500;background:var(--bg);border:1px solid var(--border);color:var(--muted);cursor:pointer;font-family:'DM Sans',sans-serif;margin-bottom:14px}.auth-hint{font-size:12px;color:var(--muted);margin-top:5px}.app{display:flex;flex-direction:column;min-height:100dvh}.topbar{position:sticky;top:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:var(--nav-h)}.topbar-brand{display:flex;align-items:center;gap:10px}.topbar-logo{width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.topbar-logo svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2}.topbar-brand h1{font-size:15px;font-weight:600}.topbar-right{display:flex;align-items:center;gap:10px}.status-pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--muted);background:var(--bg);border:1px solid var(--border);border-radius:99px;padding:4px 10px}.dot{width:7px;height:7px;border-radius:50%;background:var(--muted);flex-shrink:0}.dot.on{background:var(--green);box-shadow:0 0 0 3px rgba(22,163,74,.18)}.icon-btn{width:36px;height:36px;border-radius:9px;border:1px solid var(--border);background:var(--bg);display:flex;align-items:center;justify-content:center;cursor:pointer}.icon-btn svg{width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:2}.icon-btn:hover svg{stroke:var(--red)}.content{flex:1;padding:20px 16px 100px;max-width:680px;margin:0 auto;width:100%}.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:100;background:var(--surface);border-top:1px solid var(--border);display:flex;padding-bottom:env(safe-area-inset-bottom)}.bnav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 8px;font-size:11px;font-weight:500;color:var(--muted);border:0;background:0;cursor:pointer;transition:color .15s}.bnav-item svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8}.bnav-item.active{color:var(--accent)}.section{display:none}.section.active{display:block}.section-title{font-size:20px;font-weight:600;letter-spacing:-.3px;margin-bottom:4px}.section-sub{font-size:13.5px;color:var(--muted);margin-bottom:20px}.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}.stat-card.dark{background:var(--accent);border-color:var(--accent);color:#fff}.stat-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px}.stat-card.dark .stat-lbl{color:rgba(255,255,255,.55)}.stat-val{font-size:30px;font-weight:600;letter-spacing:-.5px;font-family:'DM Mono',monospace;line-height:1}.stat-sub{font-size:12px;color:var(--muted);margin-top:4px}.stat-card.dark .stat-sub{color:rgba(255,255,255,.55)}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:16px}.card-hdr{padding:14px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}.card-hdr h3{font-size:14px;font-weight:600}.card-hdr span{font-size:12px;color:var(--muted)}.cmd-row{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--border)}.cmd-row:last-child{border-bottom:0}.cmd-name{font-family:'DM Mono',monospace;font-size:12.5px;flex:1}.cmd-bar-w{flex:2;height:4px;background:var(--bg);border-radius:99px;overflow:hidden}.cmd-bar{height:100%;background:var(--accent);border-radius:99px;transition:width .5s ease}.cmd-cnt{font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;min-width:30px;text-align:right}.fg{margin-bottom:14px}.fg label{display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}input[type=text],input[type=password],textarea{width:100%;padding:11px 14px;border:1px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;background:var(--bg);color:var(--text);outline:0;transition:border-color .15s,background .15s;-webkit-appearance:none}input:focus,textarea:focus{border-color:var(--accent);background:var(--surface)}textarea{resize:vertical;min-height:100px}.thread-list{border:1px solid var(--border);border-radius:10px;max-height:220px;overflow-y:auto;background:var(--bg)}.thread-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .12s}.thread-item:last-child{border-bottom:0}.thread-item:hover{background:var(--surface)}.thread-item input[type=checkbox]{width:17px;height:17px;accent-color:var(--accent);flex-shrink:0;cursor:pointer}.thread-item-info{flex:1;min-width:0}.thread-item-name{font-size:13.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.thread-item-id{font-size:11px;color:var(--muted);font-family:'DM Mono',monospace}.thread-actions{display:flex;gap:8px;margin-bottom:8px}.thread-loading{text-align:center;padding:24px;color:var(--muted);font-size:13px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 18px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;border:0;transition:opacity .15s,transform .1s;width:100%}.btn:active{transform:scale(.97)}.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0}.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{opacity:.87}.btn-outline{background:transparent;border:1px solid var(--border);color:var(--text)}.btn-outline:hover{background:var(--bg)}.btn-ghost{background:var(--bg);color:var(--muted);border:1px solid var(--border)}.btn-sm{padding:7px 13px;font-size:12.5px;width:auto}.btn-danger{background:#fef2f2;color:var(--red);border:1px solid #fecaca}.send-result{border-radius:10px;padding:12px 14px;font-size:13.5px;margin-top:12px;display:none}.send-result.ok{background:#f0fdf4;color:var(--green);border:1px solid #bbf7d0}.send-result.err{background:#fef2f2;color:var(--red);border:1px solid #fecaca}.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--border)}.toggle-row:last-child{border-bottom:0}.toggle-info h4{font-size:14px;font-weight:500}.toggle-info p{font-size:12.5px;color:var(--muted);margin-top:2px}.switch{position:relative;width:44px;height:26px;flex-shrink:0}.switch input{opacity:0;width:0;height:0}.slider{position:absolute;inset:0;background:var(--border);border-radius:99px;cursor:pointer;transition:background .2s}.slider::before{content:'';position:absolute;width:20px;height:20px;left:3px;top:3px;background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 4px rgba(0,0,0,.2)}input:checked+.slider{background:var(--accent)}input:checked+.slider::before{transform:translateX(18px)}.banned-list{display:flex;flex-direction:column}.banned-row{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border);gap:12px}.banned-row:last-child{border-bottom:0}.banned-uid{font-family:'DM Mono',monospace;font-size:12.5px;font-weight:500}.banned-reason{font-size:12px;color:var(--muted);margin-top:2px}#toast{position:fixed;bottom:calc(var(--nav-h) + 12px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%) translateY(8px);background:var(--accent);color:#fff;padding:11px 20px;border-radius:99px;font-size:13.5px;font-weight:500;box-shadow:0 4px 20px rgba(0,0,0,.18);opacity:0;transition:all .25s ease;z-index:9999;pointer-events:none;white-space:nowrap;max-width:calc(100vw - 40px);text-overflow:ellipsis;overflow:hidden}#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}#toast.err{background:var(--red)}.empty{text-align:center;padding:36px 16px;color:var(--muted);font-size:13.5px}.spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
   </style>
 </head>
 <body>
@@ -18,19 +33,41 @@
       <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
     </div>
     <h2>Shadow Garden</h2>
-    <p>Sign in to manage your bot.</p>
-    <div class="fg">
-      <label>Password</label>
-      <input type="password" id="pwInput" placeholder="Enter password…"/>
+    <p>Choose how you want to access.</p>
+    <div class="mode-row" id="modePicker">
+      <button class="mode-btn" onclick="pickMode('admin')">
+        <span class="mode-icon">🛡️</span>
+        <span class="mode-label">Admin</span>
+        <span class="mode-desc">Full dashboard</span>
+      </button>
+      <button class="mode-btn" onclick="pickMode('guest')">
+        <span class="mode-icon">👤</span>
+        <span class="mode-label">Guest</span>
+        <span class="mode-desc">Try commands</span>
+      </button>
     </div>
-    <button class="btn btn-primary" id="loginBtn" onclick="login()">Sign In</button>
+    <div class="auth-sub-form" id="adminForm">
+      <button class="btn-back" onclick="resetMode()">← Back</button>
+      <div class="fg">
+        <label>Password</label>
+        <input type="password" id="pwInput" placeholder="Enter password…"/>
+      </div>
+      <button class="btn btn-primary" id="loginBtn" onclick="login()">Sign In</button>
+    </div>
+    <div class="auth-sub-form" id="guestForm">
+      <button class="btn-back" onclick="resetMode()">← Back</button>
+      <div class="fg">
+        <label>Your Facebook UID</label>
+        <input type="text" id="guestUidInput" placeholder="e.g. 100012345678901" inputmode="numeric"/>
+        <div class="auth-hint">Your UID is used as your identity. No password needed.</div>
+      </div>
+      <button class="btn btn-primary" id="guestLoginBtn" onclick="guestLogin()">Enter Guest Mode</button>
+    </div>
     <div class="auth-err" id="authErr"></div>
   </div>
 </div>
 
 <div class="app" id="appShell" style="display:none">
-
-  
   <header class="topbar">
     <div class="topbar-brand">
       <div class="topbar-logo">
@@ -46,10 +83,7 @@
     </div>
   </header>
 
-  
   <div class="content">
-
-    
     <div class="section active" id="s-stats">
       <div class="section-title">Overview</div>
       <div class="section-sub">Live bot activity.</div>
@@ -88,11 +122,9 @@
       </div>
     </div>
 
-    
     <div class="section" id="s-message">
       <div class="section-title">Send Message</div>
       <div class="section-sub">Pick threads and send a message.</div>
-
       <div class="card">
         <div class="card-hdr">
           <h3>Select Threads</h3>
@@ -111,7 +143,6 @@
           </div>
         </div>
       </div>
-
       <div class="card">
         <div class="card-hdr"><h3>Message</h3></div>
         <div style="padding:14px 16px">
@@ -126,7 +157,6 @@
           <div class="send-result" id="sendResult"></div>
         </div>
       </div>
-
       <div class="card">
         <div class="card-hdr"><h3>Broadcast to All Groups</h3></div>
         <div style="padding:14px 16px">
@@ -143,7 +173,6 @@
       </div>
     </div>
 
-    
     <div class="section" id="s-manage">
       <div class="section-title">Manage Bot</div>
       <div class="section-sub">Control maintenance and commands.</div>
@@ -170,7 +199,6 @@
       </div>
     </div>
 
-    
     <div class="section" id="s-banned">
       <div class="section-title">Banned Users</div>
       <div class="section-sub">View and remove bans.</div>
@@ -187,10 +215,8 @@
         </div>
       </div>
     </div>
-
   </div>
 
-  
   <nav class="bottom-nav">
     <button class="bnav-item active" onclick="showSection('stats', this)">
       <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
@@ -209,7 +235,6 @@
       Banned
     </button>
   </nav>
-
 </div>
 
 <div id="toast"></div>
@@ -220,6 +245,7 @@
 
   window.onload = () => {
     document.getElementById('pwInput').addEventListener('keydown', e => { if (e.key === 'Enter') login(); });
+    document.getElementById('guestUidInput').addEventListener('keydown', e => { if (e.key === 'Enter') guestLogin(); });
     if (TOKEN) {
       api('/data/stats').then(d => {
         if (d.ok) { showApp(); initDashboard(d); }
@@ -227,6 +253,42 @@
       }).catch(showLogin);
     }
   };
+
+  function pickMode(mode) {
+    document.getElementById('modePicker').style.display = 'none';
+    document.getElementById('authErr').textContent = '';
+    if (mode === 'admin') {
+      document.getElementById('adminForm').classList.add('visible');
+      setTimeout(() => document.getElementById('pwInput').focus(), 80);
+    } else {
+      document.getElementById('guestForm').classList.add('visible');
+      setTimeout(() => document.getElementById('guestUidInput').focus(), 80);
+    }
+  }
+
+  function resetMode() {
+    document.getElementById('modePicker').style.display = 'grid';
+    document.getElementById('adminForm').classList.remove('visible');
+    document.getElementById('guestForm').classList.remove('visible');
+    document.getElementById('authErr').textContent = '';
+  }
+
+  async function guestLogin() {
+    const uid   = document.getElementById('guestUidInput').value.trim();
+    const errEl = document.getElementById('authErr');
+    const btn   = document.getElementById('guestLoginBtn');
+    errEl.textContent = '';
+    if (!uid || !/^\d+$/.test(uid)) { errEl.textContent = 'Enter a valid numeric UID.'; return; }
+    btn.textContent = 'Logging in…'; btn.disabled = true;
+    try {
+      const res = await fetch('/guest/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ uid }) }).then(r => r.json());
+      if (!res.ok) { errEl.textContent = res.error || 'Login failed.'; return; }
+      localStorage.setItem('sg_guest_tok', res.token);
+      localStorage.setItem('sg_guest_uid', res.uid);
+      window.location.href = '/guest';
+    } catch { errEl.textContent = 'Could not reach the server.'; }
+    finally { btn.textContent = 'Enter Guest Mode'; btn.disabled = false; }
+  }
 
   function showLogin() { document.getElementById('authWrap').style.display = 'flex'; document.getElementById('appShell').style.display = 'none'; }
   function showApp()   { document.getElementById('authWrap').style.display = 'none';  document.getElementById('appShell').style.display = 'flex'; }
@@ -237,8 +299,7 @@
     const btn   = document.getElementById('loginBtn');
     errEl.textContent = '';
     if (!pw) { errEl.textContent = 'Please enter a password.'; return; }
-    btn.innerHTML = '<span class="spinner"></span>';
-    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span>'; btn.disabled = true;
     try {
       const res = await fetch('/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: pw }) });
       const d = await res.json();
@@ -260,10 +321,7 @@
   }
 
   async function api(path, options = {}) {
-    const res = await fetch(path, {
-      ...options,
-      headers: { 'x-session-token': TOKEN, 'Content-Type': 'application/json', ...(options.headers || {}) }
-    });
+    const res = await fetch(path, { ...options, headers: { 'x-session-token': TOKEN, 'Content-Type': 'application/json', ...(options.headers || {}) } });
     const d = await res.json();
     if (res.status === 401) { showLogin(); throw new Error('Unauthorized'); }
     return d;
@@ -282,14 +340,11 @@
     document.getElementById('sUsers').textContent   = d.usersTracked ?? '—';
     document.getElementById('sNp').textContent      = d.nonPrefixCommands ?? '—';
     document.getElementById('sEv').textContent      = d.eventCommands ?? '—';
-    document.getElementById('sDb').innerHTML        = d.dbConnected
-      ? '<span style="color:var(--green)">● Connected</span>'
-      : '<span style="color:var(--amber)">● JSON</span>';
+    document.getElementById('sDb').innerHTML        = d.dbConnected ? '<span style="color:var(--green)">● Connected</span>' : '<span style="color:var(--amber)">● JSON</span>';
     document.getElementById('sDbSub').textContent   = d.dbConnected ? 'MongoDB' : 'No URI';
     document.getElementById('statusDot').className  = 'dot on';
-    document.getElementById('statusTxt').textContent= 'Online';
+    document.getElementById('statusTxt').textContent = 'Online';
     document.getElementById('maintToggle').checked  = d.maintenanceMode || false;
-
     uptimeBase = d.uptime;
     if (uptimeTick) clearInterval(uptimeTick);
     let elapsed = 0;
@@ -301,22 +356,15 @@
       const m = Math.floor((s % 3600) / 60);
       const sec = s % 60;
       const pad = n => String(n).padStart(2, '0');
-      document.getElementById('sUptime').textContent =
-        days > 0 ? `${days}d ${pad(h)}:${pad(m)}:${pad(sec)}` : `${pad(h)}:${pad(m)}:${pad(sec)}`;
+      document.getElementById('sUptime').textContent = days > 0 ? `${days}d ${pad(h)}:${pad(m)}:${pad(sec)}` : `${pad(h)}:${pad(m)}:${pad(sec)}`;
     };
     tick(); uptimeTick = setInterval(tick, 1000);
-
     const list = d.topCommands || [];
     const max  = list[0]?.count || 1;
     document.getElementById('topCmdLbl').textContent = `${list.length} tracked`;
     document.getElementById('topCmdBody').innerHTML = list.length === 0
       ? '<div class="empty">No usage recorded yet.</div>'
-      : list.map(({ name, count }) => `
-          <div class="cmd-row">
-            <span class="cmd-name">${d.prefix || '/'}${name}</span>
-            <div class="cmd-bar-w"><div class="cmd-bar" style="width:${Math.round(count/max*100)}%"></div></div>
-            <span class="cmd-cnt">${count}</span>
-          </div>`).join('');
+      : list.map(({ name, count }) => `<div class="cmd-row"><span class="cmd-name">${d.prefix || '/'}${name}</span><div class="cmd-bar-w"><div class="cmd-bar" style="width:${Math.round(count/max*100)}%"></div></div><span class="cmd-cnt">${count}</span></div>`).join('');
   }
 
   function showSection(id, btn) {
@@ -335,14 +383,7 @@
     try {
       const d = await api('/data/threads');
       if (!d.ok || !d.threads.length) { el.innerHTML = '<div class="thread-loading">No group threads found.</div>'; return; }
-      el.innerHTML = d.threads.map(t => `
-        <label class="thread-item">
-          <input type="checkbox" class="thread-cb" value="${t.threadID}"/>
-          <div class="thread-item-info">
-            <div class="thread-item-name">${escHtml(t.name)}</div>
-            <div class="thread-item-id">${t.threadID}</div>
-          </div>
-        </label>`).join('');
+      el.innerHTML = d.threads.map(t => `<label class="thread-item"><input type="checkbox" class="thread-cb" value="${t.threadID}"/><div class="thread-item-info"><div class="thread-item-name">${escHtml(t.name)}</div><div class="thread-item-id">${t.threadID}</div></div></label>`).join('');
     } catch { el.innerHTML = '<div class="thread-loading">Failed to load. Is the bot connected?</div>'; }
   }
 
@@ -355,28 +396,17 @@
     const message  = document.getElementById('msgText').value.trim();
     const resultEl = document.getElementById('sendResult');
     resultEl.style.display = 'none';
-
     if (!selected.length) { toast('Select at least one thread.', true); return; }
     if (!message)         { toast('Message cannot be empty.', true); return; }
-
     const btn = document.getElementById('sendBtn');
     btn.innerHTML = '<span class="spinner"></span> Sending…'; btn.disabled = true;
-
     try {
       const d = await api('/data/message', { method: 'POST', body: JSON.stringify({ threadIDs: selected, message }) });
       resultEl.className = 'send-result ' + (d.ok ? 'ok' : 'err');
-      resultEl.textContent = d.ok
-        ? `✓ Sent to ${d.sent} thread${d.sent !== 1 ? 's' : ''}${d.failed > 0 ? `, ${d.failed} failed` : ''}.`
-        : (d.error || 'Failed to send.');
+      resultEl.textContent = d.ok ? `✓ Sent to ${d.sent} thread${d.sent !== 1 ? 's' : ''}${d.failed > 0 ? `, ${d.failed} failed` : ''}.` : (d.error || 'Failed to send.');
       resultEl.style.display = 'block';
-    } catch (e) {
-      resultEl.className = 'send-result err';
-      resultEl.textContent = 'Request failed.';
-      resultEl.style.display = 'block';
-    } finally {
-      btn.innerHTML = '<svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send to Selected';
-      btn.disabled = false;
-    }
+    } catch { resultEl.className = 'send-result err'; resultEl.textContent = 'Request failed.'; resultEl.style.display = 'block'; }
+    finally { btn.innerHTML = '<svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send to Selected'; btn.disabled = false; }
   }
 
   async function broadcast() {
@@ -384,25 +414,15 @@
     const resultEl = document.getElementById('broadcastResult');
     resultEl.style.display = 'none';
     if (!message) { toast('Message cannot be empty.', true); return; }
-
     const btn = document.getElementById('broadcastBtn');
     btn.innerHTML = '<span class="spinner"></span> Broadcasting…'; btn.disabled = true;
-
     try {
       const d = await api('/data/broadcast', { method: 'POST', body: JSON.stringify({ message }) });
       resultEl.className = 'send-result ' + (d.ok ? 'ok' : 'err');
-      resultEl.textContent = d.ok
-        ? `✓ Sent to ${d.sent} / ${d.total} groups${d.failed > 0 ? `, ${d.failed} failed` : ''}.`
-        : (d.error || 'Failed.');
+      resultEl.textContent = d.ok ? `✓ Sent to ${d.sent} / ${d.total} groups${d.failed > 0 ? `, ${d.failed} failed` : ''}.` : (d.error || 'Failed.');
       resultEl.style.display = 'block';
-    } catch {
-      resultEl.className = 'send-result err';
-      resultEl.textContent = 'Request failed.';
-      resultEl.style.display = 'block';
-    } finally {
-      btn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Broadcast to All';
-      btn.disabled = false;
-    }
+    } catch { resultEl.className = 'send-result err'; resultEl.textContent = 'Request failed.'; resultEl.style.display = 'block'; }
+    finally { btn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Broadcast to All'; btn.disabled = false; }
   }
 
   async function toggleMaint(el) {
@@ -427,14 +447,7 @@
     el.innerHTML = '<div class="empty">Loading…</div>';
     const d = await api('/data/banned').catch(() => ({ ok: true, banned: [] }));
     if (!d.banned?.length) { el.innerHTML = '<div class="empty">No banned users.</div>'; return; }
-    el.innerHTML = d.banned.map(u => `
-      <div class="banned-row">
-        <div>
-          <div class="banned-uid">${u.userId}</div>
-          <div class="banned-reason">${u.reason || 'No reason provided'}</div>
-        </div>
-        <button class="btn btn-danger btn-sm" onclick="unban('${u.userId}')">Unban</button>
-      </div>`).join('');
+    el.innerHTML = d.banned.map(u => `<div class="banned-row"><div><div class="banned-uid">${u.userId}</div><div class="banned-reason">${u.reason || 'No reason provided'}</div></div><button class="btn btn-danger btn-sm" onclick="unban('${u.userId}')">Unban</button></div>`).join('');
   }
 
   async function unban(userId) {
