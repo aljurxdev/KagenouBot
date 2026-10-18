@@ -1,14 +1,12 @@
-@author Aljur Pogoy
 
-! The source code is originally written by Aljur Pogoy. Do not remove, modify, or replace the original author's name in any part of the code. Respect the effort and generosity of the developer who shared this project without requiring any payment.
+@author Aljur Pogoy (Aljurx)
 
-! Official source code repository:
-  https://github.com/aljurxdev/KagenouBot
+1. Ownership: This project was originally developed by Aljur Pogoy (Aljurx). Please preserve the original author's credit.
 
-! If you obtained this source code from any other source, you may be using a modified, unofficial, or potentially malicious version. This may pose serious risks including data theft, account compromise, or hidden backdoors.
-! You are allowed to use, modify, and learn from this code for personal or educational purposes. However, redistributing this project must include proper credits to the original author (Aljurx) and this repository.
-! Selling, rebranding, or claiming this project as your own work without permission is strictly prohibited.
-! Any damages, losses, or issues caused by unauthorized modifications or third-party distributions are not the responsibility of the original author or contributors.
-! By using this source code, you agree to respect the developer’s work and follow ethical programming practices.
+2. Usage & Redistribution: You may use and modify this project under its applicable license. Redistribution must retain proper attribution and comply with the license terms.
 
-Thank you for using KagenouBot.
+3. Security & Disclaimer: Always verify unofficial copies before use. The author is not responsible for issues caused by unauthorized modifications or malicious third-party distributions, to the extent permitted by law.
+
+Official Repository: https://github.com/aljurxdev/KagenouBot
+
+© Aljur Pogoy. All rights reserved where applicable.
