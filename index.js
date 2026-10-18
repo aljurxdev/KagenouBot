@@ -13,7 +13,7 @@ const { initGoatBot, dispatchGoatMessage, dispatchGoatEvent, dispatchGoatReply, 
 const { MongoClient } = require("mongodb");
 const fs = require("fs-extra");
 const path = require("path");
-const login = require("@dongdev/fca-unofficial");
+const login = require("fbvibex");
 const { handleAuroraCommand, loadAuroraCommands } = require("./core/aurora");
 const chalk = require("chalk");
 /*const chokidar = require("chokidar");*/
