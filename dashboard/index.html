@@ -915,6 +915,14 @@
   </div>
 </div>
 
+<div id="acctOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:300;align-items:center;justify-content:center;padding:20px">
+  <div class="card" style="width:100%;max-width:380px;margin:0;overflow:visible">
+    <div class="card-hdr"><h3 id="acctTitle">Account</h3>
+      <button class="btn btn-ghost btn-sm" onclick="closeAcct()">✕</button></div>
+    <div id="acctBody" style="padding:14px 16px"></div>
+  </div>
+</div>
+
 <div id="reactionPopup" class="reaction-popup">
   <button onclick="addGroupReaction('❤️')">❤️</button>
   <button onclick="addGroupReaction('😂')">😂</button>
@@ -1447,9 +1455,10 @@ async function loadGuests() {
   const d = await adminApi('/data/guests').catch(() => ({ ok: false, guests: [] }));
   if (!d.ok) { el.innerHTML = `<div class="empty-state"><div class="empty-state-icon">⚠️</div><p>${escHtml(d.error || 'Failed to load.')}</p></div>`; return; }
   if (!d.guests?.length) { el.innerHTML = '<div class="empty-state"><div class="empty-state-icon">👤</div><p>No guest accounts yet.</p></div>'; return; }
-  el.innerHTML = d.guests.map(g => {
+    el.innerHTML = d.guests.map(g => {
     const date = g.createdAt ? new Date(g.createdAt).toLocaleDateString() : '—';
-    return `<div class="banned-row"><div><div class="banned-uid">${escHtml(g.uid)}</div><div class="banned-reason">Registered ${date}</div></div><button class="btn btn-danger btn-sm" onclick="deleteGuest('${escHtml(g.uid)}')">Remove</button></div>`;
+    const u = escHtml(g.uid);
+    return `<div class="banned-row"><div style="min-width:0"><div class="banned-uid">${escHtml(g.displayName || 'User ' + g.uid.slice(-6))}</div><div class="banned-reason">UID ${u} · ${date}</div></div><div style="display:flex;gap:6px;flex-shrink:0"><button class="btn btn-ghost btn-sm" onclick="viewAccount('${u}')">View</button><button class="btn btn-outline btn-sm" onclick="openResetPw('${u}')">Reset PW</button><button class="btn btn-danger btn-sm" onclick="deleteGuest('${u}')">Remove</button></div></div>`;
   }).join('');
   document.querySelector('#s-guests .section-sub').textContent = `${d.total} registered guest${d.total !== 1 ? 's' : ''}.`;
 }
@@ -1470,6 +1479,53 @@ async function resetGuestAccounts() {
   btn.disabled = false;
   if (d.ok) { adminToast('All guest accounts deleted.'); loadGuests(); }
   else adminToast(d.error || 'Reset failed.', true);
+}
+
+function closeAcct() { document.getElementById('acctOverlay').style.display = 'none'; }
+function openAcct(title, html) {
+  document.getElementById('acctTitle').textContent = title;
+  document.getElementById('acctBody').innerHTML = html;
+  document.getElementById('acctOverlay').style.display = 'flex';
+}
+
+async function viewAccount(uid) {
+  openAcct('Account', renderSkeletonList(3));
+  const d = await adminApi('/data/guests/' + uid).catch(() => null);
+  if (!d?.ok) { openAcct('Account', `<div class="empty">${escHtml(d?.error || 'Failed to load.')}</div>`); return; }
+  const a = d.account;
+  const row = (k, v) => `<div style="display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px"><span style="color:var(--muted)">${k}</span><span style="text-align:right;word-break:break-word">${escHtml(v)}</span></div>`;
+  const fmt = t => t ? new Date(t).toLocaleString() : '—';
+  openAcct(a.displayName || 'Account',
+    row('UID', a.uid) + row('Role', ROLE_LABELS[a.role] || 'User') +
+    row('Bio', a.bio || '—') + row('Birthdate', a.birthdate || '—') +
+    row('Avatar', a.hasAvatar ? 'Yes' : 'No') + row('Registered', fmt(a.createdAt)) +
+    row('Last PW reset', fmt(a.passwordResetAt)) +
+    row('Premium', a.premiumActive ? 'Active until ' + fmt(a.premiumExpiresAt) : 'No') +
+    `<button class="btn btn-outline" style="margin-top:14px" onclick="openResetPw('${escHtml(a.uid)}')">Reset Password</button>`);
+}
+
+function openResetPw(uid) {
+  openAcct('Reset Password', `
+    <div style="font-size:12.5px;color:var(--muted);margin-bottom:12px">Set a new password for UID <b>${escHtml(uid)}</b>. They will be logged out and must sign in with it.</div>
+    <div class="fg"><label>New Password</label>
+      <div class="pw-field"><input type="password" id="adminNewPw" placeholder="At least 6 characters"/>
+      <button class="eye-btn" type="button" onclick="toggleEye('adminNewPw',this)" tabindex="-1"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div></div>
+    <button class="btn btn-primary" id="adminPwBtn" onclick="submitResetPw('${escHtml(uid)}')">Reset Password</button>`);
+  setTimeout(() => document.getElementById('adminNewPw')?.focus(), 80);
+}
+
+async function submitResetPw(uid) {
+  const pw = document.getElementById('adminNewPw').value;
+  if (pw.length < 6) { adminToast('Password must be at least 6 characters.', true); return; }
+  const btn = document.getElementById('adminPwBtn');
+  btn.innerHTML = '<span class="spinner"></span>'; btn.disabled = true;
+  const d = await adminApi('/data/guests/' + uid + '/reset-password', {
+    method: 'POST', body: JSON.stringify({ newPassword: pw })
+  }).catch(() => ({ ok: false, error: 'Request failed.' }));
+  btn.innerHTML = 'Reset Password'; btn.disabled = false;
+  if (!d.ok) { adminToast(d.error || 'Reset failed.', true); return; }
+  closeAcct();
+  adminToast('Password reset for ' + uid + '.');
 }
 
 function renderSkeletonList(count) {
