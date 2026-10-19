@@ -798,7 +798,9 @@ markAsRead(threadID, cb)     { if (typeof cb === "function") cb(null); return Pr
     if (!checkAuth(req, res)) return;
     if (!global.db) return res.status(503).json({ ok: false, error: "Database not connected." });
     try {
-      const all = await global.db.db(GUEST_COLLECTION).find({}, { projection: { uid: 1, createdAt: 1, _id: 0 } }).toArray();
+      const all = await global.db.db(GUEST_COLLECTION).find({}, 
+        { projection: { uid: 1, displayName: 1, createdAt: 1, _id: 0 } }
+      ).toArray();
       return res.json({ ok: true, total: all.length, guests: all });
     } catch (e) { return res.status(500).json({ ok: false, error: e.message }); }
   });
