@@ -181,6 +181,53 @@ module.exports = function mountDashboard(app) {
       return res.json({ ok: true, banned: Object.entries(raw).map(([userId, info]) => ({ userId, ...info })) });
     } catch { return res.json({ ok: true, banned: [] }); }
   });
+  app.get("/data/guests/:uid", async (req, res) => {
+    if (!checkAuth(req, res)) return;
+    if (!global.db) return res.status(503).json({ ok: false, error: "Database not connected." });
+    const uid = String(req.params.uid);
+    try {
+      const doc = await global.db.db(GUEST_COLLECTION).findOne({ uid });
+      if (!doc) return res.status(404).json({ ok: false, error: "Account not found." });
+      const premium = await global.db.db(PREMIUM_COLLECTION).findOne({ uid });
+      return res.json({
+        ok: true,
+        account: {
+          uid,
+          displayName: doc.displayName || "",
+          bio: doc.bio || "",
+          birthdate: doc.birthdate || null,
+          hasAvatar: !!doc.avatar,
+          createdAt: doc.createdAt || null,
+          passwordResetAt: doc.passwordResetAt || null,
+          role: getGuestUserRole(uid),
+          premiumActive: !!(premium && premium.active && (!premium.expiresAt || Date.now() < premium.expiresAt)),
+          premiumExpiresAt: premium?.expiresAt || null,
+        },
+      });
+    } catch (e) { return res.status(500).json({ ok: false, error: e.message }); }
+  });
+  app.post("/data/guests/:uid/reset-password", async (req, res) => {
+    if (!checkAuth(req, res)) return;
+    if (!global.db) return res.status(503).json({ ok: false, error: "Database not connected." });
+    const uid = String(req.params.uid);
+    const { newPassword } = req.body || {};
+    if (!newPassword || String(newPassword).length < 6)
+      return res.status(400).json({ ok: false, error: "Password must be at least 6 characters." });
+    try {
+      const existing = await getGuestAccount(uid);
+      if (!existing) return res.status(404).json({ ok: false, error: "Account not found." });
+      const hash = hashPassword(String(newPassword));
+      await global.db.db(GUEST_COLLECTION).updateOne(
+        { uid },
+        { $set: { passwordHash: hash, passwordResetAt: Date.now() } }
+      );
+      guestAccounts.set(uid, { passwordHash: hash });
+      // log the user out everywhere
+      for (const [tok, d] of guestSessions) if (d.uid === uid) guestSessions.delete(tok);
+      global.log.info("[GUEST] Admin reset password for UID " + uid);
+      return res.json({ ok: true });
+    } catch (e) { return res.status(500).json({ ok: false, error: e.message }); }
+  });
 
   app.delete("/data/banned/:userID", async (req, res) => {
     if (!checkAuth(req, res)) return;
