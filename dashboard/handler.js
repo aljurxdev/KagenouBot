@@ -52,7 +52,16 @@ async function sendToThreads(api, threadIDs, message) {
 module.exports = function mountDashboard(app) {
   const express = require("express");
   app.use(express.json({ limit: "20mb" }));
-
+  const UPLOAD_DIR = process.env.UPLOAD_DIR || path.join(__dirname, "uploads");
+fs.ensureDirSync(UPLOAD_DIR);
+const MAX_UPLOAD = 15 * 1024 * 1024;
+const MEDIA_EXT = { "image/jpeg":"jpg","image/png":"png","image/gif":"gif","image/webp":"webp","video/mp4":"mp4","video/webm":"webm","video/quicktime":"mov" };
+const serializeItem = i => ({
+  id: i.id, uid: i.uid, mediaType: i.mediaType, mime: i.mime,
+  caption: i.caption, createdAt: i.createdAt,
+  url: i.file ? "/social/media/" + i.file : null,
+  dataUrl: i.dataUrl || null 
+});
   app.get("/", (req, res) => res.sendFile(path.join(__dirname, "index.html")));
   app.get("/admin", (req, res) => res.sendFile(path.join(__dirname, "index.html")));
   app.get("/guest", (req, res) => res.sendFile(path.join(__dirname, "index.html")));
@@ -1002,50 +1011,61 @@ markAsRead(threadID, cb)     { if (typeof cb === "function") cb(null); return Pr
       const profile = await getProfile(req.params.uid);
       const userRole = getGuestUserRole(req.params.uid);
       const collections = await global.db.db("collections").find({ uid: req.params.uid }).sort({ createdAt: -1 }).toArray();
-      return res.json({ ok: true, profile, userRole, collections, isSelf: session.uid === req.params.uid });
+      return res.json({ ok: true, profile, userRole, collections: collections.map(serializeItem), isSelf: session.uid === req.params.uid });
     } catch (e) { return res.status(500).json({ ok: false, error: e.message }); }
   });
+app.get("/social/collection", async (req, res) => {
+  const session = guestAuth(req, res); if (!session) return;
+  if (!dbRequired(res)) return;
+  try {
+    const items = await global.db.db("collections").find({ uid: session.uid }).sort({ createdAt: -1 }).toArray();
+    return res.json({ ok: true, items: items.map(serializeItem) });
+  } catch (e) { return res.status(500).json({ ok: false, error: e.message }); }
+});
 
-  app.get("/social/collection", async (req, res) => {
-    const session = guestAuth(req, res); if (!session) return;
-    if (!dbRequired(res)) return;
-    try {
-      const items = await global.db.db("collections").find({ uid: session.uid }).sort({ createdAt: -1 }).toArray();
-      return res.json({ ok: true, items });
-    } catch (e) { return res.status(500).json({ ok: false, error: e.message }); }
-  });
+app.post("/social/collection", express.raw({ type: () => true, limit: MAX_UPLOAD }), async (req, res) => {
+  const session = guestAuth(req, res); if (!session) return;
+  if (!dbRequired(res)) return;
+  const mime = String(req.headers["content-type"] || "").split(";")[0].trim().toLowerCase();
+  const ext = MEDIA_EXT[mime];
+  if (!ext) return res.status(400).json({ ok: false, error: "Only images, videos or GIFs allowed." });
+  const buf = req.body;
+  if (!Buffer.isBuffer(buf) || !buf.length) return res.status(400).json({ ok: false, error: "Empty file." });
+  if (buf.length > MAX_UPLOAD) return res.status(413).json({ ok: false, error: "File too large. Max 25MB." });
+  let caption = "";
+  try { caption = decodeURIComponent(req.headers["x-caption"] || ""); } catch {}
+  try {
+    const id = newId();
+    const file = id + "." + ext;
+    await fs.writeFile(path.join(UPLOAD_DIR, file), buf);
+    await global.db.db("collections").insertOne({
+      id, uid: session.uid, file, mime,
+      mediaType: mime.startsWith("video/") ? "video" : "image",
+      caption: caption.slice(0, 300), createdAt: Date.now()
+    });
+    return res.json({ ok: true, id });
+  } catch (e) { return res.status(500).json({ ok: false, error: e.message }); }
+});
 
-  app.post("/social/collection", async (req, res) => {
-    const session = guestAuth(req, res); if (!session) return;
-    if (!dbRequired(res)) return;
-    const { mediaData, mediaType, mime, caption } = req.body || {};
-    if (!mediaData) return res.status(400).json({ ok: false, error: "mediaData required." });
-    if (!["image","video"].includes(mediaType)) return res.status(400).json({ ok: false, error: "mediaType must be image or video." });
-    if (Buffer.byteLength(mediaData, "base64") > 10 * 1024 * 1024) return res.status(413).json({ ok: false, error: "File too large. Max 10MB." });
-    try {
-      const id = newId();
-      const finalMime = mime || (mediaType === "video" ? "video/mp4" : "image/jpeg");
-      const dataUrl = `data:${finalMime};base64,${mediaData}`;
-      await global.db.db("collections").insertOne({
-        id, uid: session.uid, mediaType, mime: finalMime, dataUrl,
-        caption: (caption || "").slice(0, 300),
-        createdAt: Date.now()
-      });
-      return res.json({ ok: true, id });
-    } catch (e) { return res.status(500).json({ ok: false, error: e.message }); }
-  });
+app.get("/social/media/:file", (req, res) => {
+  const p = path.join(UPLOAD_DIR, path.basename(req.params.file));
+  if (!fs.existsSync(p)) return res.status(404).end();
+  res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+  res.sendFile(p); // supports video seeking
+});
 
-  app.delete("/social/collection/:id", async (req, res) => {
-    const session = guestAuth(req, res); if (!session) return;
-    if (!dbRequired(res)) return;
-    try {
-      const item = await global.db.db("collections").findOne({ id: req.params.id });
-      if (!item) return res.status(404).json({ ok: false, error: "Not found." });
-      if (item.uid !== session.uid) return res.status(403).json({ ok: false, error: "Not yours." });
-      await global.db.db("collections").deleteOne({ id: req.params.id });
-      return res.json({ ok: true });
-    } catch (e) { return res.status(500).json({ ok: false, error: e.message }); }
-  });
+app.delete("/social/collection/:id", async (req, res) => {
+  const session = guestAuth(req, res); if (!session) return;
+  if (!dbRequired(res)) return;
+  try {
+    const item = await global.db.db("collections").findOne({ id: req.params.id });
+    if (!item) return res.status(404).json({ ok: false, error: "Not found." });
+    if (item.uid !== session.uid) return res.status(403).json({ ok: false, error: "Not yours." });
+    if (item.file) fs.remove(path.join(UPLOAD_DIR, path.basename(item.file))).catch(() => {});
+    await global.db.db("collections").deleteOne({ id: req.params.id });
+    return res.json({ ok: true });
+  } catch (e) { return res.status(500).json({ ok: false, error: e.message }); }
+});
 
   function newId() { return crypto.randomBytes(12).toString('hex'); }
 
