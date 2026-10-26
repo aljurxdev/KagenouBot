@@ -24,17 +24,22 @@
 - Manage bot settings
 - Enable / disable features
 
-# **Introducing The latest KagenouBot Version 12.0.0.0**
+# 👤 RandomTalksy/KagenouBot Hub - <img src="https://img.shields.io/badge/NEW-brightgreen" />
+- Chat with random stranger accounts
+- New Followers, Friend, Add Friend System to profile section
+- 
+
+# **Introducing The latest KagenouBot Dashboard Version 12.2.26.78**
 
 ![Version](https://img.shields.io/badge/version-12.0.0-blue)
 
 - We're excited to officially introduce the latest KagenouBot a full-featured bot management system built for control, simplicity, and community.
-Whether you're an admin or a guest, Shadow Garden (Dashboard) gives you a powerful and clean experience right from your browser.
+Whether you're an admin or a guest, ~~Shadow Garden~~ Mitsugoshi (Dashboard) gives you a powerful and clean experience right from your browser.
 
 # 🛡️ Admin Dashboard
 - Full control at your fingertips. Monitor your bot in real time uptime, commands loaded, users tracked, and database status. Send targeted messages to specific groups or broadcast to all at once. Manage banned users, reload commands on the fly, and toggle maintenance mode without restarting anything.
 
-# 👤 Guest Mode
+# 👤 ~~Guest Mode~~ Mitsugoshi
 - No access? No problem. Guests can register with their Facebook UID, log in, and interact with the bot directly through a clean chat interface. Browse available commands, send inputs, react to responses, and reply to messages — all in real time.
 
 # 💬 Group Chat System
