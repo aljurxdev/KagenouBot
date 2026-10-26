@@ -27,7 +27,6 @@
 # 👤 RandomTalksy/KagenouBot Hub - <img src="https://img.shields.io/badge/NEW-brightgreen" />
 - Chat with random stranger accounts
 - New Followers, Friend, Add Friend System to profile section
-- 
 
 # **Introducing The latest KagenouBot Dashboard Version 12.2.26.78**
 
