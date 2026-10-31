@@ -223,6 +223,8 @@ of this software to use, copy, modify, distribute, and publish as needed.
 
 ![snake](https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg)
 
+## Project Diagram
+[![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/aljurthecoder01/kagenoubot?utm_source=readme&utm_medium=badge)
 
 ## NMAP PROJECT
 ```mermaid
