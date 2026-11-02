@@ -1,0 +1,378 @@
+{
+  "DEV_UID": "100000245386302",
+  "VERSION": "12.2.61",
+  "DEV_STATS": 99000000000,
+  "EXP_PER_LEVEL": 1500,
+  "LEVEL_STAT_BONUS": 0.01,
+  "STAR_BONUS": 0.12,
+  "STAR_MAX": 6,
+  "BOND_MAX_LEVEL": 20,
+  "BOND_EXP_PER_LEVEL": 100,
+  "BOND_STAT_PER_LEVEL": 0.02,
+  "PRESTIGE_LEVEL_REQ": 100,
+  "PRESTIGE_BONUS": 0.1,
+  "PRESTIGE_MAX": 20,
+  "RARITY_ORDER": [
+    "R",
+    "SR",
+    "SSR",
+    "SSSR",
+    "XXSR"
+  ],
+  "RARITY_ICON": {
+    "R": "⚪",
+    "SR": "🟢",
+    "SSR": "🔵",
+    "SSSR": "🟣",
+    "XXSR": "🌌"
+  },
+  "SUMMON_COST_GEMS": 30,
+  "MULTI_SUMMON_COUNT": 10,
+  "MULTI_SUMMON_COST_GEMS": 270,
+  "SUMMON_RATES": {
+    "XXSR": 0.5,
+    "SSSR": 3.5,
+    "SSR": 15,
+    "SR": 45
+  },
+  "PITY_THRESHOLD": 80,
+  "BANNER_RATE_UP": 0.5,
+  "DUPE_COINS": {
+    "R": 200,
+    "SR": 800,
+    "SSR": 3000,
+    "SSSR": 12000,
+    "XXSR": 50000
+  },
+  "DISMISS_VALUE": {
+    "R": 100,
+    "SR": 400,
+    "SSR": 1500,
+    "SSSR": 6000,
+    "XXSR": 25000
+  },
+  "AWAKEN_COST": [
+    {
+      "coins": 2000,
+      "gems": 10
+    },
+    {
+      "coins": 6000,
+      "gems": 30
+    },
+    {
+      "coins": 15000,
+      "gems": 60
+    },
+    {
+      "coins": 40000,
+      "gems": 120
+    },
+    {
+      "coins": 100000,
+      "gems": 250
+    }
+  ],
+  "STARTING": {
+    "coins": 500,
+    "gems": 60
+  },
+  "NAME_MIN": 2,
+  "NAME_MAX": 30,
+  "BIO_MAX": 100,
+  "CHANGENAME_COST": 1000,
+  "CLAN_CHANGE_COST": 20000,
+  "COOLDOWNS": {
+    "battle": 15,
+    "hunt": 25,
+    "ambush": 45,
+    "boss": 120,
+    "duel": 60,
+    "spar": 30,
+    "arena": 90,
+    "bounty": 300,
+    "authority": 60,
+    "explore": 45,
+    "story": 60,
+    "bondTrain": 1800,
+    "worldboss": 1800
+  },
+  "CHARGE_PER_WIN": 8,
+  "WIN_ATK_GAIN": 3,
+  "DROP_BASE": 0.3,
+  "DUEL_REWARD": {
+    "coins": 400,
+    "exp": 300
+  },
+  "DAILY": {
+    "coins": 800,
+    "gems": 20,
+    "exp": 500,
+    "streakCoins": 150,
+    "streakCap": 30
+  },
+  "WEEKLY": {
+    "coins": 6000,
+    "gems": 150,
+    "exp": 4000
+  },
+  "STANCES": {
+    "offense": {
+      "atk": 1.2,
+      "def": 0.85
+    },
+    "balanced": {
+      "atk": 1.0,
+      "def": 1.0
+    },
+    "defense": {
+      "atk": 0.85,
+      "def": 1.25
+    }
+  },
+  "AUTHORITY_MULT": {
+    "R": 2,
+    "SR": 2.5,
+    "SSR": 3.5,
+    "SSSR": 5,
+    "XXSR": 8
+  },
+  "MAX_EQUIPPED_SKILLS": 4,
+  "SKILL_RESET_REFUND": 0.5,
+  "WEAPON_MAX_UPGRADE": 10,
+  "UPGRADE_COIN_BASE": 400,
+  "WEAPON_UPGRADE_BONUS": 0.1,
+  "SELL_RATIO": 0.4,
+  "ARENA": {
+    "START_RATING": 1000,
+    "WIN": 25,
+    "LOSS": 15,
+    "GEM_CHANCE": 0.2
+  },
+  "RAID": {
+    "MAX": 6,
+    "DURATION": 300,
+    "REWARD": {
+      "coins": 3000,
+      "exp": 2500,
+      "gems": 25
+    }
+  },
+  "TOURNEY": {
+    "MAX": 8,
+    "DURATION": 300,
+    "WINNER": {
+      "coins": 5000,
+      "exp": 4000,
+      "gems": 40
+    },
+    "LOSER": {
+      "exp": 600
+    }
+  },
+  "SURGE": {
+    "DURATION": 600,
+    "REWARDS": {
+      "coins": 10000,
+      "exp": 5000,
+      "gems": 60
+    }
+  },
+  "WORLDBOSS": {
+    "BASE_HP": 250000,
+    "DAMAGE_MULT": 25,
+    "HP_GROWTH": 1.25,
+    "RESPAWN_SECS": 3600,
+    "KILL_POOL": {
+      "coins": 50000,
+      "exp": 40000,
+      "gems": 300
+    },
+    "KILLER_BONUS": {
+      "coins": 10000,
+      "gems": 50
+    }
+  },
+  "HOUSE": {
+    "CREATE_COST": 10000,
+    "MAX_MEMBERS": 30,
+    "RENAME_COST": 5000,
+    "NAME_MIN": 3,
+    "NAME_MAX": 24
+  },
+  "GAMBLE_MAX_BET": 100000,
+  "GAME_CD": 10,
+  "SLOTS": {
+    "SYMBOLS": [
+      "🩸",
+      "🌙",
+      "⚔️",
+      "🌹",
+      "👑"
+    ],
+    "THREE": {
+      "🩸": 3,
+      "🌙": 4,
+      "⚔️": 5,
+      "🌹": 8,
+      "👑": 20
+    },
+    "TWO": 1.5
+  },
+  "WHEEL": [
+    {
+      "label": "💀 Bust",
+      "mult": 0,
+      "weight": 25
+    },
+    {
+      "label": "🔸 Half",
+      "mult": 0.5,
+      "weight": 25
+    },
+    {
+      "label": "🔹 Even",
+      "mult": 1,
+      "weight": 20
+    },
+    {
+      "label": "✨ Double",
+      "mult": 2,
+      "weight": 15
+    },
+    {
+      "label": "🌟 Triple",
+      "mult": 3,
+      "weight": 10
+    },
+    {
+      "label": "👑 Grand",
+      "mult": 6,
+      "weight": 4
+    },
+    {
+      "label": "🌌 Jackpot",
+      "mult": 15,
+      "weight": 1
+    }
+  ],
+  "LOTTERY": {
+    "COST": 500,
+    "PRIZES": [
+      {
+        "label": "Nothing",
+        "coins": 0,
+        "gems": 0,
+        "weight": 70
+      },
+      {
+        "label": "Small Prize",
+        "coins": 1000,
+        "gems": 0,
+        "weight": 20
+      },
+      {
+        "label": "Medium Prize",
+        "coins": 5000,
+        "gems": 5,
+        "weight": 7
+      },
+      {
+        "label": "Big Prize",
+        "coins": 20000,
+        "gems": 20,
+        "weight": 2.5
+      },
+      {
+        "label": "GRAND PRIZE",
+        "coins": 100000,
+        "gems": 100,
+        "weight": 0.5
+      }
+    ]
+  },
+  "TRIVIA": {
+    "TIMEOUT": 60,
+    "REWARD": {
+      "coins": 600,
+      "exp": 400
+    }
+  },
+  "MARKET": {
+    "FEE": 0.05,
+    "MAX_LISTINGS": 5,
+    "MIN_PRICE": 1
+  },
+  "PAY": {
+    "MIN": 1,
+    "FEE": 0.02
+  },
+  "QUESTS_PER_DAY": 4,
+  "QUEST_REROLL_GEMS": 10,
+  "SOUL": {
+    "MAX_LEVEL": 20,
+    "MAX_STARS": 3,
+    "STAT_PER_LEVEL": 0.08,
+    "STAR_MULT": 0.25,
+    "FORGE": {
+      "coins": 5000,
+      "mats": {
+        "noble_essence": 5,
+        "soul_shard": 10
+      }
+    },
+    "UPGRADE_COIN_BASE": 800,
+    "EVOLVE_MATS": {
+      "noble_essence": 10,
+      "ancient_relic": 5
+    }
+  },
+  "PRESTIGE_SHOP": [
+    {
+      "id": "PP1",
+      "name": "200 Soul Crystals",
+      "cost": 1,
+      "gems": 200
+    },
+    {
+      "id": "PP2",
+      "name": "50,000 Gold",
+      "cost": 1,
+      "coins": 50000
+    },
+    {
+      "id": "PP3",
+      "name": "Noble Essence x20",
+      "cost": 2,
+      "mat": "noble_essence",
+      "qty": 20
+    },
+    {
+      "id": "PP4",
+      "name": "Permanent +100 Trained ATK/DEF/MANA/LUCK",
+      "cost": 3,
+      "trained": 100
+    },
+    {
+      "id": "PP5",
+      "name": "Ancient Relic x15",
+      "cost": 2,
+      "mat": "ancient_relic",
+      "qty": 15
+    }
+  ],
+  "LEADERBOARD_SIZE": 10,
+  "PAGE_SIZE": 25,
+  "TIPS": [
+    "Use /noblesse daily and /noblesse weekly every reset for free Soul Crystals.",
+    "Switch /noblesse stance defense before bosses when your DEF is high.",
+    "Ramen gives a power buff for a short time. Rai approves.",
+    "Equip up to 4 skills with /noblesse skill equip <ID>.",
+    "Soul Weapons only give bonuses while bound.",
+    "Raise bond with /noblesse bond train for permanent stat boosts.",
+    "Use /noblesse market list to find cheap materials from other players.",
+    "Prestige at level 100 for a permanent stat multiplier.",
+    "Authority needs 100% charge. Win fights to fill it.",
+    "Join a House for shared power rankings with friends."
+  ]
+}
