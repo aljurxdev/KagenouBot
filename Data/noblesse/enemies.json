@@ -1,0 +1,450 @@
+[
+  {
+    "id": "union_1",
+    "name": "Union Foot Soldier",
+    "tag": "union",
+    "atk": 200,
+    "def": 140,
+    "exp": 160,
+    "coins": 220,
+    "drop": "blood_vial"
+  },
+  {
+    "id": "union_2",
+    "name": "Union Strike Team",
+    "tag": "union",
+    "atk": 360,
+    "def": 251,
+    "exp": 256,
+    "coins": 348,
+    "drop": "soul_shard"
+  },
+  {
+    "id": "union_3",
+    "name": "Union Squad Leader",
+    "tag": "union",
+    "atk": 640,
+    "def": 448,
+    "exp": 424,
+    "coins": 572,
+    "drop": "mana_crystal"
+  },
+  {
+    "id": "union_4",
+    "name": "Union Commander",
+    "tag": "union",
+    "atk": 1200,
+    "def": 840,
+    "exp": 760,
+    "coins": 1020,
+    "drop": "herb_bundle"
+  },
+  {
+    "id": "wolf_1",
+    "name": "Wolf Cub",
+    "tag": "wolf",
+    "atk": 350,
+    "def": 244,
+    "exp": 250,
+    "coins": 340,
+    "drop": "ancient_relic"
+  },
+  {
+    "id": "wolf_2",
+    "name": "Wolf Pack Member",
+    "tag": "wolf",
+    "atk": 630,
+    "def": 441,
+    "exp": 418,
+    "coins": 564,
+    "drop": "steel_scrap"
+  },
+  {
+    "id": "wolf_3",
+    "name": "Wolf Alpha",
+    "tag": "wolf",
+    "atk": 1120,
+    "def": 784,
+    "exp": 712,
+    "coins": 956,
+    "drop": "union_circuit"
+  },
+  {
+    "id": "wolf_4",
+    "name": "Wolf Warlord",
+    "tag": "wolf",
+    "atk": 2100,
+    "def": 1470,
+    "exp": 1300,
+    "coins": 1740,
+    "drop": "wolf_fang"
+  },
+  {
+    "id": "legion_1",
+    "name": "Legion Recruit",
+    "tag": "legion",
+    "atk": 500,
+    "def": 350,
+    "exp": 340,
+    "coins": 460,
+    "drop": "legion_core"
+  },
+  {
+    "id": "legion_2",
+    "name": "Legion Lancer",
+    "tag": "legion",
+    "atk": 900,
+    "def": 630,
+    "exp": 580,
+    "coins": 780,
+    "drop": "noble_essence"
+  },
+  {
+    "id": "legion_3",
+    "name": "Legion Knight",
+    "tag": "legion",
+    "atk": 1600,
+    "def": 1120,
+    "exp": 1000,
+    "coins": 1340,
+    "drop": "obsidian_ore"
+  },
+  {
+    "id": "legion_4",
+    "name": "Legion Overseer",
+    "tag": "legion",
+    "atk": 3000,
+    "def": 2100,
+    "exp": 1840,
+    "coins": 2460,
+    "drop": "star_dust"
+  },
+  {
+    "id": "human_1",
+    "name": "Street Thug",
+    "tag": "human",
+    "atk": 120,
+    "def": 84,
+    "exp": 112,
+    "coins": 156,
+    "drop": "blood_vial"
+  },
+  {
+    "id": "human_2",
+    "name": "Gang Enforcer",
+    "tag": "human",
+    "atk": 216,
+    "def": 151,
+    "exp": 169,
+    "coins": 232,
+    "drop": "soul_shard"
+  },
+  {
+    "id": "human_3",
+    "name": "Armed Mercenary",
+    "tag": "human",
+    "atk": 384,
+    "def": 268,
+    "exp": 270,
+    "coins": 367,
+    "drop": "mana_crystal"
+  },
+  {
+    "id": "human_4",
+    "name": "Syndicate Boss",
+    "tag": "human",
+    "atk": 720,
+    "def": 503,
+    "exp": 472,
+    "coins": 636,
+    "drop": "herb_bundle"
+  },
+  {
+    "id": "beast_1",
+    "name": "Feral Hound",
+    "tag": "beast",
+    "atk": 300,
+    "def": 210,
+    "exp": 220,
+    "coins": 300,
+    "drop": "ancient_relic"
+  },
+  {
+    "id": "beast_2",
+    "name": "Shadow Panther",
+    "tag": "beast",
+    "atk": 540,
+    "def": 378,
+    "exp": 364,
+    "coins": 492,
+    "drop": "steel_scrap"
+  },
+  {
+    "id": "beast_3",
+    "name": "Mutated Bear",
+    "tag": "beast",
+    "atk": 960,
+    "def": 672,
+    "exp": 616,
+    "coins": 828,
+    "drop": "union_circuit"
+  },
+  {
+    "id": "beast_4",
+    "name": "Ancient Chimera",
+    "tag": "beast",
+    "atk": 1800,
+    "def": 1260,
+    "exp": 1120,
+    "coins": 1500,
+    "drop": "wolf_fang"
+  },
+  {
+    "id": "noble_1",
+    "name": "Rogue Noble",
+    "tag": "noble",
+    "atk": 800,
+    "def": 560,
+    "exp": 520,
+    "coins": 700,
+    "drop": "legion_core"
+  },
+  {
+    "id": "noble_2",
+    "name": "Fallen Noble",
+    "tag": "noble",
+    "atk": 1440,
+    "def": 1007,
+    "exp": 904,
+    "coins": 1212,
+    "drop": "noble_essence"
+  },
+  {
+    "id": "noble_3",
+    "name": "Cursed Noble",
+    "tag": "noble",
+    "atk": 2560,
+    "def": 1792,
+    "exp": 1576,
+    "coins": 2108,
+    "drop": "obsidian_ore"
+  },
+  {
+    "id": "noble_4",
+    "name": "Dark Noble Lord",
+    "tag": "noble",
+    "atk": 4800,
+    "def": 3360,
+    "exp": 2920,
+    "coins": 3900,
+    "drop": "star_dust"
+  },
+  {
+    "id": "experiment_1",
+    "name": "Failed Experiment",
+    "tag": "experiment",
+    "atk": 1200,
+    "def": 840,
+    "exp": 760,
+    "coins": 1020,
+    "drop": "blood_vial"
+  },
+  {
+    "id": "experiment_2",
+    "name": "Enhanced Subject",
+    "tag": "experiment",
+    "atk": 2160,
+    "def": 1512,
+    "exp": 1336,
+    "coins": 1788,
+    "drop": "soul_shard"
+  },
+  {
+    "id": "experiment_3",
+    "name": "Berserk Subject",
+    "tag": "experiment",
+    "atk": 3840,
+    "def": 2688,
+    "exp": 2344,
+    "coins": 3132,
+    "drop": "mana_crystal"
+  },
+  {
+    "id": "experiment_4",
+    "name": "Prime Experiment",
+    "tag": "experiment",
+    "atk": 7200,
+    "def": 5040,
+    "exp": 4360,
+    "coins": 5820,
+    "drop": "herb_bundle"
+  },
+  {
+    "id": "elite_1",
+    "name": "Elite Assassin",
+    "tag": "elite",
+    "atk": 2500,
+    "def": 1750,
+    "exp": 1540,
+    "coins": 2060,
+    "drop": "ancient_relic"
+  },
+  {
+    "id": "elite_2",
+    "name": "Elite Hunter",
+    "tag": "elite",
+    "atk": 4500,
+    "def": 3150,
+    "exp": 2740,
+    "coins": 3660,
+    "drop": "steel_scrap"
+  },
+  {
+    "id": "elite_3",
+    "name": "Elite Executioner",
+    "tag": "elite",
+    "atk": 8000,
+    "def": 5600,
+    "exp": 4840,
+    "coins": 6460,
+    "drop": "union_circuit"
+  },
+  {
+    "id": "elite_4",
+    "name": "Elite Warden",
+    "tag": "elite",
+    "atk": 15000,
+    "def": 10500,
+    "exp": 9040,
+    "coins": 12060,
+    "drop": "wolf_fang"
+  },
+  {
+    "id": "nightmare_1",
+    "name": "Nightmare Wraith",
+    "tag": "nightmare",
+    "atk": 6000,
+    "def": 4200,
+    "exp": 3640,
+    "coins": 4860,
+    "drop": "legion_core"
+  },
+  {
+    "id": "nightmare_2",
+    "name": "Nightmare Stalker",
+    "tag": "nightmare",
+    "atk": 10800,
+    "def": 7559,
+    "exp": 6520,
+    "coins": 8700,
+    "drop": "noble_essence"
+  },
+  {
+    "id": "nightmare_3",
+    "name": "Nightmare Titan",
+    "tag": "nightmare",
+    "atk": 19200,
+    "def": 13440,
+    "exp": 11560,
+    "coins": 15420,
+    "drop": "obsidian_ore"
+  },
+  {
+    "id": "nightmare_4",
+    "name": "Nightmare Sovereign",
+    "tag": "nightmare",
+    "atk": 36000,
+    "def": 25200,
+    "exp": 21640,
+    "coins": 28860,
+    "drop": "star_dust"
+  },
+  {
+    "id": "boss_1",
+    "name": "The Renegade Lord",
+    "tag": "boss",
+    "boss": true,
+    "atk": 8000,
+    "def": 6400,
+    "exp": 4500,
+    "coins": 6400,
+    "drop": "noble_essence"
+  },
+  {
+    "id": "boss_2",
+    "name": "Legion Commander",
+    "tag": "boss",
+    "boss": true,
+    "atk": 17600,
+    "def": 14080,
+    "exp": 9300,
+    "coins": 13120,
+    "drop": "star_dust"
+  },
+  {
+    "id": "boss_3",
+    "name": "Wolf King",
+    "tag": "boss",
+    "boss": true,
+    "atk": 38720,
+    "def": 30976,
+    "exp": 19860,
+    "coins": 27904,
+    "drop": "ancient_relic"
+  },
+  {
+    "id": "boss_4",
+    "name": "Union Grand Master",
+    "tag": "boss",
+    "boss": true,
+    "atk": 85184,
+    "def": 68147,
+    "exp": 43092,
+    "coins": 60428,
+    "drop": "soul_shard"
+  },
+  {
+    "id": "boss_5",
+    "name": "Dark Spear Phantom",
+    "tag": "boss",
+    "boss": true,
+    "atk": 187404,
+    "def": 149923,
+    "exp": 94202,
+    "coins": 131982,
+    "drop": "noble_essence"
+  },
+  {
+    "id": "boss_6",
+    "name": "Soul Weapon Revenant",
+    "tag": "boss",
+    "boss": true,
+    "atk": 412290,
+    "def": 329832,
+    "exp": 206645,
+    "coins": 289403,
+    "drop": "star_dust"
+  },
+  {
+    "id": "boss_7",
+    "name": "Ancient Nightmare",
+    "tag": "boss",
+    "boss": true,
+    "atk": 907039,
+    "def": 725631,
+    "exp": 454019,
+    "coins": 635727,
+    "drop": "ancient_relic"
+  },
+  {
+    "id": "boss_8",
+    "name": "Fallen Noble Lord",
+    "tag": "boss",
+    "boss": true,
+    "atk": 1995486,
+    "def": 1596388,
+    "exp": 998243,
+    "coins": 1397640,
+    "drop": "soul_shard"
+  }
+]

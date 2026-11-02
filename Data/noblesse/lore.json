@@ -1,0 +1,223 @@
+{
+  "categories": {
+    "characters": [
+      {
+        "t": "Cadis Etrama Di Raizel",
+        "d": "The Noblesse. After 820 years of slumber he wakes in the modern world and quietly begins a new life as a student."
+      },
+      {
+        "t": "Frankenstein",
+        "d": "Rai's loyal servant and a gifted scientist-warrior who builds Rai a new life, including a place at Ye Ran High School."
+      },
+      {
+        "t": "M-21",
+        "d": "A devoted ally who stands by Rai and the people he protects."
+      },
+      {
+        "t": "Seira J. Loyard",
+        "d": "A noble of the Loyard clan whose elegance is matched by her power."
+      },
+      {
+        "t": "Rael Kertia",
+        "d": "A noble of the Kertia clan, known for skill and discipline."
+      }
+    ],
+    "nobles": [
+      {
+        "t": "What is a Noble?",
+        "d": "Nobles are long lived beings with extraordinary power who have watched humanity for centuries."
+      },
+      {
+        "t": "The Noblesse",
+        "d": "The title held by the most powerful Noble, ranking above the Lords of the clans."
+      },
+      {
+        "t": "Soul Weapons",
+        "d": "Nobles can bring forth a soul weapon, a physical form of their power."
+      },
+      {
+        "t": "Blood and Mana",
+        "d": "A Noble's strength comes from refined mana that flows through their body."
+      }
+    ],
+    "clans": [
+      {
+        "t": "Kertia",
+        "d": "A clan known for swift and disciplined fighters."
+      },
+      {
+        "t": "Loyard",
+        "d": "A clan known for grace and refined power."
+      },
+      {
+        "t": "Landegre",
+        "d": "A clan known for overwhelming strength."
+      },
+      {
+        "t": "Metiolant",
+        "d": "A clan known for tactical minds."
+      },
+      {
+        "t": "Kerias",
+        "d": "A clan known for relentless resilience."
+      },
+      {
+        "t": "Lukedonia",
+        "d": "A clan known for balance and quiet strength."
+      }
+    ],
+    "union": [
+      {
+        "t": "The Union",
+        "d": "A secretive organization that experiments on humans and pursues power in the shadows."
+      },
+      {
+        "t": "Union Agents",
+        "d": "Trained field operatives equipped with advanced weapons and enhancements."
+      },
+      {
+        "t": "Experiments",
+        "d": "Subjects altered by Union science, often unstable and dangerous."
+      }
+    ],
+    "wolves": [
+      {
+        "t": "Wolves",
+        "d": "Dangerous hunters who stalk the shadows and fight beside or against the Nobles."
+      },
+      {
+        "t": "Wolf Packs",
+        "d": "Hunters who move in packs and prize loyalty to their leader."
+      }
+    ],
+    "legion": [
+      {
+        "t": "The Legion",
+        "d": "A militant faction that fights to enforce its own order."
+      },
+      {
+        "t": "Legion Soldiers",
+        "d": "Disciplined fighters who trade individual glory for strict order."
+      }
+    ],
+    "lords": [
+      {
+        "t": "Lords of the Clans",
+        "d": "Each major clan is led by a Lord, a Noble of exceptional strength."
+      },
+      {
+        "t": "Regis K. Landegre",
+        "d": "Lord of Landegre, known for overwhelming force."
+      },
+      {
+        "t": "Gejutel Metiolant",
+        "d": "Lord of Metiolant, known for cunning and calculation."
+      },
+      {
+        "t": "Ragar Kerias",
+        "d": "Lord of Kerias, known for relentless drive."
+      }
+    ],
+    "weapons": [
+      {
+        "t": "Dark Spear",
+        "d": "A spear of concentrated dark power, famously wielded by Frankenstein."
+      },
+      {
+        "t": "Soul Weapons",
+        "d": "Each Noble's soul weapon reflects their will, from blades to lances to bows."
+      },
+      {
+        "t": "Union Weapons",
+        "d": "Mass produced guns and enhancement gear used by Union soldiers."
+      }
+    ],
+    "authority": [
+      {
+        "t": "Noble Authority",
+        "d": "A Noble's authority is the force of their will made real, bending the battlefield to their command."
+      },
+      {
+        "t": "Seal and Limiter",
+        "d": "Great power is often restrained by a limiter. Breaking it unleashes a Noble's true strength."
+      }
+    ],
+    "events": [
+      {
+        "t": "The Awakening",
+        "d": "Rai wakes after 820 years of slumber and begins a quiet life in Korea."
+      },
+      {
+        "t": "Ye Ran High School",
+        "d": "Rai enrolls and befriends classmates while threats gather in the dark."
+      },
+      {
+        "t": "Clash with the Union",
+        "d": "The Union's schemes bring conflict to Rai's new home."
+      }
+    ],
+    "timeline": [
+      {
+        "t": "Ancient Era",
+        "d": "The Nobles rule from the shadows, guided by the Noblesse."
+      },
+      {
+        "t": "820 Years of Slumber",
+        "d": "Rai sleeps while the world changes without him."
+      },
+      {
+        "t": "Modern Day",
+        "d": "Rai awakens and starts over as a student."
+      }
+    ],
+    "locations": [
+      {
+        "t": "Ye Ran High School",
+        "d": "The school where Rai enrolls after waking."
+      },
+      {
+        "t": "Noble Mansion",
+        "d": "A secluded estate tied to noble history."
+      },
+      {
+        "t": "Union Outposts",
+        "d": "Hidden bases where Union research and operations take place."
+      },
+      {
+        "t": "Ramen Shop",
+        "d": "The Noblesse's favorite place to eat."
+      }
+    ]
+  },
+  "facts": [
+    "Rai slept for 820 years before waking in the modern world.",
+    "Rai's love of ramen is legendary.",
+    "Frankenstein is Rai's loyal servant and builds his modern life.",
+    "Ye Ran High School is where Rai becomes a student.",
+    "The Dark Spear is a signature weapon of Frankenstein.",
+    "Noble clans are led by powerful Lords.",
+    "The Noblesse ranks above the Lords.",
+    "Soul weapons are physical forms of a Noble's will.",
+    "The Union experiments on humans and Nobles alike."
+  ],
+  "proverbs": [
+    "A quiet noble is the most dangerous one.",
+    "Power unspoken needs no announcement.",
+    "Eighty years is a blink; eight hundred is a promise.",
+    "The humble bowl of ramen outlasts every empire.",
+    "A servant's loyalty is the sharpest spear.",
+    "Seals are only promises waiting to be broken."
+  ],
+  "bondStories": [
+    "Level 2: Your partner shares a quiet meal with you and says little.",
+    "Level 4: You train together before dawn and learn each other's rhythm.",
+    "Level 6: A rare smile appears when you win a hard fight.",
+    "Level 8: You share a secret about the past and trust grows.",
+    "Level 10: Your partner stands between you and danger without hesitation.",
+    "Level 12: The two of you finish each other's attacks.",
+    "Level 14: Your partner entrusts you with an old relic.",
+    "Level 16: You see a rare glimpse of what they truly fear.",
+    "Level 18: Your partner vows to protect you at any cost.",
+    "Level 20: Your bond is unbreakable. Your power is truly shared."
+  ]
+}

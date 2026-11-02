@@ -1,0 +1,62 @@
+{
+  "blood_vial": {
+    "name": "Blood Vial Essence",
+    "rarity": "R",
+    "value": 60
+  },
+  "soul_shard": {
+    "name": "Soul Shard",
+    "rarity": "SR",
+    "value": 250
+  },
+  "mana_crystal": {
+    "name": "Mana Crystal",
+    "rarity": "SR",
+    "value": 220
+  },
+  "herb_bundle": {
+    "name": "Healing Herb Bundle",
+    "rarity": "R",
+    "value": 40
+  },
+  "ancient_relic": {
+    "name": "Ancient Relic",
+    "rarity": "SSR",
+    "value": 900
+  },
+  "steel_scrap": {
+    "name": "Steel Scrap",
+    "rarity": "R",
+    "value": 50
+  },
+  "union_circuit": {
+    "name": "Union Circuit",
+    "rarity": "SR",
+    "value": 200
+  },
+  "wolf_fang": {
+    "name": "Wolf Fang",
+    "rarity": "SR",
+    "value": 180
+  },
+  "legion_core": {
+    "name": "Legion Core",
+    "rarity": "SSR",
+    "value": 800
+  },
+  "noble_essence": {
+    "name": "Noble Essence",
+    "rarity": "SSSR",
+    "value": 3000
+  },
+  "obsidian_ore": {
+    "name": "Obsidian Ore",
+    "rarity": "SSR",
+    "value": 700
+  },
+  "star_dust": {
+    "name": "Star Dust",
+    "rarity": "SSSR",
+    "value": 2500
+  }
+}

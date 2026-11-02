@@ -1,0 +1,202 @@
+{
+  "W001": {
+    "id": "W001",
+    "name": "Iron Bat",
+    "atk": 40,
+    "def": 5,
+    "price": 800,
+    "reqLevel": 1,
+    "rarity": "R",
+    "upgradeMat": "steel_scrap"
+  },
+  "W002": {
+    "id": "W002",
+    "name": "Combat Knife",
+    "atk": 75,
+    "def": 8,
+    "price": 1500,
+    "reqLevel": 3,
+    "rarity": "R",
+    "upgradeMat": "steel_scrap"
+  },
+  "W003": {
+    "id": "W003",
+    "name": "Steel Katana",
+    "atk": 130,
+    "def": 15,
+    "price": 3000,
+    "reqLevel": 6,
+    "rarity": "SR",
+    "upgradeMat": "steel_scrap"
+  },
+  "W004": {
+    "id": "W004",
+    "name": "Wolf Fang Dagger",
+    "atk": 190,
+    "def": 10,
+    "price": 5000,
+    "reqLevel": 9,
+    "rarity": "SR",
+    "upgradeMat": "wolf_fang"
+  },
+  "W005": {
+    "id": "W005",
+    "name": "Union Pulse Rifle",
+    "atk": 260,
+    "def": 20,
+    "price": 8000,
+    "reqLevel": 12,
+    "rarity": "SR",
+    "upgradeMat": "union_circuit"
+  },
+  "W006": {
+    "id": "W006",
+    "name": "Noble Rapier",
+    "atk": 360,
+    "def": 30,
+    "price": 13000,
+    "reqLevel": 16,
+    "rarity": "SSR",
+    "upgradeMat": "mana_crystal"
+  },
+  "W007": {
+    "id": "W007",
+    "name": "Legion Blade",
+    "atk": 480,
+    "def": 40,
+    "price": 20000,
+    "reqLevel": 20,
+    "rarity": "SSR",
+    "upgradeMat": "legion_core"
+  },
+  "W008": {
+    "id": "W008",
+    "name": "Crimson Scythe",
+    "atk": 640,
+    "def": 50,
+    "price": 30000,
+    "reqLevel": 25,
+    "rarity": "SSR",
+    "upgradeMat": "blood_vial"
+  },
+  "W009": {
+    "id": "W009",
+    "name": "Loyard Crossbow",
+    "atk": 840,
+    "def": 70,
+    "price": 45000,
+    "reqLevel": 30,
+    "rarity": "SSR",
+    "upgradeMat": "mana_crystal"
+  },
+  "W010": {
+    "id": "W010",
+    "name": "Kertia Lance",
+    "atk": 1100,
+    "def": 90,
+    "price": 65000,
+    "reqLevel": 36,
+    "rarity": "SSSR",
+    "upgradeMat": "noble_essence"
+  },
+  "W011": {
+    "id": "W011",
+    "name": "Metiolant Whip",
+    "atk": 1400,
+    "def": 120,
+    "price": 90000,
+    "reqLevel": 42,
+    "rarity": "SSSR",
+    "upgradeMat": "mana_crystal"
+  },
+  "W012": {
+    "id": "W012",
+    "name": "Kerias Claws",
+    "atk": 1800,
+    "def": 160,
+    "price": 125000,
+    "reqLevel": 50,
+    "rarity": "SSSR",
+    "upgradeMat": "wolf_fang"
+  },
+  "W013": {
+    "id": "W013",
+    "name": "Landegre Greatsword",
+    "atk": 2300,
+    "def": 200,
+    "price": 170000,
+    "reqLevel": 58,
+    "rarity": "SSSR",
+    "upgradeMat": "steel_scrap"
+  },
+  "W014": {
+    "id": "W014",
+    "name": "Lukedonia Halberd",
+    "atk": 2900,
+    "def": 260,
+    "price": 230000,
+    "reqLevel": 66,
+    "rarity": "SSSR",
+    "upgradeMat": "noble_essence"
+  },
+  "W015": {
+    "id": "W015",
+    "name": "Obsidian Edge",
+    "atk": 3700,
+    "def": 330,
+    "price": 310000,
+    "reqLevel": 75,
+    "rarity": "SSSR",
+    "upgradeMat": "obsidian_ore"
+  },
+  "W016": {
+    "id": "W016",
+    "name": "Soulforged Blade",
+    "atk": 4700,
+    "def": 420,
+    "price": 420000,
+    "reqLevel": 85,
+    "rarity": "XXSR",
+    "upgradeMat": "soul_shard"
+  },
+  "W017": {
+    "id": "W017",
+    "name": "Twilight Saber",
+    "atk": 6000,
+    "def": 540,
+    "price": 560000,
+    "reqLevel": 95,
+    "rarity": "XXSR",
+    "upgradeMat": "star_dust"
+  },
+  "W018": {
+    "id": "W018",
+    "name": "Abyss Reaper",
+    "atk": 7800,
+    "def": 700,
+    "price": 750000,
+    "reqLevel": 110,
+    "rarity": "XXSR",
+    "upgradeMat": "ancient_relic"
+  },
+  "W019": {
+    "id": "W019",
+    "name": "Dark Spear",
+    "atk": 10000,
+    "def": 900,
+    "price": 1000000,
+    "reqLevel": 125,
+    "rarity": "XXSR",
+    "upgradeMat": "noble_essence"
+  },
+  "W020": {
+    "id": "W020",
+    "name": "Noblesse Edge",
+    "atk": 14000,
+    "def": 1300,
+    "price": 1500000,
+    "reqLevel": 150,
+    "rarity": "XXSR",
+    "upgradeMat": "star_dust"
+  }
+}

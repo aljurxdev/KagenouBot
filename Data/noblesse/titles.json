@@ -1,0 +1,110 @@
+[
+  {
+    "id": "awakened",
+    "label": "🌙 The Awakened",
+    "metric": "level",
+    "min": 1
+  },
+  {
+    "id": "veteran",
+    "label": "⚔️ Battle Veteran",
+    "metric": "wins",
+    "min": 100
+  },
+  {
+    "id": "legend",
+    "label": "🏆 Living Legend",
+    "metric": "wins",
+    "min": 1000
+  },
+  {
+    "id": "hunter",
+    "label": "🐺 Relentless Hunter",
+    "metric": "hunts",
+    "min": 100
+  },
+  {
+    "id": "boss_slayer",
+    "label": "💀 Boss Slayer",
+    "metric": "bossKills",
+    "min": 25
+  },
+  {
+    "id": "duelist",
+    "label": "🤺 Duel Champion",
+    "metric": "duelWins",
+    "min": 20
+  },
+  {
+    "id": "collector",
+    "label": "📚 Collector",
+    "metric": "collection",
+    "min": 15
+  },
+  {
+    "id": "rich",
+    "label": "💰 Gold Noble",
+    "metric": "coins",
+    "min": 1000000
+  },
+  {
+    "id": "bonded",
+    "label": "💛 Bonded Soul",
+    "metric": "bond",
+    "min": 10
+  },
+  {
+    "id": "streak",
+    "label": "🔥 Loyal Servant",
+    "metric": "streak",
+    "min": 7
+  },
+  {
+    "id": "storyteller",
+    "label": "📖 Chronicle Keeper",
+    "metric": "story",
+    "min": 14
+  },
+  {
+    "id": "prestige",
+    "label": "🌟 Reborn",
+    "metric": "prestige",
+    "min": 1
+  },
+  {
+    "id": "xxsr",
+    "label": "🌌 Noblesse's Presence",
+    "metric": "xxsr",
+    "min": 1
+  },
+  {
+    "id": "houseguest",
+    "label": "🏰 House Member",
+    "metric": "house",
+    "min": 1
+  },
+  {
+    "id": "skilled",
+    "label": "🌀 Master of Skills",
+    "metric": "skills",
+    "min": 12
+  },
+  {
+    "id": "forged",
+    "label": "🗡️ Soul Forger",
+    "metric": "soul",
+    "min": 10
+  },
+  {
+    "id": "explorer",
+    "label": "🧭 Wanderer",
+    "metric": "explores",
+    "min": 100
+  },
+  {
+    "id": "gatherer",
+    "label": "🧺 Resourceful",
+    "metric": "gathers",
+    "min": 100
+  }
+]

@@ -1,0 +1,254 @@
+{
+  "W001": {
+    "type": "weapon",
+    "ref": "W001",
+    "price": 800,
+    "currency": "coins"
+  },
+  "W002": {
+    "type": "weapon",
+    "ref": "W002",
+    "price": 1500,
+    "currency": "coins"
+  },
+  "W003": {
+    "type": "weapon",
+    "ref": "W003",
+    "price": 3000,
+    "currency": "coins"
+  },
+  "W004": {
+    "type": "weapon",
+    "ref": "W004",
+    "price": 5000,
+    "currency": "coins"
+  },
+  "W005": {
+    "type": "weapon",
+    "ref": "W005",
+    "price": 8000,
+    "currency": "coins"
+  },
+  "W006": {
+    "type": "weapon",
+    "ref": "W006",
+    "price": 13000,
+    "currency": "coins"
+  },
+  "W007": {
+    "type": "weapon",
+    "ref": "W007",
+    "price": 20000,
+    "currency": "coins"
+  },
+  "W008": {
+    "type": "weapon",
+    "ref": "W008",
+    "price": 30000,
+    "currency": "coins"
+  },
+  "W009": {
+    "type": "weapon",
+    "ref": "W009",
+    "price": 45000,
+    "currency": "coins"
+  },
+  "W010": {
+    "type": "weapon",
+    "ref": "W010",
+    "price": 65000,
+    "currency": "coins"
+  },
+  "W011": {
+    "type": "weapon",
+    "ref": "W011",
+    "price": 90000,
+    "currency": "coins"
+  },
+  "W012": {
+    "type": "weapon",
+    "ref": "W012",
+    "price": 125000,
+    "currency": "coins"
+  },
+  "W013": {
+    "type": "weapon",
+    "ref": "W013",
+    "price": 170000,
+    "currency": "coins"
+  },
+  "W014": {
+    "type": "weapon",
+    "ref": "W014",
+    "price": 230000,
+    "currency": "coins"
+  },
+  "W015": {
+    "type": "weapon",
+    "ref": "W015",
+    "price": 310000,
+    "currency": "coins"
+  },
+  "W016": {
+    "type": "weapon",
+    "ref": "W016",
+    "price": 420000,
+    "currency": "coins"
+  },
+  "W017": {
+    "type": "weapon",
+    "ref": "W017",
+    "price": 560000,
+    "currency": "coins"
+  },
+  "W018": {
+    "type": "weapon",
+    "ref": "W018",
+    "price": 750000,
+    "currency": "coins"
+  },
+  "W019": {
+    "type": "weapon",
+    "ref": "W019",
+    "price": 1000000,
+    "currency": "coins"
+  },
+  "W020": {
+    "type": "weapon",
+    "ref": "W020",
+    "price": 1500000,
+    "currency": "coins"
+  },
+  "P001": {
+    "type": "potion",
+    "ref": "P001",
+    "price": 300,
+    "currency": "coins"
+  },
+  "P002": {
+    "type": "potion",
+    "ref": "P002",
+    "price": 1200,
+    "currency": "coins"
+  },
+  "P003": {
+    "type": "potion",
+    "ref": "P003",
+    "price": 5000,
+    "currency": "coins"
+  },
+  "P004": {
+    "type": "potion",
+    "ref": "P004",
+    "price": 25000,
+    "currency": "coins"
+  },
+  "P005": {
+    "type": "potion",
+    "ref": "P005",
+    "price": 900,
+    "currency": "coins"
+  },
+  "P006": {
+    "type": "potion",
+    "ref": "P006",
+    "price": 2500,
+    "currency": "coins"
+  },
+  "P007": {
+    "type": "potion",
+    "ref": "P007",
+    "price": 1500,
+    "currency": "coins"
+  },
+  "P008": {
+    "type": "potion",
+    "ref": "P008",
+    "price": 3000,
+    "currency": "coins"
+  },
+  "P009": {
+    "type": "potion",
+    "ref": "P009",
+    "price": 40,
+    "currency": "gems"
+  },
+  "P010": {
+    "type": "potion",
+    "ref": "P010",
+    "price": 2000,
+    "currency": "coins"
+  },
+  "M001": {
+    "type": "material",
+    "ref": "blood_vial",
+    "price": 150,
+    "currency": "coins"
+  },
+  "M002": {
+    "type": "material",
+    "ref": "soul_shard",
+    "price": 625,
+    "currency": "coins"
+  },
+  "M003": {
+    "type": "material",
+    "ref": "mana_crystal",
+    "price": 550,
+    "currency": "coins"
+  },
+  "M004": {
+    "type": "material",
+    "ref": "herb_bundle",
+    "price": 100,
+    "currency": "coins"
+  },
+  "M005": {
+    "type": "material",
+    "ref": "ancient_relic",
+    "price": 2250,
+    "currency": "coins"
+  },
+  "M006": {
+    "type": "material",
+    "ref": "steel_scrap",
+    "price": 125,
+    "currency": "coins"
+  },
+  "M007": {
+    "type": "material",
+    "ref": "union_circuit",
+    "price": 500,
+    "currency": "coins"
+  },
+  "M008": {
+    "type": "material",
+    "ref": "wolf_fang",
+    "price": 450,
+    "currency": "coins"
+  },
+  "M009": {
+    "type": "material",
+    "ref": "legion_core",
+    "price": 2000,
+    "currency": "coins"
+  },
+  "M010": {
+    "type": "material",
+    "ref": "noble_essence",
+    "price": 7500,
+    "currency": "coins"
+  },
+  "M011": {
+    "type": "material",
+    "ref": "obsidian_ore",
+    "price": 1750,
+    "currency": "coins"
+  },
+  "M012": {
+    "type": "material",
+    "ref": "star_dust",
+    "price": 6250,
+    "currency": "coins"
+  }
+}

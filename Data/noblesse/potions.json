@@ -1,0 +1,112 @@
+{
+  "P001": {
+    "id": "P001",
+    "name": "Minor Blood Vial",
+    "effect": {
+      "kind": "exp",
+      "value": 500
+    },
+    "price": 300,
+    "currency": "coins",
+    "desc": "Restores vitality and grants 500 EXP."
+  },
+  "P002": {
+    "id": "P002",
+    "name": "Blood Vial",
+    "effect": {
+      "kind": "exp",
+      "value": 2500
+    },
+    "price": 1200,
+    "currency": "coins",
+    "desc": "Grants 2,500 EXP."
+  },
+  "P003": {
+    "id": "P003",
+    "name": "Greater Blood Vial",
+    "effect": {
+      "kind": "exp",
+      "value": 12000
+    },
+    "price": 5000,
+    "currency": "coins",
+    "desc": "Grants 12,000 EXP."
+  },
+  "P004": {
+    "id": "P004",
+    "name": "Noble Elixir",
+    "effect": {
+      "kind": "exp",
+      "value": 60000
+    },
+    "price": 25000,
+    "currency": "coins",
+    "desc": "Grants 60,000 EXP."
+  },
+  "P005": {
+    "id": "P005",
+    "name": "Authority Draught",
+    "effect": {
+      "kind": "authority",
+      "value": 50
+    },
+    "price": 900,
+    "currency": "coins",
+    "desc": "Adds 50% Authority charge."
+  },
+  "P006": {
+    "id": "P006",
+    "name": "Authority Elixir",
+    "effect": {
+      "kind": "authority",
+      "value": 100
+    },
+    "price": 2500,
+    "currency": "coins",
+    "desc": "Fully charges Authority."
+  },
+  "P007": {
+    "id": "P007",
+    "name": "Bond Tonic",
+    "effect": {
+      "kind": "bond",
+      "value": 60
+    },
+    "price": 1500,
+    "currency": "coins",
+    "desc": "Adds 60 bond EXP."
+  },
+  "P008": {
+    "id": "P008",
+    "name": "Rest Tonic",
+    "effect": {
+      "kind": "cooldown",
+      "value": 1
+    },
+    "price": 3000,
+    "currency": "coins",
+    "desc": "Resets battle, hunt, boss and ambush cooldowns."
+  },
+  "P009": {
+    "id": "P009",
+    "name": "Essence of Strength",
+    "effect": {
+      "kind": "trained",
+      "value": 25
+    },
+    "price": 40,
+    "currency": "gems",
+    "desc": "Permanently adds 25 to every trained stat."
+  },
+  "P010": {
+    "id": "P010",
+    "name": "Crystal Cache",
+    "effect": {
+      "kind": "gems",
+      "value": 25
+    },
+    "price": 2000,
+    "currency": "coins",
+    "desc": "Opens to reveal 25 Soul Crystals."
+  }
+}

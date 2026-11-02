@@ -1,0 +1,305 @@
+[
+  {
+    "id": "school",
+    "name": "Ye Ran High School",
+    "desc": "Where the Noblesse enrolls as a new transfer student.",
+    "levelReq": 1,
+    "coins": [
+      80,
+      250
+    ],
+    "exp": [
+      60,
+      180
+    ],
+    "gemChance": 0.05,
+    "drops": [
+      "herb_bundle",
+      "steel_scrap"
+    ],
+    "events": [
+      "You help a classmate and receive a reward from the grateful student council.",
+      "You find a forgotten bag in the hallway with a few coins inside.",
+      "A quiet afternoon on the rooftop leaves you refreshed and a little richer."
+    ],
+    "setbacks": [
+      "You get scolded by a teacher and pay for a broken window."
+    ]
+  },
+  {
+    "id": "mansion",
+    "name": "Noble Mansion",
+    "desc": "A quiet estate hiding centuries of noble history.",
+    "levelReq": 5,
+    "coins": [
+      200,
+      600
+    ],
+    "exp": [
+      150,
+      400
+    ],
+    "gemChance": 0.08,
+    "drops": [
+      "noble_essence",
+      "blood_vial",
+      "mana_crystal"
+    ],
+    "events": [
+      "You discover a sealed cabinet in the cellar and pry it open.",
+      "The mansion's guardian rewards you for your discipline.",
+      "A dusty ledger leads you to forgotten savings."
+    ],
+    "setbacks": [
+      "A hidden trap drains some of your coins."
+    ]
+  },
+  {
+    "id": "union",
+    "name": "Union Outpost",
+    "desc": "A hostile Union base full of equipment and danger.",
+    "levelReq": 12,
+    "coins": [
+      500,
+      1400
+    ],
+    "exp": [
+      400,
+      900
+    ],
+    "gemChance": 0.1,
+    "drops": [
+      "union_circuit",
+      "steel_scrap"
+    ],
+    "events": [
+      "You sneak past guards and loot a supply crate.",
+      "You hack a terminal and extract valuable data.",
+      "A fleeing agent drops a cash case."
+    ],
+    "setbacks": [
+      "An alarm trips and you pay a bribe to escape."
+    ]
+  },
+  {
+    "id": "cafe",
+    "name": "Neighborhood Cafe",
+    "desc": "A calm cafe with regulars who know more than they say.",
+    "levelReq": 3,
+    "coins": [
+      100,
+      350
+    ],
+    "exp": [
+      80,
+      220
+    ],
+    "gemChance": 0.06,
+    "drops": [
+      "herb_bundle",
+      "blood_vial"
+    ],
+    "events": [
+      "The owner gifts you a free meal and a tip jar.",
+      "A regular shares a rumor worth a few coins.",
+      "You win a small bet in a card game."
+    ],
+    "setbacks": [
+      "The bill is steeper than expected."
+    ]
+  },
+  {
+    "id": "ramenshop",
+    "name": "Ramen Shop",
+    "desc": "The Noblesse's favorite place on earth.",
+    "levelReq": 1,
+    "coins": [
+      120,
+      400
+    ],
+    "exp": [
+      100,
+      300
+    ],
+    "gemChance": 0.07,
+    "drops": [
+      "herb_bundle",
+      "star_dust"
+    ],
+    "events": [
+      "The chef is impressed by your appetite and gives you a bonus.",
+      "You finish a giant bowl and win the shop challenge.",
+      "A stranger pays your tab and slips you a tip."
+    ],
+    "setbacks": [
+      "You order too much and the bill hurts."
+    ]
+  },
+  {
+    "id": "apartment",
+    "name": "Quiet Apartment",
+    "desc": "A modest home base with surprising hidden storage.",
+    "levelReq": 2,
+    "coins": [
+      90,
+      280
+    ],
+    "exp": [
+      70,
+      200
+    ],
+    "gemChance": 0.05,
+    "drops": [
+      "steel_scrap",
+      "herb_bundle"
+    ],
+    "events": [
+      "You find a stash behind the loose floorboard.",
+      "A neighbor repays an old favor.",
+      "Cleaning the closet reveals forgotten valuables."
+    ],
+    "setbacks": [
+      "The landlord collects overdue fees."
+    ]
+  },
+  {
+    "id": "wolfden",
+    "name": "Wolf Den",
+    "desc": "Dangerous grounds crawling with wolf-line hunters.",
+    "levelReq": 18,
+    "coins": [
+      800,
+      2200
+    ],
+    "exp": [
+      700,
+      1500
+    ],
+    "gemChance": 0.12,
+    "drops": [
+      "wolf_fang",
+      "blood_vial"
+    ],
+    "events": [
+      "You fend off a pack and claim their hoard.",
+      "A wounded hunter trades supplies for protection.",
+      "You track a trail to a hidden cache."
+    ],
+    "setbacks": [
+      "A pack ambush forces you to abandon some gold."
+    ]
+  },
+  {
+    "id": "ruins",
+    "name": "Ancient Ruins",
+    "desc": "Ruins older than any living Noble.",
+    "levelReq": 25,
+    "coins": [
+      1500,
+      4000
+    ],
+    "exp": [
+      1200,
+      2800
+    ],
+    "gemChance": 0.15,
+    "drops": [
+      "ancient_relic",
+      "obsidian_ore",
+      "star_dust"
+    ],
+    "events": [
+      "You decipher an old mural that reveals a treasure room.",
+      "A collapsing corridor exposes a gleaming relic.",
+      "You solve a stone puzzle and open a vault."
+    ],
+    "setbacks": [
+      "A cave-in costs you part of your haul."
+    ]
+  },
+  {
+    "id": "forest",
+    "name": "Darkwood Forest",
+    "desc": "A dense forest where beasts and hunters roam.",
+    "levelReq": 8,
+    "coins": [
+      300,
+      900
+    ],
+    "exp": [
+      250,
+      650
+    ],
+    "gemChance": 0.08,
+    "drops": [
+      "herb_bundle",
+      "wolf_fang",
+      "obsidian_ore"
+    ],
+    "events": [
+      "You hunt down a beast and sell its pelt.",
+      "You find rare herbs growing near a stream.",
+      "A lost traveler rewards you for guiding them out."
+    ],
+    "setbacks": [
+      "You get lost and waste supplies."
+    ]
+  },
+  {
+    "id": "city",
+    "name": "Neon City Streets",
+    "desc": "A sprawling city full of rumors and opportunity.",
+    "levelReq": 6,
+    "coins": [
+      250,
+      800
+    ],
+    "exp": [
+      200,
+      500
+    ],
+    "gemChance": 0.07,
+    "drops": [
+      "union_circuit",
+      "steel_scrap",
+      "mana_crystal"
+    ],
+    "events": [
+      "You break up a street fight and the shop owner rewards you.",
+      "A pickpocket drops his loot while fleeing.",
+      "A night market sale nets you a profit."
+    ],
+    "setbacks": [
+      "Street vendors overcharge you."
+    ]
+  },
+  {
+    "id": "lab",
+    "name": "Forgotten Laboratory",
+    "desc": "An abandoned lab with unstable experiments.",
+    "levelReq": 30,
+    "coins": [
+      2000,
+      5500
+    ],
+    "exp": [
+      1800,
+      3600
+    ],
+    "gemChance": 0.18,
+    "drops": [
+      "soul_shard",
+      "legion_core",
+      "mana_crystal",
+      "noble_essence"
+    ],
+    "events": [
+      "You salvage prototype components from a broken pod.",
+      "A surviving terminal unlocks a research stockpile.",
+      "You neutralize a rogue subject and claim its core."
+    ],
+    "setbacks": [
+      "A containment breach damages your gear."
+    ]
+  }
+]

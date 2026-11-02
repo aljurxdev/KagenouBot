@@ -1,0 +1,214 @@
+{
+  "questions": [
+    {
+      "q": "Who is the Noblesse?",
+      "options": [
+        "Frankenstein",
+        "Cadis Etrama Di Raizel",
+        "M-21",
+        "Regis"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "How many years did Rai sleep?",
+      "options": [
+        "80",
+        "320",
+        "820",
+        "1,200"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which school does Rai attend?",
+      "options": [
+        "Ye Ran High School",
+        "Shadow Academy",
+        "Lukedonia School",
+        "Neon Prep"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What food is Rai famous for loving?",
+      "options": [
+        "Pizza",
+        "Sushi",
+        "Ramen",
+        "Curry"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Who is Rai's loyal servant?",
+      "options": [
+        "Frankenstein",
+        "Gejutel",
+        "Tao",
+        "Ragar"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Which spear is Frankenstein known for?",
+      "options": [
+        "Light Lance",
+        "Dark Spear",
+        "Silver Pike",
+        "Flame Trident"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Who leads a Noble clan?",
+      "options": [
+        "A Lord",
+        "A Student",
+        "A Soldier",
+        "A Scientist"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Which organization experiments on humans?",
+      "options": [
+        "The Union",
+        "The Legion",
+        "The Wolves",
+        "The Council"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What do Nobles summon as a physical form of their will?",
+      "options": [
+        "A shield",
+        "A soul weapon",
+        "A dagger",
+        "A familiar"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which clan is Seira from?",
+      "options": [
+        "Kertia",
+        "Loyard",
+        "Landegre",
+        "Kerias"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which clan is Rael from?",
+      "options": [
+        "Metiolant",
+        "Kertia",
+        "Loyard",
+        "Lukedonia"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which clan is Regis from?",
+      "options": [
+        "Landegre",
+        "Kertia",
+        "Kerias",
+        "Metiolant"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Which clan is Gejutel from?",
+      "options": [
+        "Metiolant",
+        "Loyard",
+        "Kertia",
+        "Kerias"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Which clan is Ragar from?",
+      "options": [
+        "Kerias",
+        "Landegre",
+        "Metiolant",
+        "Loyard"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What title ranks above the Lords?",
+      "options": [
+        "Overseer",
+        "Noblesse",
+        "Commander",
+        "Warden"
+      ],
+      "answer": 1
+    }
+  ],
+  "riddles": [
+    {
+      "q": "I slept eight hundred years and woke craving ramen. Who am I?",
+      "answers": [
+        "rai",
+        "raizel",
+        "noblesse",
+        "cadis",
+        "cadis etrama di raizel"
+      ]
+    },
+    {
+      "q": "I am the spear that Frankenstein favors. What am I?",
+      "answers": [
+        "dark spear",
+        "the dark spear"
+      ]
+    },
+    {
+      "q": "I am the school where the Noblesse becomes a student. What am I?",
+      "answers": [
+        "ye ran",
+        "ye ran high school"
+      ]
+    },
+    {
+      "q": "I am the faction that experiments in the shadows and wears the letter U. What am I?",
+      "answers": [
+        "union",
+        "the union"
+      ]
+    },
+    {
+      "q": "I am the form of a Noble's will given shape. What am I?",
+      "answers": [
+        "soul weapon",
+        "soulweapon"
+      ]
+    },
+    {
+      "q": "I am the title above every Lord. What am I?",
+      "answers": [
+        "noblesse",
+        "the noblesse"
+      ]
+    },
+    {
+      "q": "I am the loyal servant who runs a school for his master. Who am I?",
+      "answers": [
+        "frankenstein"
+      ]
+    },
+    {
+      "q": "I lead a clan of Nobles. What is my title?",
+      "answers": [
+        "lord",
+        "a lord"
+      ]
+    }
+  ]
+}

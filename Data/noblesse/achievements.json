@@ -1,0 +1,128 @@
+[
+  {
+    "id": "a_first_win",
+    "name": "First Blood",
+    "desc": "Win your first battle",
+    "metric": "wins",
+    "min": 1,
+    "coins": 300,
+    "gems": 5
+  },
+  {
+    "id": "a_wins_50",
+    "name": "Fifty Victories",
+    "desc": "Win 50 battles",
+    "metric": "wins",
+    "min": 50,
+    "coins": 3000,
+    "gems": 20
+  },
+  {
+    "id": "a_wins_500",
+    "name": "Five Hundred Victories",
+    "desc": "Win 500 battles",
+    "metric": "wins",
+    "min": 500,
+    "coins": 30000,
+    "gems": 100
+  },
+  {
+    "id": "a_level_25",
+    "name": "Rising Noble",
+    "desc": "Reach level 25",
+    "metric": "level",
+    "min": 25,
+    "coins": 5000,
+    "gems": 25
+  },
+  {
+    "id": "a_level_100",
+    "name": "Centurion",
+    "desc": "Reach level 100",
+    "metric": "level",
+    "min": 100,
+    "coins": 50000,
+    "gems": 100
+  },
+  {
+    "id": "a_boss_5",
+    "name": "Boss Hunter",
+    "desc": "Defeat 5 bosses",
+    "metric": "bossKills",
+    "min": 5,
+    "coins": 8000,
+    "gems": 40
+  },
+  {
+    "id": "a_collect_10",
+    "name": "Growing Roster",
+    "desc": "Own 10 characters",
+    "metric": "collection",
+    "min": 10,
+    "coins": 10000,
+    "gems": 50
+  },
+  {
+    "id": "a_story_7",
+    "name": "Halfway There",
+    "desc": "Clear 7 story chapters",
+    "metric": "story",
+    "min": 7,
+    "coins": 15000,
+    "gems": 60
+  },
+  {
+    "id": "a_story_14",
+    "name": "Chronicle Complete",
+    "desc": "Clear all 14 story chapters",
+    "metric": "story",
+    "min": 14,
+    "coins": 100000,
+    "gems": 200
+  },
+  {
+    "id": "a_bond_10",
+    "name": "Close Bond",
+    "desc": "Reach bond level 10",
+    "metric": "bond",
+    "min": 10,
+    "coins": 10000,
+    "gems": 40
+  },
+  {
+    "id": "a_skills_8",
+    "name": "Skill Collector",
+    "desc": "Learn 8 skills",
+    "metric": "skills",
+    "min": 8,
+    "coins": 12000,
+    "gems": 50
+  },
+  {
+    "id": "a_soul_10",
+    "name": "Soul Forger",
+    "desc": "Raise a soul weapon to level 10",
+    "metric": "soul",
+    "min": 10,
+    "coins": 20000,
+    "gems": 80
+  },
+  {
+    "id": "a_prestige_1",
+    "name": "Reborn",
+    "desc": "Prestige once",
+    "metric": "prestige",
+    "min": 1,
+    "coins": 50000,
+    "gems": 150
+  },
+  {
+    "id": "a_games_50",
+    "name": "Gambler",
+    "desc": "Play 50 mini games",
+    "metric": "gamesPlayed",
+    "min": 50,
+    "coins": 10000,
+    "gems": 30
+  }
+]

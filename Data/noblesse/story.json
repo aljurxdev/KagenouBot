@@ -1,0 +1,198 @@
+[
+  {
+    "id": 1,
+    "name": "820 Years of Slumber",
+    "desc": "Chapter 1: 820 Years of Slumber.",
+    "enemy": "Dormant Guardian",
+    "atk": 250,
+    "def": 175,
+    "reward": {
+      "coins": 875,
+      "exp": 700,
+      "gems": 10
+    },
+    "hint": "Recommended power: around 227. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 2,
+    "name": "The New Transfer Student",
+    "desc": "Chapter 2: The New Transfer Student.",
+    "enemy": "Union Strike Leader",
+    "atk": 575,
+    "def": 402,
+    "reward": {
+      "coins": 1362,
+      "exp": 1090,
+      "gems": 15
+    },
+    "hint": "Recommended power: around 523. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 3,
+    "name": "First Blood of the Union",
+    "desc": "Chapter 3: First Blood of the Union.",
+    "enemy": "Union Experiment Alpha",
+    "atk": 1322,
+    "def": 925,
+    "reward": {
+      "coins": 2483,
+      "exp": 1986,
+      "gems": 20
+    },
+    "hint": "Recommended power: around 1,202. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 4,
+    "name": "Frankenstein's Workshop",
+    "desc": "Chapter 4: Frankenstein's Workshop.",
+    "enemy": "Rogue Lab Subject",
+    "atk": 3041,
+    "def": 2128,
+    "reward": {
+      "coins": 5061,
+      "exp": 4049,
+      "gems": 25
+    },
+    "hint": "Recommended power: around 2,767. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 5,
+    "name": "The Wolf Pack",
+    "desc": "Chapter 5: The Wolf Pack.",
+    "enemy": "Wolf Alpha",
+    "atk": 6996,
+    "def": 4897,
+    "reward": {
+      "coins": 10994,
+      "exp": 8795,
+      "gems": 30
+    },
+    "hint": "Recommended power: around 6,366. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 6,
+    "name": "Shadow of the Legion",
+    "desc": "Chapter 6: Shadow of the Legion.",
+    "enemy": "Legion Overseer",
+    "atk": 16090,
+    "def": 11263,
+    "reward": {
+      "coins": 24635,
+      "exp": 19708,
+      "gems": 35
+    },
+    "hint": "Recommended power: around 14,641. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 7,
+    "name": "Council of Lords",
+    "desc": "Chapter 7: Council of Lords.",
+    "enemy": "Rebel Lord",
+    "atk": 37008,
+    "def": 25905,
+    "reward": {
+      "coins": 56012,
+      "exp": 44809,
+      "gems": 40
+    },
+    "hint": "Recommended power: around 33,677. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 8,
+    "name": "Kertia's Challenge",
+    "desc": "Chapter 8: Kertia's Challenge.",
+    "enemy": "Kertia's Champion",
+    "atk": 85120,
+    "def": 59583,
+    "reward": {
+      "coins": 128180,
+      "exp": 102544,
+      "gems": 45
+    },
+    "hint": "Recommended power: around 77,458. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 9,
+    "name": "Loyard's Pride",
+    "desc": "Chapter 9: Loyard's Pride.",
+    "enemy": "Loyard's Guardian",
+    "atk": 195777,
+    "def": 137043,
+    "reward": {
+      "coins": 294165,
+      "exp": 235332,
+      "gems": 50
+    },
+    "hint": "Recommended power: around 178,156. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 10,
+    "name": "Landegre's Trial",
+    "desc": "Chapter 10: Landegre's Trial.",
+    "enemy": "Landegre Berserker",
+    "atk": 450288,
+    "def": 315201,
+    "reward": {
+      "coins": 675932,
+      "exp": 540745,
+      "gems": 55
+    },
+    "hint": "Recommended power: around 409,761. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 11,
+    "name": "Metiolant Vault",
+    "desc": "Chapter 11: Metiolant Vault.",
+    "enemy": "Metiolant Warden",
+    "atk": 1035662,
+    "def": 724963,
+    "reward": {
+      "coins": 1553993,
+      "exp": 1243194,
+      "gems": 60
+    },
+    "hint": "Recommended power: around 942,452. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 12,
+    "name": "Kerias Uprising",
+    "desc": "Chapter 12: Kerias Uprising.",
+    "enemy": "Kerias Warlord",
+    "atk": 2382024,
+    "def": 1667416,
+    "reward": {
+      "coins": 3573536,
+      "exp": 2858828,
+      "gems": 65
+    },
+    "hint": "Recommended power: around 2,167,641. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 13,
+    "name": "The Dark Spear Falls",
+    "desc": "Chapter 13: The Dark Spear Falls.",
+    "enemy": "Dark Spear Phantom",
+    "atk": 5478656,
+    "def": 3835059,
+    "reward": {
+      "coins": 8218484,
+      "exp": 6574787,
+      "gems": 70
+    },
+    "hint": "Recommended power: around 4,985,576. Train, equip skills and upgrade weapons first."
+  },
+  {
+    "id": 14,
+    "name": "Awakening of the Noblesse",
+    "desc": "Chapter 14: Awakening of the Noblesse.",
+    "enemy": "Fallen Noblesse Echo",
+    "atk": 12600909,
+    "def": 8820636,
+    "reward": {
+      "coins": 18901863,
+      "exp": 15121490,
+      "gems": 75
+    },
+    "hint": "Recommended power: around 11,466,827. Train, equip skills and upgrade weapons first."
+  }
+]

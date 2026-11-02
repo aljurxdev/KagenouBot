@@ -1,0 +1,356 @@
+{
+  "train": [
+    {
+      "key": "train.atk",
+      "label": "Strength Training",
+      "stat": "atk",
+      "gain": [
+        8,
+        20
+      ],
+      "cost": 100,
+      "cd": 40,
+      "exp": 60,
+      "charge": 0,
+      "clearCd": false,
+      "text": "You hit the training grounds and push your body to the limit."
+    },
+    {
+      "key": "train.def",
+      "label": "Defense Training",
+      "stat": "def",
+      "gain": [
+        8,
+        20
+      ],
+      "cost": 100,
+      "cd": 40,
+      "exp": 60,
+      "charge": 0,
+      "clearCd": false,
+      "text": "You endure punishing drills until your guard becomes second nature."
+    },
+    {
+      "key": "train.mana",
+      "label": "Mana Training",
+      "stat": "mana",
+      "gain": [
+        8,
+        20
+      ],
+      "cost": 100,
+      "cd": 40,
+      "exp": 60,
+      "charge": 0,
+      "clearCd": false,
+      "text": "You circulate mana until your reserves swell."
+    },
+    {
+      "key": "train.luck",
+      "label": "Luck Training",
+      "stat": "luck",
+      "gain": [
+        6,
+        16
+      ],
+      "cost": 100,
+      "cd": 40,
+      "exp": 60,
+      "charge": 0,
+      "clearCd": false,
+      "text": "You practice reading omens and bending fortune."
+    },
+    {
+      "key": "train.all",
+      "label": "Full Body Training",
+      "stat": "all",
+      "gain": [
+        3,
+        9
+      ],
+      "cost": 400,
+      "cd": 90,
+      "exp": 150,
+      "charge": 0,
+      "clearCd": false,
+      "text": "You run a full regimen covering every discipline."
+    },
+    {
+      "key": "meditate",
+      "label": "Meditation",
+      "stat": "mana",
+      "gain": [
+        5,
+        14
+      ],
+      "cost": 0,
+      "cd": 120,
+      "exp": 80,
+      "charge": 15,
+      "clearCd": false,
+      "text": "You sit in stillness and gather your authority."
+    },
+    {
+      "key": "sleep",
+      "label": "Long Slumber",
+      "stat": "none",
+      "gain": [
+        0,
+        0
+      ],
+      "cost": 0,
+      "cd": 3600,
+      "exp": 1200,
+      "charge": 0,
+      "clearCd": false,
+      "text": "Like the Noblesse himself, you sleep deeply and wake renewed."
+    },
+    {
+      "key": "rest",
+      "label": "Rest",
+      "stat": "none",
+      "gain": [
+        0,
+        0
+      ],
+      "cost": 0,
+      "cd": 600,
+      "exp": 100,
+      "charge": 30,
+      "clearCd": true,
+      "text": "You rest, recover, and clear your fatigue."
+    },
+    {
+      "key": "focus",
+      "label": "Focus Practice",
+      "stat": "luck",
+      "gain": [
+        10,
+        24
+      ],
+      "cost": 200,
+      "cd": 90,
+      "exp": 100,
+      "charge": 0,
+      "clearCd": false,
+      "text": "You hone your instincts until chance bends your way."
+    },
+    {
+      "key": "drill",
+      "label": "Combat Drill",
+      "stat": "all",
+      "gain": [
+        2,
+        6
+      ],
+      "cost": 0,
+      "cd": 60,
+      "exp": 120,
+      "charge": 5,
+      "clearCd": false,
+      "text": "A disciplined drill sharpens every skill a little."
+    },
+    {
+      "key": "fortify",
+      "label": "Fortification",
+      "stat": "def",
+      "gain": [
+        14,
+        32
+      ],
+      "cost": 500,
+      "cd": 120,
+      "exp": 150,
+      "charge": 0,
+      "clearCd": false,
+      "text": "You reinforce your guard with grueling endurance work."
+    }
+  ],
+  "buff": [
+    {
+      "key": "ramen",
+      "cost": 150,
+      "cd": 3600,
+      "pct": 0.15,
+      "secs": 1800,
+      "text": "You slurp a bowl of ramen. The Noblesse would approve of your taste."
+    }
+  ],
+  "gather": [
+    {
+      "key": "gather.blood",
+      "mat": "blood_vial",
+      "qty": [
+        2,
+        5
+      ],
+      "cd": 45,
+      "coins": 40,
+      "text": "You collect fresh blood vial essence from fallen foes."
+    },
+    {
+      "key": "gather.soul",
+      "mat": "soul_shard",
+      "qty": [
+        1,
+        2
+      ],
+      "cd": 90,
+      "coins": 60,
+      "text": "You harvest a glimmering soul shard from lingering spirits."
+    },
+    {
+      "key": "gather.crystal",
+      "mat": "mana_crystal",
+      "qty": [
+        1,
+        3
+      ],
+      "cd": 75,
+      "coins": 50,
+      "text": "You mine a vein of mana crystals."
+    },
+    {
+      "key": "gather.herb",
+      "mat": "herb_bundle",
+      "qty": [
+        3,
+        7
+      ],
+      "cd": 30,
+      "coins": 20,
+      "text": "You pick healing herbs along the path."
+    },
+    {
+      "key": "gather.relic",
+      "mat": "ancient_relic",
+      "qty": [
+        1,
+        1
+      ],
+      "cd": 240,
+      "coins": 100,
+      "text": "You dig a relic from an ancient site."
+    },
+    {
+      "key": "gather.scrap",
+      "mat": "steel_scrap",
+      "qty": [
+        4,
+        9
+      ],
+      "cd": 30,
+      "coins": 20,
+      "text": "You salvage steel scrap from wreckage."
+    },
+    {
+      "key": "gather.circuit",
+      "mat": "union_circuit",
+      "qty": [
+        1,
+        3
+      ],
+      "cd": 75,
+      "coins": 50,
+      "text": "You strip circuits from Union equipment."
+    },
+    {
+      "key": "gather.ore",
+      "mat": "obsidian_ore",
+      "qty": [
+        1,
+        2
+      ],
+      "cd": 150,
+      "coins": 70,
+      "text": "You quarry obsidian ore from a dark vein."
+    },
+    {
+      "key": "gather.essence",
+      "mat": "noble_essence",
+      "qty": [
+        1,
+        1
+      ],
+      "cd": 300,
+      "coins": 120,
+      "text": "You distill a drop of pure noble essence."
+    },
+    {
+      "key": "scavenge",
+      "mat": "random",
+      "qty": [
+        1,
+        4
+      ],
+      "cd": 40,
+      "coins": 30,
+      "text": "You scavenge whatever you can find."
+    }
+  ],
+  "hunt": [
+    {
+      "key": "hunt.union",
+      "tag": "union",
+      "mult": 1.0,
+      "cd": 25,
+      "label": "Union Hunt"
+    },
+    {
+      "key": "hunt.wolf",
+      "tag": "wolf",
+      "mult": 1.1,
+      "cd": 25,
+      "label": "Wolf Hunt"
+    },
+    {
+      "key": "hunt.legion",
+      "tag": "legion",
+      "mult": 1.2,
+      "cd": 30,
+      "label": "Legion Hunt"
+    },
+    {
+      "key": "hunt.human",
+      "tag": "human",
+      "mult": 0.8,
+      "cd": 20,
+      "label": "Street Hunt"
+    },
+    {
+      "key": "hunt.beast",
+      "tag": "beast",
+      "mult": 1.1,
+      "cd": 25,
+      "label": "Beast Hunt"
+    },
+    {
+      "key": "hunt.noble",
+      "tag": "noble",
+      "mult": 1.4,
+      "cd": 35,
+      "label": "Rogue Noble Hunt"
+    },
+    {
+      "key": "hunt.experiment",
+      "tag": "experiment",
+      "mult": 1.6,
+      "cd": 40,
+      "label": "Experiment Hunt"
+    },
+    {
+      "key": "hunt.elite",
+      "tag": "elite",
+      "mult": 2.0,
+      "cd": 50,
+      "label": "Elite Hunt"
+    },
+    {
+      "key": "hunt.nightmare",
+      "tag": "nightmare",
+      "mult": 3.0,
+      "cd": 70,
+      "label": "Nightmare Hunt"
+    }
+  ]
+}

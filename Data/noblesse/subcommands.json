@@ -1,0 +1,1322 @@
+{
+  "register": {
+    "category": "🔰 Account",
+    "usage": "<name>",
+    "desc": "Create your Noble account",
+    "access": "all"
+  },
+  "status": {
+    "category": "🔰 Account",
+    "usage": "",
+    "desc": "View your full profile",
+    "access": "all"
+  },
+  "profile": {
+    "category": "🔰 Account",
+    "usage": "[name]",
+    "desc": "View another Noble's profile",
+    "access": "all"
+  },
+  "changename": {
+    "category": "🔰 Account",
+    "usage": "<new name>",
+    "desc": "Change your name",
+    "access": "all"
+  },
+  "daily": {
+    "category": "🔰 Account",
+    "usage": "",
+    "desc": "Claim your daily reward",
+    "access": "all"
+  },
+  "weekly": {
+    "category": "🔰 Account",
+    "usage": "",
+    "desc": "Claim your weekly reward",
+    "access": "all"
+  },
+  "balance": {
+    "category": "🔰 Account",
+    "usage": "",
+    "desc": "Check gold, crystals and pity",
+    "access": "all"
+  },
+  "stats": {
+    "category": "🔰 Account",
+    "usage": "",
+    "desc": "Detailed stat breakdown",
+    "access": "all"
+  },
+  "rank": {
+    "category": "🔰 Account",
+    "usage": "",
+    "desc": "See your power rank",
+    "access": "all"
+  },
+  "level": {
+    "category": "🔰 Account",
+    "usage": "",
+    "desc": "Level and EXP progress",
+    "access": "all"
+  },
+  "title.list": {
+    "category": "🔰 Account",
+    "usage": "",
+    "desc": "List all titles",
+    "access": "all"
+  },
+  "title.set": {
+    "category": "🔰 Account",
+    "usage": "<titleId>",
+    "desc": "Equip a title",
+    "access": "all"
+  },
+  "bio": {
+    "category": "🔰 Account",
+    "usage": "<text>",
+    "desc": "Set your profile bio",
+    "access": "all"
+  },
+  "reset": {
+    "category": "🔰 Account",
+    "usage": "confirm",
+    "desc": "Reset your account",
+    "access": "all"
+  },
+  "summon": {
+    "category": "✨ Summoning",
+    "usage": "",
+    "desc": "Summon one character",
+    "access": "all"
+  },
+  "multisummon": {
+    "category": "✨ Summoning",
+    "usage": "",
+    "desc": "Summon ten characters",
+    "access": "all"
+  },
+  "pity": {
+    "category": "✨ Summoning",
+    "usage": "",
+    "desc": "View your pity counter",
+    "access": "all"
+  },
+  "rates": {
+    "category": "✨ Summoning",
+    "usage": "",
+    "desc": "View summon rates",
+    "access": "all"
+  },
+  "banner": {
+    "category": "✨ Summoning",
+    "usage": "",
+    "desc": "View the featured banner",
+    "access": "all"
+  },
+  "collection": {
+    "category": "✨ Summoning",
+    "usage": "",
+    "desc": "View your characters",
+    "access": "all"
+  },
+  "charlist": {
+    "category": "✨ Summoning",
+    "usage": "[page]",
+    "desc": "Browse all characters",
+    "access": "all"
+  },
+  "charinfo": {
+    "category": "✨ Summoning",
+    "usage": "<id or name>",
+    "desc": "Character details",
+    "access": "all"
+  },
+  "setmain": {
+    "category": "✨ Summoning",
+    "usage": "<id or name>",
+    "desc": "Set your main character",
+    "access": "all"
+  },
+  "awaken": {
+    "category": "✨ Summoning",
+    "usage": "<id or name>",
+    "desc": "Raise a character's stars",
+    "access": "all"
+  },
+  "dismiss": {
+    "category": "✨ Summoning",
+    "usage": "<id or name>",
+    "desc": "Sell a character",
+    "access": "all"
+  },
+  "compare": {
+    "category": "✨ Summoning",
+    "usage": "<idA> <idB>",
+    "desc": "Compare two characters",
+    "access": "all"
+  },
+  "favorite": {
+    "category": "✨ Summoning",
+    "usage": "<id or name>",
+    "desc": "Mark a favorite",
+    "access": "all"
+  },
+  "unfavorite": {
+    "category": "✨ Summoning",
+    "usage": "<id or name>",
+    "desc": "Remove a favorite",
+    "access": "all"
+  },
+  "clan.list": {
+    "category": "🩸 Clans",
+    "usage": "",
+    "desc": "List all clans",
+    "access": "all"
+  },
+  "clan.set": {
+    "category": "🩸 Clans",
+    "usage": "<clanId>",
+    "desc": "Change your clan",
+    "access": "all"
+  },
+  "clan.info": {
+    "category": "🩸 Clans",
+    "usage": "[clanId]",
+    "desc": "Clan details",
+    "access": "all"
+  },
+  "clan.mastery": {
+    "category": "🩸 Clans",
+    "usage": "",
+    "desc": "Your clan mastery rank",
+    "access": "all"
+  },
+  "clan.perks": {
+    "category": "🩸 Clans",
+    "usage": "",
+    "desc": "Your clan perks",
+    "access": "all"
+  },
+  "clan.compare": {
+    "category": "🩸 Clans",
+    "usage": "<a> <b>",
+    "desc": "Compare two clans",
+    "access": "all"
+  },
+  "battle": {
+    "category": "⚔️ Combat",
+    "usage": "",
+    "desc": "Fight a random enemy",
+    "access": "all"
+  },
+  "hunt": {
+    "category": "⚔️ Combat",
+    "usage": "",
+    "desc": "Hunt a random target",
+    "access": "all"
+  },
+  "ambush": {
+    "category": "⚔️ Combat",
+    "usage": "",
+    "desc": "Ambush an elite for big rewards",
+    "access": "all"
+  },
+  "boss": {
+    "category": "⚔️ Combat",
+    "usage": "",
+    "desc": "Challenge a boss",
+    "access": "all"
+  },
+  "duel": {
+    "category": "⚔️ Combat",
+    "usage": "<name>",
+    "desc": "Duel another player",
+    "access": "all"
+  },
+  "spar": {
+    "category": "⚔️ Combat",
+    "usage": "",
+    "desc": "Spar for training EXP",
+    "access": "all"
+  },
+  "arena": {
+    "category": "⚔️ Combat",
+    "usage": "",
+    "desc": "Fight in the arena",
+    "access": "all"
+  },
+  "bounty": {
+    "category": "⚔️ Combat",
+    "usage": "",
+    "desc": "Take on a bounty",
+    "access": "all"
+  },
+  "authority": {
+    "category": "⚔️ Combat",
+    "usage": "",
+    "desc": "Unleash your Authority",
+    "access": "all"
+  },
+  "stance": {
+    "category": "⚔️ Combat",
+    "usage": "<offense/defense/balanced>",
+    "desc": "Set your combat stance",
+    "access": "all"
+  },
+  "hunt.union": {
+    "category": "🐺 Hunts",
+    "usage": "",
+    "desc": "Hunt Union forces",
+    "access": "all"
+  },
+  "hunt.wolf": {
+    "category": "🐺 Hunts",
+    "usage": "",
+    "desc": "Hunt wolves",
+    "access": "all"
+  },
+  "hunt.legion": {
+    "category": "🐺 Hunts",
+    "usage": "",
+    "desc": "Hunt the Legion",
+    "access": "all"
+  },
+  "hunt.human": {
+    "category": "🐺 Hunts",
+    "usage": "",
+    "desc": "Hunt street criminals",
+    "access": "all"
+  },
+  "hunt.beast": {
+    "category": "🐺 Hunts",
+    "usage": "",
+    "desc": "Hunt beasts",
+    "access": "all"
+  },
+  "hunt.noble": {
+    "category": "🐺 Hunts",
+    "usage": "",
+    "desc": "Hunt rogue nobles",
+    "access": "all"
+  },
+  "hunt.experiment": {
+    "category": "🐺 Hunts",
+    "usage": "",
+    "desc": "Hunt failed experiments",
+    "access": "all"
+  },
+  "hunt.elite": {
+    "category": "🐺 Hunts",
+    "usage": "",
+    "desc": "Hunt elite targets",
+    "access": "all"
+  },
+  "hunt.nightmare": {
+    "category": "🐺 Hunts",
+    "usage": "",
+    "desc": "Hunt nightmares",
+    "access": "all"
+  },
+  "train.atk": {
+    "category": "🏋️ Training",
+    "usage": "",
+    "desc": "Train ATK",
+    "access": "all"
+  },
+  "train.def": {
+    "category": "🏋️ Training",
+    "usage": "",
+    "desc": "Train DEF",
+    "access": "all"
+  },
+  "train.mana": {
+    "category": "🏋️ Training",
+    "usage": "",
+    "desc": "Train Mana",
+    "access": "all"
+  },
+  "train.luck": {
+    "category": "🏋️ Training",
+    "usage": "",
+    "desc": "Train Luck",
+    "access": "all"
+  },
+  "train.all": {
+    "category": "🏋️ Training",
+    "usage": "",
+    "desc": "Train every stat",
+    "access": "all"
+  },
+  "meditate": {
+    "category": "🏋️ Training",
+    "usage": "",
+    "desc": "Meditate for Mana and charge",
+    "access": "all"
+  },
+  "sleep": {
+    "category": "🏋️ Training",
+    "usage": "",
+    "desc": "Sleep for big EXP",
+    "access": "all"
+  },
+  "ramen": {
+    "category": "🏋️ Training",
+    "usage": "",
+    "desc": "Eat ramen for a power buff",
+    "access": "all"
+  },
+  "rest": {
+    "category": "🏋️ Training",
+    "usage": "",
+    "desc": "Rest and clear cooldowns",
+    "access": "all"
+  },
+  "focus": {
+    "category": "🏋️ Training",
+    "usage": "",
+    "desc": "Focus for Luck",
+    "access": "all"
+  },
+  "drill": {
+    "category": "🏋️ Training",
+    "usage": "",
+    "desc": "Combat drill",
+    "access": "all"
+  },
+  "fortify": {
+    "category": "🏋️ Training",
+    "usage": "",
+    "desc": "Fortify your defense",
+    "access": "all"
+  },
+  "gather.blood": {
+    "category": "🧺 Gathering",
+    "usage": "",
+    "desc": "Gather blood vial essence",
+    "access": "all"
+  },
+  "gather.soul": {
+    "category": "🧺 Gathering",
+    "usage": "",
+    "desc": "Gather soul shards",
+    "access": "all"
+  },
+  "gather.crystal": {
+    "category": "🧺 Gathering",
+    "usage": "",
+    "desc": "Gather mana crystals",
+    "access": "all"
+  },
+  "gather.herb": {
+    "category": "🧺 Gathering",
+    "usage": "",
+    "desc": "Gather herbs",
+    "access": "all"
+  },
+  "gather.relic": {
+    "category": "🧺 Gathering",
+    "usage": "",
+    "desc": "Gather ancient relics",
+    "access": "all"
+  },
+  "gather.scrap": {
+    "category": "🧺 Gathering",
+    "usage": "",
+    "desc": "Gather steel scrap",
+    "access": "all"
+  },
+  "gather.circuit": {
+    "category": "🧺 Gathering",
+    "usage": "",
+    "desc": "Gather Union circuits",
+    "access": "all"
+  },
+  "gather.ore": {
+    "category": "🧺 Gathering",
+    "usage": "",
+    "desc": "Gather obsidian ore",
+    "access": "all"
+  },
+  "gather.essence": {
+    "category": "🧺 Gathering",
+    "usage": "",
+    "desc": "Gather noble essence",
+    "access": "all"
+  },
+  "scavenge": {
+    "category": "🧺 Gathering",
+    "usage": "",
+    "desc": "Scavenge random materials",
+    "access": "all"
+  },
+  "explore": {
+    "category": "🧭 Exploration",
+    "usage": "",
+    "desc": "Explore a random location",
+    "access": "all"
+  },
+  "explore.school": {
+    "category": "🧭 Exploration",
+    "usage": "",
+    "desc": "Explore Ye Ran High School",
+    "access": "all"
+  },
+  "explore.mansion": {
+    "category": "🧭 Exploration",
+    "usage": "",
+    "desc": "Explore the Noble Mansion",
+    "access": "all"
+  },
+  "explore.union": {
+    "category": "🧭 Exploration",
+    "usage": "",
+    "desc": "Explore a Union Outpost",
+    "access": "all"
+  },
+  "explore.cafe": {
+    "category": "🧭 Exploration",
+    "usage": "",
+    "desc": "Explore the Cafe",
+    "access": "all"
+  },
+  "explore.ramenshop": {
+    "category": "🧭 Exploration",
+    "usage": "",
+    "desc": "Explore the Ramen Shop",
+    "access": "all"
+  },
+  "explore.apartment": {
+    "category": "🧭 Exploration",
+    "usage": "",
+    "desc": "Explore your apartment",
+    "access": "all"
+  },
+  "explore.wolfden": {
+    "category": "🧭 Exploration",
+    "usage": "",
+    "desc": "Explore the Wolf Den",
+    "access": "all"
+  },
+  "explore.ruins": {
+    "category": "🧭 Exploration",
+    "usage": "",
+    "desc": "Explore Ancient Ruins",
+    "access": "all"
+  },
+  "explore.forest": {
+    "category": "🧭 Exploration",
+    "usage": "",
+    "desc": "Explore Darkwood Forest",
+    "access": "all"
+  },
+  "explore.city": {
+    "category": "🧭 Exploration",
+    "usage": "",
+    "desc": "Explore Neon City",
+    "access": "all"
+  },
+  "explore.lab": {
+    "category": "🧭 Exploration",
+    "usage": "",
+    "desc": "Explore the Forgotten Lab",
+    "access": "all"
+  },
+  "story": {
+    "category": "📖 Story",
+    "usage": "",
+    "desc": "Attempt the next chapter",
+    "access": "all"
+  },
+  "story.list": {
+    "category": "📖 Story",
+    "usage": "",
+    "desc": "List all chapters",
+    "access": "all"
+  },
+  "story.progress": {
+    "category": "📖 Story",
+    "usage": "",
+    "desc": "Story progress",
+    "access": "all"
+  },
+  "story.replay": {
+    "category": "📖 Story",
+    "usage": "<chapter>",
+    "desc": "Replay a cleared chapter",
+    "access": "all"
+  },
+  "story.rewards": {
+    "category": "📖 Story",
+    "usage": "",
+    "desc": "Preview chapter rewards",
+    "access": "all"
+  },
+  "story.hint": {
+    "category": "📖 Story",
+    "usage": "",
+    "desc": "Hint for the next chapter",
+    "access": "all"
+  },
+  "quest": {
+    "category": "📜 Quests",
+    "usage": "",
+    "desc": "View today's quests",
+    "access": "all"
+  },
+  "quest.list": {
+    "category": "📜 Quests",
+    "usage": "",
+    "desc": "List possible quest types",
+    "access": "all"
+  },
+  "quest.claim": {
+    "category": "📜 Quests",
+    "usage": "<questId>",
+    "desc": "Claim a quest reward",
+    "access": "all"
+  },
+  "quest.claimall": {
+    "category": "📜 Quests",
+    "usage": "",
+    "desc": "Claim every completed quest",
+    "access": "all"
+  },
+  "quest.daily": {
+    "category": "📜 Quests",
+    "usage": "",
+    "desc": "Quest reset info",
+    "access": "all"
+  },
+  "quest.reroll": {
+    "category": "📜 Quests",
+    "usage": "",
+    "desc": "Reroll quests for crystals",
+    "access": "all"
+  },
+  "shop": {
+    "category": "🛍️ Shop & Items",
+    "usage": "",
+    "desc": "Shop overview",
+    "access": "all"
+  },
+  "shop.weapons": {
+    "category": "🛍️ Shop & Items",
+    "usage": "",
+    "desc": "Browse weapons",
+    "access": "all"
+  },
+  "shop.potions": {
+    "category": "🛍️ Shop & Items",
+    "usage": "",
+    "desc": "Browse potions",
+    "access": "all"
+  },
+  "shop.materials": {
+    "category": "🛍️ Shop & Items",
+    "usage": "",
+    "desc": "Browse materials",
+    "access": "all"
+  },
+  "buy": {
+    "category": "🛍️ Shop & Items",
+    "usage": "<ID> [qty]",
+    "desc": "Buy an item",
+    "access": "all"
+  },
+  "sell": {
+    "category": "🛍️ Shop & Items",
+    "usage": "<ID> [qty]",
+    "desc": "Sell an item",
+    "access": "all"
+  },
+  "use": {
+    "category": "🛍️ Shop & Items",
+    "usage": "<ID> [qty]",
+    "desc": "Use a potion",
+    "access": "all"
+  },
+  "inventory": {
+    "category": "🛍️ Shop & Items",
+    "usage": "",
+    "desc": "Inventory overview",
+    "access": "all"
+  },
+  "inventory.weapons": {
+    "category": "🛍️ Shop & Items",
+    "usage": "",
+    "desc": "Your weapons",
+    "access": "all"
+  },
+  "inventory.potions": {
+    "category": "🛍️ Shop & Items",
+    "usage": "",
+    "desc": "Your potions",
+    "access": "all"
+  },
+  "inventory.materials": {
+    "category": "🛍️ Shop & Items",
+    "usage": "",
+    "desc": "Your materials",
+    "access": "all"
+  },
+  "equip": {
+    "category": "🛍️ Shop & Items",
+    "usage": "<weaponID>",
+    "desc": "Equip a weapon",
+    "access": "all"
+  },
+  "unequip": {
+    "category": "🛍️ Shop & Items",
+    "usage": "",
+    "desc": "Unequip your weapon",
+    "access": "all"
+  },
+  "upgrade": {
+    "category": "🛍️ Shop & Items",
+    "usage": "<weaponID>",
+    "desc": "Upgrade a weapon",
+    "access": "all"
+  },
+  "craft": {
+    "category": "🛍️ Shop & Items",
+    "usage": "<recipeID> [qty]",
+    "desc": "Craft an item",
+    "access": "all"
+  },
+  "recipes": {
+    "category": "🛍️ Shop & Items",
+    "usage": "",
+    "desc": "List recipes",
+    "access": "all"
+  },
+  "disassemble": {
+    "category": "🛍️ Shop & Items",
+    "usage": "<weaponID>",
+    "desc": "Break a weapon down",
+    "access": "all"
+  },
+  "skill.list": {
+    "category": "🌀 Skills",
+    "usage": "",
+    "desc": "List all skills",
+    "access": "all"
+  },
+  "skill.learn": {
+    "category": "🌀 Skills",
+    "usage": "<ID>",
+    "desc": "Learn a skill",
+    "access": "all"
+  },
+  "skill.info": {
+    "category": "🌀 Skills",
+    "usage": "<ID>",
+    "desc": "Skill details",
+    "access": "all"
+  },
+  "skill.equip": {
+    "category": "🌀 Skills",
+    "usage": "<ID>",
+    "desc": "Equip a skill",
+    "access": "all"
+  },
+  "skill.unequip": {
+    "category": "🌀 Skills",
+    "usage": "<ID>",
+    "desc": "Unequip a skill",
+    "access": "all"
+  },
+  "skill.reset": {
+    "category": "🌀 Skills",
+    "usage": "",
+    "desc": "Reset all skills",
+    "access": "all"
+  },
+  "bond": {
+    "category": "💛 Bond",
+    "usage": "",
+    "desc": "View your bond",
+    "access": "all"
+  },
+  "bond.train": {
+    "category": "💛 Bond",
+    "usage": "",
+    "desc": "Train bond",
+    "access": "all"
+  },
+  "bond.gift": {
+    "category": "💛 Bond",
+    "usage": "<ID> [qty]",
+    "desc": "Gift an item for bond EXP",
+    "access": "all"
+  },
+  "bond.status": {
+    "category": "💛 Bond",
+    "usage": "",
+    "desc": "Bond bonuses",
+    "access": "all"
+  },
+  "bond.story": {
+    "category": "💛 Bond",
+    "usage": "",
+    "desc": "Read unlocked bond stories",
+    "access": "all"
+  },
+  "house.create": {
+    "category": "🏰 Houses",
+    "usage": "<name>",
+    "desc": "Found a House",
+    "access": "all"
+  },
+  "house.join": {
+    "category": "🏰 Houses",
+    "usage": "<name>",
+    "desc": "Join a House",
+    "access": "all"
+  },
+  "house.leave": {
+    "category": "🏰 Houses",
+    "usage": "",
+    "desc": "Leave your House",
+    "access": "all"
+  },
+  "house.list": {
+    "category": "🏰 Houses",
+    "usage": "",
+    "desc": "Top Houses",
+    "access": "all"
+  },
+  "house.info": {
+    "category": "🏰 Houses",
+    "usage": "[name]",
+    "desc": "House details",
+    "access": "all"
+  },
+  "house.donate": {
+    "category": "🏰 Houses",
+    "usage": "<amount>",
+    "desc": "Donate gold",
+    "access": "all"
+  },
+  "house.kick": {
+    "category": "🏰 Houses",
+    "usage": "<name>",
+    "desc": "Kick a member",
+    "access": "all"
+  },
+  "house.disband": {
+    "category": "🏰 Houses",
+    "usage": "",
+    "desc": "Disband your House",
+    "access": "all"
+  },
+  "house.rename": {
+    "category": "🏰 Houses",
+    "usage": "<new name>",
+    "desc": "Rename your House",
+    "access": "all"
+  },
+  "house.top": {
+    "category": "🏰 Houses",
+    "usage": "",
+    "desc": "Richest Houses",
+    "access": "all"
+  },
+  "house.members": {
+    "category": "🏰 Houses",
+    "usage": "",
+    "desc": "List members",
+    "access": "all"
+  },
+  "raid.open": {
+    "category": "🌍 Events",
+    "usage": "",
+    "desc": "Open a raid lobby",
+    "access": "all"
+  },
+  "raid.join": {
+    "category": "🌍 Events",
+    "usage": "",
+    "desc": "Join the raid lobby",
+    "access": "all"
+  },
+  "raid.start": {
+    "category": "🌍 Events",
+    "usage": "",
+    "desc": "Start the raid",
+    "access": "all"
+  },
+  "tournament.open": {
+    "category": "🌍 Events",
+    "usage": "",
+    "desc": "Open a tournament lobby",
+    "access": "all"
+  },
+  "tournament.join": {
+    "category": "🌍 Events",
+    "usage": "",
+    "desc": "Join the tournament",
+    "access": "all"
+  },
+  "tournament.begin": {
+    "category": "🌍 Events",
+    "usage": "",
+    "desc": "Begin the tournament",
+    "access": "all"
+  },
+  "surge.start": {
+    "category": "🌍 Events",
+    "usage": "",
+    "desc": "Trigger a Soul Surge",
+    "access": "admin"
+  },
+  "surge.enter": {
+    "category": "🌍 Events",
+    "usage": "",
+    "desc": "Claim the Soul Surge",
+    "access": "all"
+  },
+  "worldboss": {
+    "category": "🌍 Events",
+    "usage": "",
+    "desc": "World boss status",
+    "access": "all"
+  },
+  "worldboss.attack": {
+    "category": "🌍 Events",
+    "usage": "",
+    "desc": "Attack the world boss",
+    "access": "all"
+  },
+  "pay": {
+    "category": "🤝 Social",
+    "usage": "<name> <amount>",
+    "desc": "Send gold",
+    "access": "all"
+  },
+  "gift": {
+    "category": "🤝 Social",
+    "usage": "<name> <ID> [qty]",
+    "desc": "Gift an item",
+    "access": "all"
+  },
+  "leaderboard": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Top players by power",
+    "access": "all"
+  },
+  "leaderboard.power": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Top by power",
+    "access": "all"
+  },
+  "leaderboard.wins": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Top by wins",
+    "access": "all"
+  },
+  "leaderboard.wealth": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Top by gold",
+    "access": "all"
+  },
+  "leaderboard.level": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Top by level",
+    "access": "all"
+  },
+  "leaderboard.house": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Top Houses",
+    "access": "all"
+  },
+  "coinflip": {
+    "category": "🎲 Games",
+    "usage": "<amount> <heads/tails>",
+    "desc": "Flip a coin",
+    "access": "all"
+  },
+  "dice": {
+    "category": "🎲 Games",
+    "usage": "<amount>",
+    "desc": "Roll dice against the house",
+    "access": "all"
+  },
+  "slots": {
+    "category": "🎲 Games",
+    "usage": "<amount>",
+    "desc": "Spin the slots",
+    "access": "all"
+  },
+  "gamble": {
+    "category": "🎲 Games",
+    "usage": "<amount>",
+    "desc": "Risk it all",
+    "access": "all"
+  },
+  "wheel": {
+    "category": "🎲 Games",
+    "usage": "<amount>",
+    "desc": "Spin the wheel",
+    "access": "all"
+  },
+  "trivia": {
+    "category": "🎲 Games",
+    "usage": "",
+    "desc": "Noblesse trivia",
+    "access": "all"
+  },
+  "riddle": {
+    "category": "🎲 Games",
+    "usage": "",
+    "desc": "Solve a riddle",
+    "access": "all"
+  },
+  "lottery": {
+    "category": "🎲 Games",
+    "usage": "",
+    "desc": "Buy a lottery ticket",
+    "access": "all"
+  },
+  "lore.characters": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Character lore",
+    "access": "all"
+  },
+  "lore.nobles": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Noble lore",
+    "access": "all"
+  },
+  "lore.clans": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Clan lore",
+    "access": "all"
+  },
+  "lore.union": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Union lore",
+    "access": "all"
+  },
+  "lore.wolves": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Wolf lore",
+    "access": "all"
+  },
+  "lore.legion": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Legion lore",
+    "access": "all"
+  },
+  "lore.lords": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Lords lore",
+    "access": "all"
+  },
+  "lore.weapons": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Weapon lore",
+    "access": "all"
+  },
+  "lore.authority": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Authority lore",
+    "access": "all"
+  },
+  "lore.events": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Event lore",
+    "access": "all"
+  },
+  "lore.timeline": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Timeline",
+    "access": "all"
+  },
+  "lore.locations": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Location lore",
+    "access": "all"
+  },
+  "lore.quotes": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Proverbs of the Nobles",
+    "access": "all"
+  },
+  "lore.fact": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Random fact",
+    "access": "all"
+  },
+  "lore.search": {
+    "category": "📚 Lore",
+    "usage": "<keyword>",
+    "desc": "Search the lore",
+    "access": "all"
+  },
+  "lore.random": {
+    "category": "📚 Lore",
+    "usage": "",
+    "desc": "Random lore entry",
+    "access": "all"
+  },
+  "soulweapon.info": {
+    "category": "🗡️ Soul Weapon",
+    "usage": "",
+    "desc": "Your soul weapon",
+    "access": "all"
+  },
+  "soulweapon.forge": {
+    "category": "🗡️ Soul Weapon",
+    "usage": "",
+    "desc": "Forge a soul weapon",
+    "access": "all"
+  },
+  "soulweapon.upgrade": {
+    "category": "🗡️ Soul Weapon",
+    "usage": "",
+    "desc": "Level up your soul weapon",
+    "access": "all"
+  },
+  "soulweapon.bind": {
+    "category": "🗡️ Soul Weapon",
+    "usage": "",
+    "desc": "Bind or unbind your soul weapon",
+    "access": "all"
+  },
+  "soulweapon.release": {
+    "category": "🗡️ Soul Weapon",
+    "usage": "",
+    "desc": "Dismantle your soul weapon",
+    "access": "all"
+  },
+  "soulweapon.evolve": {
+    "category": "🗡️ Soul Weapon",
+    "usage": "",
+    "desc": "Evolve your soul weapon",
+    "access": "all"
+  },
+  "achievements": {
+    "category": "🏅 Achievements",
+    "usage": "",
+    "desc": "View achievements",
+    "access": "all"
+  },
+  "achievements.claim": {
+    "category": "🏅 Achievements",
+    "usage": "[id]",
+    "desc": "Claim achievement rewards",
+    "access": "all"
+  },
+  "achievements.progress": {
+    "category": "🏅 Achievements",
+    "usage": "",
+    "desc": "Achievement progress",
+    "access": "all"
+  },
+  "market.list": {
+    "category": "🏪 Market",
+    "usage": "",
+    "desc": "Browse listings",
+    "access": "all"
+  },
+  "market.sell": {
+    "category": "🏪 Market",
+    "usage": "<ID> <qty> <price>",
+    "desc": "List an item",
+    "access": "all"
+  },
+  "market.buy": {
+    "category": "🏪 Market",
+    "usage": "<listingId>",
+    "desc": "Buy a listing",
+    "access": "all"
+  },
+  "market.cancel": {
+    "category": "🏪 Market",
+    "usage": "<listingId>",
+    "desc": "Cancel a listing",
+    "access": "all"
+  },
+  "market.mine": {
+    "category": "🏪 Market",
+    "usage": "",
+    "desc": "Your listings",
+    "access": "all"
+  },
+  "prestige": {
+    "category": "🌟 Prestige",
+    "usage": "",
+    "desc": "Prestige now",
+    "access": "all"
+  },
+  "prestige.info": {
+    "category": "🌟 Prestige",
+    "usage": "",
+    "desc": "Prestige requirements",
+    "access": "all"
+  },
+  "prestige.shop": {
+    "category": "🌟 Prestige",
+    "usage": "[ID]",
+    "desc": "Prestige shop",
+    "access": "all"
+  },
+  "admin.setstat": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<name> <atk> <def> <mana> <luck>",
+    "desc": "Set trained stats",
+    "access": "admin"
+  },
+  "admin.givecoins": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<name> <amount>",
+    "desc": "Give gold",
+    "access": "admin"
+  },
+  "admin.givegems": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<name> <amount>",
+    "desc": "Give crystals",
+    "access": "admin"
+  },
+  "admin.giveexp": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<name> <amount>",
+    "desc": "Give EXP",
+    "access": "admin"
+  },
+  "admin.givematerial": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<name> <key> <qty>",
+    "desc": "Give materials",
+    "access": "admin"
+  },
+  "admin.setlevel": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<name> <level>",
+    "desc": "Set level",
+    "access": "admin"
+  },
+  "admin.ban": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<name>",
+    "desc": "Ban a player",
+    "access": "admin"
+  },
+  "admin.unban": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<name>",
+    "desc": "Unban a player",
+    "access": "admin"
+  },
+  "admin.wipe": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<name>",
+    "desc": "Wipe a player",
+    "access": "admin"
+  },
+  "admin.spawnboss": {
+    "category": "🔐 Admin & Developer",
+    "usage": "",
+    "desc": "Spawn a fresh world boss",
+    "access": "admin"
+  },
+  "admin.resetcd": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<name>",
+    "desc": "Clear cooldowns",
+    "access": "admin"
+  },
+  "admin.inspect": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<name>",
+    "desc": "Inspect a player",
+    "access": "admin"
+  },
+  "admin.setclan": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<name> <clanId>",
+    "desc": "Set a clan",
+    "access": "admin"
+  },
+  "dev.buff": {
+    "category": "🔐 Admin & Developer",
+    "usage": "",
+    "desc": "Reapply the developer buff",
+    "access": "dev"
+  },
+  "dev.unlock": {
+    "category": "🔐 Admin & Developer",
+    "usage": "",
+    "desc": "Unlock everything",
+    "access": "dev"
+  },
+  "dev.form": {
+    "category": "🔐 Admin & Developer",
+    "usage": "<sealed/unsealed/absolute>",
+    "desc": "Switch developer form",
+    "access": "dev"
+  },
+  "help": {
+    "category": "❓ Help",
+    "usage": "[category]",
+    "desc": "Show help",
+    "access": "all"
+  },
+  "commands": {
+    "category": "❓ Help",
+    "usage": "[page]",
+    "desc": "List every subcommand",
+    "access": "all"
+  },
+  "search": {
+    "category": "❓ Help",
+    "usage": "<keyword>",
+    "desc": "Search subcommands",
+    "access": "all"
+  },
+  "about": {
+    "category": "❓ Help",
+    "usage": "",
+    "desc": "About this command",
+    "access": "all"
+  },
+  "ping": {
+    "category": "❓ Help",
+    "usage": "",
+    "desc": "Check latency",
+    "access": "all"
+  },
+  "version": {
+    "category": "❓ Help",
+    "usage": "",
+    "desc": "Show version",
+    "access": "all"
+  },
+  "tips": {
+    "category": "❓ Help",
+    "usage": "",
+    "desc": "Random tip",
+    "access": "all"
+  }
+}

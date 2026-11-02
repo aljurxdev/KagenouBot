@@ -1,0 +1,90 @@
+[
+  {
+    "id": "sw_blade",
+    "name": "Crimson Soul Blade",
+    "rarity": "R",
+    "weight": 30,
+    "atk": 120,
+    "def": 40,
+    "mana": 40,
+    "luck": 10,
+    "desc": "A simple blade shaped by a fledgling noble."
+  },
+  {
+    "id": "sw_lance",
+    "name": "Soul Lance",
+    "rarity": "SR",
+    "weight": 25,
+    "atk": 260,
+    "def": 80,
+    "mana": 100,
+    "luck": 20,
+    "desc": "A long lance with a reach no foe can match."
+  },
+  {
+    "id": "sw_whip",
+    "name": "Soul Whip",
+    "rarity": "SR",
+    "weight": 20,
+    "atk": 220,
+    "def": 60,
+    "mana": 200,
+    "luck": 30,
+    "desc": "A whip that bends mana around its target."
+  },
+  {
+    "id": "sw_gauntlets",
+    "name": "Soul Gauntlets",
+    "rarity": "SSR",
+    "weight": 12,
+    "atk": 520,
+    "def": 200,
+    "mana": 160,
+    "luck": 40,
+    "desc": "Fists wreathed in crushing soul energy."
+  },
+  {
+    "id": "sw_bow",
+    "name": "Soul Bow",
+    "rarity": "SSR",
+    "weight": 8,
+    "atk": 480,
+    "def": 120,
+    "mana": 360,
+    "luck": 90,
+    "desc": "A bow that never needs a quiver."
+  },
+  {
+    "id": "sw_scythe",
+    "name": "Soul Scythe",
+    "rarity": "SSSR",
+    "weight": 4,
+    "atk": 1100,
+    "def": 300,
+    "mana": 500,
+    "luck": 100,
+    "desc": "A scythe that reaps resolve and strength."
+  },
+  {
+    "id": "sw_spear",
+    "name": "Soul Spear",
+    "rarity": "SSSR",
+    "weight": 0.9,
+    "atk": 1500,
+    "def": 400,
+    "mana": 700,
+    "luck": 150,
+    "desc": "A spear forged for a loyal servant's will."
+  },
+  {
+    "id": "sw_noblesse",
+    "name": "Noblesse Soul Weapon",
+    "rarity": "XXSR",
+    "weight": 0.1,
+    "atk": 4000,
+    "def": 1200,
+    "mana": 2400,
+    "luck": 400,
+    "desc": "The soul weapon of the Noblesse himself."
+  }
+]

@@ -1,0 +1,210 @@
+{
+  "SK01": {
+    "id": "SK01",
+    "name": "Blood Field",
+    "desc": "A field of blood weakens foes and strengthens you.",
+    "cost": 2000,
+    "levelReq": 3,
+    "bonus": {
+      "atk": 0.06,
+      "def": 0,
+      "mana": 0,
+      "luck": 0
+    }
+  },
+  "SK02": {
+    "id": "SK02",
+    "name": "Dark Spear",
+    "desc": "Condense power into a piercing spear.",
+    "cost": 4500,
+    "levelReq": 8,
+    "bonus": {
+      "atk": 0.1,
+      "def": 0,
+      "mana": 0,
+      "luck": 0
+    }
+  },
+  "SK03": {
+    "id": "SK03",
+    "name": "Mind Control",
+    "desc": "Bend minds and sharpen focus.",
+    "cost": 6000,
+    "levelReq": 12,
+    "bonus": {
+      "atk": 0,
+      "def": 0,
+      "mana": 0.12,
+      "luck": 0.05
+    }
+  },
+  "SK04": {
+    "id": "SK04",
+    "name": "Regeneration",
+    "desc": "Rapid recovery from every wound.",
+    "cost": 3500,
+    "levelReq": 6,
+    "bonus": {
+      "atk": 0,
+      "def": 0.1,
+      "mana": 0,
+      "luck": 0
+    }
+  },
+  "SK05": {
+    "id": "SK05",
+    "name": "Noble Aura",
+    "desc": "An aura that steadies the whole body.",
+    "cost": 8000,
+    "levelReq": 15,
+    "bonus": {
+      "atk": 0.04,
+      "def": 0.04,
+      "mana": 0.04,
+      "luck": 0.04
+    }
+  },
+  "SK06": {
+    "id": "SK06",
+    "name": "Mana Burst",
+    "desc": "Release stored mana in a burst.",
+    "cost": 5000,
+    "levelReq": 10,
+    "bonus": {
+      "atk": 0.05,
+      "def": 0,
+      "mana": 0.1,
+      "luck": 0
+    }
+  },
+  "SK07": {
+    "id": "SK07",
+    "name": "Swift Step",
+    "desc": "Faster than the eye can follow.",
+    "cost": 3000,
+    "levelReq": 5,
+    "bonus": {
+      "atk": 0.03,
+      "def": 0,
+      "mana": 0,
+      "luck": 0.08
+    }
+  },
+  "SK08": {
+    "id": "SK08",
+    "name": "Iron Will",
+    "desc": "A will that does not break.",
+    "cost": 4000,
+    "levelReq": 9,
+    "bonus": {
+      "atk": 0,
+      "def": 0.12,
+      "mana": 0.03,
+      "luck": 0
+    }
+  },
+  "SK09": {
+    "id": "SK09",
+    "name": "Predator Sense",
+    "desc": "Sense every opening in the enemy.",
+    "cost": 7000,
+    "levelReq": 14,
+    "bonus": {
+      "atk": 0.08,
+      "def": 0,
+      "mana": 0,
+      "luck": 0.08
+    }
+  },
+  "SK10": {
+    "id": "SK10",
+    "name": "Crimson Guard",
+    "desc": "A guard woven from blood.",
+    "cost": 9000,
+    "levelReq": 18,
+    "bonus": {
+      "atk": 0,
+      "def": 0.16,
+      "mana": 0.05,
+      "luck": 0
+    }
+  },
+  "SK11": {
+    "id": "SK11",
+    "name": "Soul Link",
+    "desc": "Link your soul weapon to your will.",
+    "cost": 12000,
+    "levelReq": 22,
+    "bonus": {
+      "atk": 0.06,
+      "def": 0.06,
+      "mana": 0.1,
+      "luck": 0
+    }
+  },
+  "SK12": {
+    "id": "SK12",
+    "name": "Bloodlust",
+    "desc": "Fury that feeds on every strike.",
+    "cost": 15000,
+    "levelReq": 28,
+    "bonus": {
+      "atk": 0.18,
+      "def": -0.05,
+      "mana": 0,
+      "luck": 0
+    }
+  },
+  "SK13": {
+    "id": "SK13",
+    "name": "Lord's Command",
+    "desc": "The authority of a Lord.",
+    "cost": 25000,
+    "levelReq": 35,
+    "bonus": {
+      "atk": 0.1,
+      "def": 0.1,
+      "mana": 0.1,
+      "luck": 0.05
+    }
+  },
+  "SK14": {
+    "id": "SK14",
+    "name": "Midnight Veil",
+    "desc": "A veil of night that hides weakness.",
+    "cost": 20000,
+    "levelReq": 32,
+    "bonus": {
+      "atk": 0.05,
+      "def": 0.12,
+      "mana": 0.08,
+      "luck": 0.1
+    }
+  },
+  "SK15": {
+    "id": "SK15",
+    "name": "Seal Break",
+    "desc": "Shatter the limiter on your power.",
+    "cost": 50000,
+    "levelReq": 45,
+    "bonus": {
+      "atk": 0.2,
+      "def": 0.15,
+      "mana": 0.15,
+      "luck": 0.05
+    }
+  },
+  "SK16": {
+    "id": "SK16",
+    "name": "Noblesse Eclipse",
+    "desc": "The eclipse of the Noblesse blots out the sun.",
+    "cost": 100000,
+    "levelReq": 60,
+    "bonus": {
+      "atk": 0.25,
+      "def": 0.2,
+      "mana": 0.25,
+      "luck": 0.1
+    }
+  }
+}

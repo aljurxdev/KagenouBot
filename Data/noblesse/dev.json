@@ -1,0 +1,34 @@
+{
+  "characterId": "raizel",
+  "clanId": "noblesse",
+  "displayName": "Cadis Etrama Di Raizel",
+  "title": "The Noblesse",
+  "level": 9999,
+  "exp": 99999999,
+  "prestige": 20,
+  "coins": 999999999,
+  "gems": 999999,
+  "materials": 9999,
+  "potions": 999,
+  "defaultForm": "absolute",
+  "forms": [
+    {
+      "id": "sealed",
+      "name": "Rai (Sealed)",
+      "mult": 0.25,
+      "desc": "The quiet student. Power held back by the seal."
+    },
+    {
+      "id": "unsealed",
+      "name": "Raizel (Seal Released)",
+      "mult": 0.6,
+      "desc": "The seal broken. Power rolls out in waves."
+    },
+    {
+      "id": "absolute",
+      "name": "Noblesse (Absolute)",
+      "mult": 1.0,
+      "desc": "Unrestrained. The strongest Noble in full authority."
+    }
+  ]
+}

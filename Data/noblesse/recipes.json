@@ -1,0 +1,148 @@
+[
+  {
+    "id": "R01",
+    "name": "Blood Vial",
+    "type": "potion",
+    "ref": "P002",
+    "qty": 3,
+    "mats": {
+      "blood_vial": 3,
+      "herb_bundle": 2
+    },
+    "coins": 300
+  },
+  {
+    "id": "R02",
+    "name": "Greater Blood Vial",
+    "type": "potion",
+    "ref": "P003",
+    "qty": 2,
+    "mats": {
+      "blood_vial": 6,
+      "mana_crystal": 2
+    },
+    "coins": 900
+  },
+  {
+    "id": "R03",
+    "name": "Noble Elixir",
+    "type": "potion",
+    "ref": "P004",
+    "qty": 1,
+    "mats": {
+      "noble_essence": 3,
+      "blood_vial": 10
+    },
+    "coins": 4000
+  },
+  {
+    "id": "R04",
+    "name": "Authority Draught",
+    "type": "potion",
+    "ref": "P005",
+    "qty": 2,
+    "mats": {
+      "mana_crystal": 3,
+      "soul_shard": 1
+    },
+    "coins": 700
+  },
+  {
+    "id": "R05",
+    "name": "Authority Elixir",
+    "type": "potion",
+    "ref": "P006",
+    "qty": 1,
+    "mats": {
+      "mana_crystal": 6,
+      "soul_shard": 3
+    },
+    "coins": 1800
+  },
+  {
+    "id": "R06",
+    "name": "Bond Tonic",
+    "type": "potion",
+    "ref": "P007",
+    "qty": 2,
+    "mats": {
+      "herb_bundle": 5,
+      "star_dust": 1
+    },
+    "coins": 800
+  },
+  {
+    "id": "R07",
+    "name": "Rest Tonic",
+    "type": "potion",
+    "ref": "P008",
+    "qty": 1,
+    "mats": {
+      "herb_bundle": 8,
+      "mana_crystal": 2
+    },
+    "coins": 2200
+  },
+  {
+    "id": "R08",
+    "name": "Wolf Fang Dagger",
+    "type": "weapon",
+    "ref": "W004",
+    "qty": 1,
+    "mats": {
+      "wolf_fang": 8,
+      "steel_scrap": 10
+    },
+    "coins": 3500
+  },
+  {
+    "id": "R09",
+    "name": "Union Pulse Rifle",
+    "type": "weapon",
+    "ref": "W005",
+    "qty": 1,
+    "mats": {
+      "union_circuit": 8,
+      "steel_scrap": 12
+    },
+    "coins": 6000
+  },
+  {
+    "id": "R10",
+    "name": "Crimson Scythe",
+    "type": "weapon",
+    "ref": "W008",
+    "qty": 1,
+    "mats": {
+      "blood_vial": 20,
+      "obsidian_ore": 6,
+      "soul_shard": 3
+    },
+    "coins": 20000
+  },
+  {
+    "id": "R11",
+    "name": "Kertia Lance",
+    "type": "weapon",
+    "ref": "W010",
+    "qty": 1,
+    "mats": {
+      "noble_essence": 6,
+      "steel_scrap": 25
+    },
+    "coins": 45000
+  },
+  {
+    "id": "R12",
+    "name": "Obsidian Edge",
+    "type": "weapon",
+    "ref": "W015",
+    "qty": 1,
+    "mats": {
+      "obsidian_ore": 15,
+      "noble_essence": 8,
+      "star_dust": 3
+    },
+    "coins": 200000
+  }
+]

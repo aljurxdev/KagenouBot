@@ -1,0 +1,128 @@
+[
+  {
+    "id": "q_wins_5",
+    "desc": "Win 5 battles",
+    "metric": "wins",
+    "goal": 5,
+    "coins": 600,
+    "exp": 400,
+    "gems": 0
+  },
+  {
+    "id": "q_wins_15",
+    "desc": "Win 15 battles",
+    "metric": "wins",
+    "goal": 15,
+    "coins": 2000,
+    "exp": 1200,
+    "gems": 5
+  },
+  {
+    "id": "q_hunts_5",
+    "desc": "Complete 5 hunts",
+    "metric": "hunts",
+    "goal": 5,
+    "coins": 700,
+    "exp": 500,
+    "gems": 0
+  },
+  {
+    "id": "q_trains_5",
+    "desc": "Train 5 times",
+    "metric": "trains",
+    "goal": 5,
+    "coins": 500,
+    "exp": 300,
+    "gems": 0
+  },
+  {
+    "id": "q_gathers_5",
+    "desc": "Gather resources 5 times",
+    "metric": "gathers",
+    "goal": 5,
+    "coins": 500,
+    "exp": 350,
+    "gems": 0
+  },
+  {
+    "id": "q_explores_5",
+    "desc": "Explore 5 times",
+    "metric": "explores",
+    "goal": 5,
+    "coins": 600,
+    "exp": 400,
+    "gems": 0
+  },
+  {
+    "id": "q_duels_2",
+    "desc": "Win 2 duels",
+    "metric": "duelWins",
+    "goal": 2,
+    "coins": 900,
+    "exp": 700,
+    "gems": 3
+  },
+  {
+    "id": "q_boss_1",
+    "desc": "Defeat a boss",
+    "metric": "bossKills",
+    "goal": 1,
+    "coins": 1500,
+    "exp": 1200,
+    "gems": 5
+  },
+  {
+    "id": "q_crafts_2",
+    "desc": "Craft 2 items",
+    "metric": "crafts",
+    "goal": 2,
+    "coins": 600,
+    "exp": 400,
+    "gems": 0
+  },
+  {
+    "id": "q_bond_3",
+    "desc": "Train bond 3 times",
+    "metric": "bondTrains",
+    "goal": 3,
+    "coins": 500,
+    "exp": 500,
+    "gems": 0
+  },
+  {
+    "id": "q_summon_3",
+    "desc": "Summon 3 times",
+    "metric": "summons",
+    "goal": 3,
+    "coins": 800,
+    "exp": 300,
+    "gems": 3
+  },
+  {
+    "id": "q_games_5",
+    "desc": "Play 5 mini games",
+    "metric": "gamesPlayed",
+    "goal": 5,
+    "coins": 500,
+    "exp": 300,
+    "gems": 0
+  },
+  {
+    "id": "q_arena_3",
+    "desc": "Win 3 arena matches",
+    "metric": "arenaWins",
+    "goal": 3,
+    "coins": 1000,
+    "exp": 800,
+    "gems": 3
+  },
+  {
+    "id": "q_buys_3",
+    "desc": "Buy 3 items from the shop",
+    "metric": "shopBuys",
+    "goal": 3,
+    "coins": 500,
+    "exp": 300,
+    "gems": 0
+  }
+]

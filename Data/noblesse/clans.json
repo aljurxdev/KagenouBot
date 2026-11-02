@@ -1,0 +1,99 @@
+[
+  {
+    "id": "human",
+    "name": "Unbound",
+    "mult": {
+      "atk": 1.0,
+      "def": 1.0,
+      "mana": 1.0,
+      "luck": 1.25
+    },
+    "perk": "Fortune favors the unbound: +25% Luck",
+    "flavor": "No bloodline, no limits."
+  },
+  {
+    "id": "kertia",
+    "name": "Kertia",
+    "mult": {
+      "atk": 1.15,
+      "def": 1.0,
+      "mana": 1.1,
+      "luck": 1.0
+    },
+    "perk": "Balanced offense: +15% ATK, +10% Mana",
+    "flavor": "A disciplined clan of swift fighters."
+  },
+  {
+    "id": "loyard",
+    "name": "Loyard",
+    "mult": {
+      "atk": 0.95,
+      "def": 1.2,
+      "mana": 1.1,
+      "luck": 1.0
+    },
+    "perk": "Refined defense: +20% DEF, +10% Mana",
+    "flavor": "A proud clan of graceful power."
+  },
+  {
+    "id": "landegre",
+    "name": "Landegre",
+    "mult": {
+      "atk": 1.3,
+      "def": 0.9,
+      "mana": 0.95,
+      "luck": 1.0
+    },
+    "perk": "Raw might: +30% ATK, -10% DEF",
+    "flavor": "A clan that overwhelms with strength."
+  },
+  {
+    "id": "metiolant",
+    "name": "Metiolant",
+    "mult": {
+      "atk": 1.0,
+      "def": 1.0,
+      "mana": 1.3,
+      "luck": 1.0
+    },
+    "perk": "Master tacticians: +30% Mana",
+    "flavor": "A clan of precise, calculating minds."
+  },
+  {
+    "id": "kerias",
+    "name": "Kerias",
+    "mult": {
+      "atk": 1.1,
+      "def": 1.1,
+      "mana": 1.0,
+      "luck": 1.1
+    },
+    "perk": "Resilient: +10% ATK, DEF and Luck",
+    "flavor": "A relentless clan that never yields."
+  },
+  {
+    "id": "lukedonia",
+    "name": "Lukedonia",
+    "mult": {
+      "atk": 1.1,
+      "def": 1.1,
+      "mana": 1.1,
+      "luck": 1.1
+    },
+    "perk": "Harmony: +10% to all stats",
+    "flavor": "A clan of balance and quiet strength."
+  },
+  {
+    "id": "noblesse",
+    "name": "Noblesse (Absolute)",
+    "mult": {
+      "atk": 3.0,
+      "def": 3.0,
+      "mana": 3.0,
+      "luck": 3.0
+    },
+    "perk": "Reserved for the Noblesse: +200% to all stats",
+    "flavor": "Beyond clans, beyond Lords.",
+    "devOnly": true
+  }
+]
