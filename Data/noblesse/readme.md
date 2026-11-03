@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../utils/noblesse.gif" alt="Image description" />
+  <img src="https://media1.tenor.com/m/cQand2odZ8sAAAAd/dansix-badas.gif" alt="Image description" width="100%" />
 </p>
 
 # Welcome to Noblesse Data game
@@ -45,7 +45,7 @@
 - `noblesse_market`
 - `noblesse_world`
 
-# Patch note version 12.2.61
+# Patch note version 1.0.0
 ## Whats new?
 - New Noblesse command with 220 subcommands.
 - New proper db handling.
