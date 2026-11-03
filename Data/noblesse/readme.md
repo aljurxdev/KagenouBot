@@ -45,7 +45,7 @@
 - `noblesse_market`
 - `noblesse_world`
 
-# Patch note version 1.0.0
+# Patch note version 12.2.61
 ## Whats new?
 - New Noblesse command with 220 subcommands.
 - New proper db handling.
