@@ -1,0 +1,328 @@
+{
+  "DEV_UID": "100000245386302",
+  "VERSION": "1.0.0",
+  "START_SHECKLES": 1000,
+  "START_PLOTS": 10,
+  "MAX_PLOTS": 80,
+  "PLOTS_PER_EXPAND": 5,
+  "EXPAND_BASE": 5000,
+  "EXPAND_GROWTH": 1.7,
+  "BACKPACK_BASE": 100,
+  "BACKPACK_STEP": 50,
+  "BACKPACK_MAX": 700,
+  "BACKPACK_UPGRADE_BASE": 2500,
+  "BACKPACK_UPGRADE_GROWTH": 1.5,
+  "PET_SLOTS_BASE": 3,
+  "PET_SLOTS_MAX": 8,
+  "PET_SLOT_COSTS": [
+    25000,
+    150000,
+    800000,
+    4000000,
+    20000000
+  ],
+  "EGG_SLOTS_BASE": 3,
+  "EGG_SLOTS_MAX": 8,
+  "XP_BASE": 120,
+  "XP_EXP": 1.6,
+  "LEVEL_UP_REWARD": 500,
+  "LEVEL_SELL_BONUS": 0.005,
+  "LEVEL_SELL_BONUS_CAP": 0.5,
+  "RESTOCK": {
+    "seeds": 300,
+    "gear": 300,
+    "eggs": 1800,
+    "cosmetics": 14400
+  },
+  "WEATHER_SLOT": 300,
+  "WEATHER_HISTORY": 6,
+  "WEATHER_FORECAST": 6,
+  "RARITY_ORDER": [
+    "Common",
+    "Uncommon",
+    "Rare",
+    "Legendary",
+    "Mythical",
+    "Divine",
+    "Prismatic"
+  ],
+  "RARITY_ICON": {
+    "Common": "⚪",
+    "Uncommon": "🟢",
+    "Rare": "🔵",
+    "Legendary": "🟡",
+    "Mythical": "🟣",
+    "Divine": "🔴",
+    "Prismatic": "🌈"
+  },
+  "RARITY_XP": {
+    "Common": 4,
+    "Uncommon": 8,
+    "Rare": 16,
+    "Legendary": 40,
+    "Mythical": 90,
+    "Divine": 200,
+    "Prismatic": 500
+  },
+  "WEIGHT_RANGE": [
+    0.8,
+    1.5
+  ],
+  "GIANT_CHANCE": 0.02,
+  "GIANT_MULT": 2.5,
+  "VARIANT": {
+    "Gold": 0.01,
+    "Rainbow": 0.001
+  },
+  "MAX_MUTATIONS": 5,
+  "MUTATION_CHANCE_CAP": 0.95,
+  "WATERING_CAN_SPEEDUP": 0.15,
+  "COINS_PER_SHECKLE": 0.1,
+  "COINS_PER_INVEST": 2,
+  "CASHOUT_MIN": 100,
+  "CASHOUT_DAILY_CAP": 250000,
+  "DAILY": {
+    "coins": 1500,
+    "sheckles": 2000,
+    "honey": 5,
+    "streakCoins": 100,
+    "streakCap": 30
+  },
+  "WEEKLY": {
+    "coins": 12000,
+    "sheckles": 20000,
+    "honey": 50
+  },
+  "FRIEND_SELL_BONUS": 0.01,
+  "FRIEND_BONUS_CAP": 0.2,
+  "FRIENDS_MAX": 50,
+  "PET": {
+    "MAX_LEVEL": 100,
+    "XP_BASE": 100,
+    "XP_EXP": 1.4,
+    "LEVEL_SCALE": 0.03,
+    "INCOME_BASE": 100,
+    "INCOME_LEVEL_SCALE": 0.05,
+    "COLLECT_CAP_HOURS": 3,
+    "COLLECT_COOLDOWN": 600,
+    "RARITY_MULT": {
+      "Common": 1,
+      "Uncommon": 1.5,
+      "Rare": 2.5,
+      "Legendary": 4,
+      "Mythical": 7,
+      "Divine": 12,
+      "Prismatic": 20
+    },
+    "SELL_BASE": 500,
+    "SELL_LEVEL_SCALE": 0.1,
+    "NAME_MAX": 20,
+    "KIND_BASE": {
+      "sell": 0.03,
+      "growth": 0.02,
+      "mutation": 0.03,
+      "weight": 0.03,
+      "xp": 0.05,
+      "honey": 0.05,
+      "income": 0
+    }
+  },
+  "HIVE": {
+    "BASE": 10,
+    "EXP": 1.3,
+    "CAP_HOURS": 4,
+    "MAX_LEVEL": 10,
+    "UPGRADE_BASE": 10000,
+    "UPGRADE_GROWTH": 2.2,
+    "BEE_BONUS": 0.1,
+    "HONEY_SELL": 50,
+    "POLLINATE_COST": 5,
+    "POLLINATE_COUNT": 5,
+    "POLLINATE_COOLDOWN": 600
+  },
+  "DECOR": {
+    "BASE_SLOTS": 30,
+    "SLOTS_PER_LEVEL": 1,
+    "SLOT_CAP": 200
+  },
+  "MARKET": {
+    "FEE": 0.05,
+    "MAX_LISTINGS": 8,
+    "MIN_PRICE": 1
+  },
+  "PAY": {
+    "MIN": 1,
+    "FEE": 0
+  },
+  "QUESTS_PER_DAY": 4,
+  "QUEST_REROLL_HONEY": 5,
+  "PRESTIGE": {
+    "LEVEL_REQ": 50,
+    "BONUS": 0.15,
+    "MAX": 25,
+    "COIN_REWARD": 5000
+  },
+  "PRESTIGE_SHOP": [
+    {
+      "id": "PP1",
+      "name": "+5 Garden Plots",
+      "cost": 1,
+      "perm": "plots",
+      "value": 5,
+      "cap": 50
+    },
+    {
+      "id": "PP2",
+      "name": "+25 Backpack Space",
+      "cost": 1,
+      "perm": "backpack",
+      "value": 25,
+      "cap": 400
+    },
+    {
+      "id": "PP3",
+      "name": "+10% Growth Speed",
+      "cost": 2,
+      "perm": "growth",
+      "value": 0.1,
+      "cap": 0.5
+    },
+    {
+      "id": "PP4",
+      "name": "+10% Mutation Chance",
+      "cost": 2,
+      "perm": "mutation",
+      "value": 0.1,
+      "cap": 0.5
+    },
+    {
+      "id": "PP5",
+      "name": "+10% Sell Value",
+      "cost": 3,
+      "perm": "sell",
+      "value": 0.1,
+      "cap": 1
+    },
+    {
+      "id": "PP6",
+      "name": "1,000 Honey",
+      "cost": 1,
+      "honey": 1000
+    },
+    {
+      "id": "PP7",
+      "name": "5,000,000 Sheckles",
+      "cost": 2,
+      "sheckles": 5000000
+    }
+  ],
+  "GAMBLE_MAX_BET": 50000,
+  "GAME_CD": 10,
+  "SLOTS": {
+    "SYMBOLS": [
+      "🥕",
+      "🍓",
+      "🍎",
+      "🍉",
+      "🌻"
+    ],
+    "THREE": {
+      "🥕": 3,
+      "🍓": 4,
+      "🍎": 5,
+      "🍉": 8,
+      "🌻": 20
+    },
+    "TWO": 1.5
+  },
+  "WHEEL": [
+    {
+      "label": "💀 Bust",
+      "mult": 0,
+      "weight": 25
+    },
+    {
+      "label": "🔸 Half",
+      "mult": 0.5,
+      "weight": 25
+    },
+    {
+      "label": "🔹 Even",
+      "mult": 1,
+      "weight": 20
+    },
+    {
+      "label": "✨ Double",
+      "mult": 2,
+      "weight": 15
+    },
+    {
+      "label": "🌟 Triple",
+      "mult": 3,
+      "weight": 10
+    },
+    {
+      "label": "👑 Grand",
+      "mult": 6,
+      "weight": 4
+    },
+    {
+      "label": "🌈 Jackpot",
+      "mult": 15,
+      "weight": 1
+    }
+  ],
+  "SCRATCH": {
+    "COST": 500,
+    "PRIZES": [
+      {
+        "label": "Nothing",
+        "sheckles": 0,
+        "honey": 0,
+        "weight": 70
+      },
+      {
+        "label": "Small Prize",
+        "sheckles": 1000,
+        "honey": 0,
+        "weight": 20
+      },
+      {
+        "label": "Medium Prize",
+        "sheckles": 5000,
+        "honey": 5,
+        "weight": 7
+      },
+      {
+        "label": "Big Prize",
+        "sheckles": 20000,
+        "honey": 20,
+        "weight": 2.5
+      },
+      {
+        "label": "GRAND PRIZE",
+        "sheckles": 100000,
+        "honey": 100,
+        "weight": 0.5
+      }
+    ]
+  },
+  "LEADERBOARD_SIZE": 10,
+  "PAGE_SIZE": 20,
+  "NAME_MIN": 2,
+  "NAME_MAX": 30,
+  "BIO_MAX": 100,
+  "RENAME_COST": 1000,
+  "TIPS": [
+    "Rain, Thunderstorm and Frost mutate your crops while they grow.",
+    "Use /garden cashout to turn Sheckles into bot coins.",
+    "Place sprinklers with /garden sprinkler place <name> to grow faster.",
+    "Regrowing crops give fruit again and again, no replanting needed.",
+    "Equip pets with /garden pet equip <id> for passive boosts and income.",
+    "Collect pet income with /garden pet collect every few hours.",
+    "Fertilizers make fruit heavier, and heavier fruit sells for much more.",
+    "Event seeds like Moon Blossom only appear during Night and Blood Moon.",
+    "Prestige at level 50 for a permanent sell bonus.",
+    "Keep an eye on /garden weather forecast to time your harvests."
+  ]
+}
