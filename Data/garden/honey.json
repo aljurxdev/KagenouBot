@@ -1,0 +1,50 @@
+[
+  {
+    "id": "H1",
+    "name": "Bee Egg",
+    "kind": "egg",
+    "price": 500
+  },
+  {
+    "id": "H2",
+    "name": "Pollen Spray",
+    "kind": "gear",
+    "price": 100
+  },
+  {
+    "id": "H3",
+    "name": "Medium Treat",
+    "kind": "gear",
+    "price": 150
+  },
+  {
+    "id": "H4",
+    "name": "Large Treat",
+    "kind": "gear",
+    "price": 600
+  },
+  {
+    "id": "H5",
+    "name": "Honeysuckle",
+    "kind": "seed",
+    "price": 200
+  },
+  {
+    "id": "H6",
+    "name": "Mega Fertilizer",
+    "kind": "gear",
+    "price": 1500
+  },
+  {
+    "id": "H7",
+    "name": "Godly Sprinkler",
+    "kind": "gear",
+    "price": 3000
+  },
+  {
+    "id": "H8",
+    "name": "Beehive Statue",
+    "kind": "cosmetic",
+    "price": 2500
+  }
+]

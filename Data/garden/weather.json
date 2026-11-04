@@ -1,0 +1,235 @@
+{
+  "Clear": {
+    "icon": "☀️",
+    "weight": 40,
+    "desc": "A calm and sunny day.",
+    "effect": "No bonuses.",
+    "growthMult": 1.0,
+    "mutations": [],
+    "rarity": "Common"
+  },
+  "Rain": {
+    "icon": "🌧️",
+    "weight": 14,
+    "desc": "Rain waters the garden.",
+    "effect": "Crops grow 20% faster and may turn Wet.",
+    "growthMult": 0.8,
+    "mutations": [
+      {
+        "name": "Wet",
+        "chance": 0.5
+      }
+    ],
+    "rarity": "Common"
+  },
+  "Thunderstorm": {
+    "icon": "⛈️",
+    "weight": 6,
+    "desc": "Lightning crackles overhead.",
+    "effect": "Crops may be Wet or Shocked.",
+    "growthMult": 0.9,
+    "mutations": [
+      {
+        "name": "Wet",
+        "chance": 0.4
+      },
+      {
+        "name": "Shocked",
+        "chance": 0.3
+      }
+    ],
+    "rarity": "Rare"
+  },
+  "Frost": {
+    "icon": "🥶",
+    "weight": 7,
+    "desc": "A hard frost settles in.",
+    "effect": "Crops may turn Chilled or Frozen.",
+    "growthMult": 1.0,
+    "mutations": [
+      {
+        "name": "Chilled",
+        "chance": 0.45
+      },
+      {
+        "name": "Frozen",
+        "chance": 0.15
+      }
+    ],
+    "rarity": "Uncommon"
+  },
+  "Snow": {
+    "icon": "❄️",
+    "weight": 6,
+    "desc": "Snow blankets the garden.",
+    "effect": "Crops may turn Chilled or Frozen.",
+    "growthMult": 1.0,
+    "mutations": [
+      {
+        "name": "Chilled",
+        "chance": 0.3
+      },
+      {
+        "name": "Frozen",
+        "chance": 0.1
+      }
+    ],
+    "rarity": "Uncommon"
+  },
+  "Night": {
+    "icon": "🌙",
+    "weight": 8,
+    "desc": "The moon rises over the garden.",
+    "effect": "Crops may turn Moonlit. Event seeds appear.",
+    "growthMult": 1.0,
+    "mutations": [
+      {
+        "name": "Moonlit",
+        "chance": 0.4
+      }
+    ],
+    "rarity": "Uncommon"
+  },
+  "Blood Moon": {
+    "icon": "🩸",
+    "weight": 3,
+    "desc": "A crimson moon hangs overhead.",
+    "effect": "Crops may turn Bloodlit or Moonlit. Event seeds appear.",
+    "growthMult": 1.0,
+    "mutations": [
+      {
+        "name": "Bloodlit",
+        "chance": 0.4
+      },
+      {
+        "name": "Moonlit",
+        "chance": 0.2
+      }
+    ],
+    "rarity": "Legendary"
+  },
+  "Windy": {
+    "icon": "💨",
+    "weight": 5,
+    "desc": "Strong gusts sweep through.",
+    "effect": "Crops may turn Windstruck.",
+    "growthMult": 1.0,
+    "mutations": [
+      {
+        "name": "Windstruck",
+        "chance": 0.35
+      }
+    ],
+    "rarity": "Common"
+  },
+  "Heatwave": {
+    "icon": "🔥",
+    "weight": 4,
+    "desc": "The sun scorches the ground.",
+    "effect": "Crops may turn Burnt or Sundried.",
+    "growthMult": 1.0,
+    "mutations": [
+      {
+        "name": "Burnt",
+        "chance": 0.3
+      },
+      {
+        "name": "Sundried",
+        "chance": 0.05
+      }
+    ],
+    "rarity": "Rare"
+  },
+  "Tornado": {
+    "icon": "🌪️",
+    "weight": 2,
+    "desc": "A tornado tears across the land.",
+    "effect": "Crops may turn Twisted.",
+    "growthMult": 1.0,
+    "mutations": [
+      {
+        "name": "Twisted",
+        "chance": 0.3
+      }
+    ],
+    "rarity": "Legendary"
+  },
+  "Bee Swarm": {
+    "icon": "🐝",
+    "weight": 3,
+    "desc": "A swarm of bees descends.",
+    "effect": "Crops may turn Pollinated or Honeyglazed. Event seeds appear.",
+    "growthMult": 1.0,
+    "mutations": [
+      {
+        "name": "Pollinated",
+        "chance": 0.4
+      },
+      {
+        "name": "Honeyglazed",
+        "chance": 0.1
+      }
+    ],
+    "rarity": "Legendary"
+  },
+  "Tropical Rain": {
+    "icon": "🌴",
+    "weight": 2,
+    "desc": "Warm tropical rain pours down.",
+    "effect": "Crops grow 30% faster and may turn Wet or Drenched.",
+    "growthMult": 0.7,
+    "mutations": [
+      {
+        "name": "Wet",
+        "chance": 0.6
+      },
+      {
+        "name": "Drenched",
+        "chance": 0.15
+      }
+    ],
+    "rarity": "Rare"
+  },
+  "Meteor Shower": {
+    "icon": "☄️",
+    "weight": 1.5,
+    "desc": "Meteors streak across the sky.",
+    "effect": "Crops may turn Meteoric.",
+    "growthMult": 1.0,
+    "mutations": [
+      {
+        "name": "Meteoric",
+        "chance": 0.1
+      }
+    ],
+    "rarity": "Mythical"
+  },
+  "Disco": {
+    "icon": "🪩",
+    "weight": 1.5,
+    "desc": "The garden lights up with a disco beat.",
+    "effect": "Crops may turn Disco.",
+    "growthMult": 1.0,
+    "mutations": [
+      {
+        "name": "Disco",
+        "chance": 0.15
+      }
+    ],
+    "rarity": "Mythical"
+  },
+  "Jandel Zombie": {
+    "icon": "🧟",
+    "weight": 1,
+    "desc": "The undead rise in the garden.",
+    "effect": "Crops may turn Zombified.",
+    "growthMult": 1.0,
+    "mutations": [
+      {
+        "name": "Zombified",
+        "chance": 0.2
+      }
+    ],
+    "rarity": "Divine"
+  }
+}

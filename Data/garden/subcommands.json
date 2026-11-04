@@ -1,0 +1,1250 @@
+{
+  "register": {
+    "category": "🌱 Account",
+    "usage": "<name>",
+    "desc": "Create your garden",
+    "access": "all"
+  },
+  "profile": {
+    "category": "🌱 Account",
+    "usage": "[name]",
+    "desc": "View a garden profile",
+    "access": "all"
+  },
+  "status": {
+    "category": "🌱 Account",
+    "usage": "",
+    "desc": "Growth status of your crops",
+    "access": "all"
+  },
+  "balance": {
+    "category": "🌱 Account",
+    "usage": "",
+    "desc": "Sheckles, honey, coins and bank",
+    "access": "all"
+  },
+  "stats": {
+    "category": "🌱 Account",
+    "usage": "",
+    "desc": "Garden statistics",
+    "access": "all"
+  },
+  "rename": {
+    "category": "🌱 Account",
+    "usage": "<new name>",
+    "desc": "Rename your garden",
+    "access": "all"
+  },
+  "bio": {
+    "category": "🌱 Account",
+    "usage": "<text>",
+    "desc": "Set your bio",
+    "access": "all"
+  },
+  "daily": {
+    "category": "🌱 Account",
+    "usage": "",
+    "desc": "Claim your daily reward",
+    "access": "all"
+  },
+  "weekly": {
+    "category": "🌱 Account",
+    "usage": "",
+    "desc": "Claim your weekly reward",
+    "access": "all"
+  },
+  "level": {
+    "category": "🌱 Account",
+    "usage": "",
+    "desc": "Level and XP progress",
+    "access": "all"
+  },
+  "rank": {
+    "category": "🌱 Account",
+    "usage": "",
+    "desc": "Your rank among gardeners",
+    "access": "all"
+  },
+  "title.list": {
+    "category": "🌱 Account",
+    "usage": "",
+    "desc": "List titles",
+    "access": "all"
+  },
+  "title.set": {
+    "category": "🌱 Account",
+    "usage": "<id>",
+    "desc": "Equip a title",
+    "access": "all"
+  },
+  "reset": {
+    "category": "🌱 Account",
+    "usage": "confirm",
+    "desc": "Reset your garden",
+    "access": "all"
+  },
+  "cashout": {
+    "category": "💰 Earn Money",
+    "usage": "<amount/all>",
+    "desc": "Turn Sheckles into bot coins",
+    "access": "all"
+  },
+  "invest": {
+    "category": "💰 Earn Money",
+    "usage": "<coins>",
+    "desc": "Turn bot coins into Sheckles",
+    "access": "all"
+  },
+  "rates": {
+    "category": "💰 Earn Money",
+    "usage": "",
+    "desc": "Exchange rates and daily limit",
+    "access": "all"
+  },
+  "earnings": {
+    "category": "💰 Earn Money",
+    "usage": "",
+    "desc": "Lifetime earnings",
+    "access": "all"
+  },
+  "garden": {
+    "category": "🌾 Garden",
+    "usage": "",
+    "desc": "View your plots",
+    "access": "all"
+  },
+  "plots": {
+    "category": "🌾 Garden",
+    "usage": "",
+    "desc": "Plot usage and expansion",
+    "access": "all"
+  },
+  "growing": {
+    "category": "🌾 Garden",
+    "usage": "",
+    "desc": "Crops that are growing",
+    "access": "all"
+  },
+  "ready": {
+    "category": "🌾 Garden",
+    "usage": "",
+    "desc": "Crops ready to harvest",
+    "access": "all"
+  },
+  "timers": {
+    "category": "🌾 Garden",
+    "usage": "",
+    "desc": "Next ready times",
+    "access": "all"
+  },
+  "plant": {
+    "category": "🌾 Garden",
+    "usage": "<seed> [qty]",
+    "desc": "Plant seeds",
+    "access": "all"
+  },
+  "plant.all": {
+    "category": "🌾 Garden",
+    "usage": "<seed>",
+    "desc": "Fill every free plot",
+    "access": "all"
+  },
+  "plant.random": {
+    "category": "🌾 Garden",
+    "usage": "",
+    "desc": "Plant random seeds you own",
+    "access": "all"
+  },
+  "harvest": {
+    "category": "🌾 Garden",
+    "usage": "",
+    "desc": "Harvest every ready crop",
+    "access": "all"
+  },
+  "harvest.crop": {
+    "category": "🌾 Garden",
+    "usage": "<seed>",
+    "desc": "Harvest one kind of crop",
+    "access": "all"
+  },
+  "harvest.sell": {
+    "category": "🌾 Garden",
+    "usage": "",
+    "desc": "Harvest and sell instantly",
+    "access": "all"
+  },
+  "water": {
+    "category": "🌾 Garden",
+    "usage": "<plot>",
+    "desc": "Use a Watering Can",
+    "access": "all"
+  },
+  "water.all": {
+    "category": "🌾 Garden",
+    "usage": "",
+    "desc": "Water every growing crop",
+    "access": "all"
+  },
+  "fertilize": {
+    "category": "🌾 Garden",
+    "usage": "<plot> <fertilizer>",
+    "desc": "Fertilize a crop",
+    "access": "all"
+  },
+  "shovel": {
+    "category": "🌾 Garden",
+    "usage": "<plot>",
+    "desc": "Remove a crop",
+    "access": "all"
+  },
+  "shovel.all": {
+    "category": "🌾 Garden",
+    "usage": "<seed>",
+    "desc": "Remove every crop of a kind",
+    "access": "all"
+  },
+  "expand": {
+    "category": "🌾 Garden",
+    "usage": "",
+    "desc": "Buy more plots",
+    "access": "all"
+  },
+  "stock": {
+    "category": "🛒 Shop",
+    "usage": "",
+    "desc": "Everything in stock",
+    "access": "all"
+  },
+  "stock.seeds": {
+    "category": "🛒 Shop",
+    "usage": "",
+    "desc": "Seed shop",
+    "access": "all"
+  },
+  "stock.gear": {
+    "category": "🛒 Shop",
+    "usage": "",
+    "desc": "Gear shop",
+    "access": "all"
+  },
+  "stock.eggs": {
+    "category": "🛒 Shop",
+    "usage": "",
+    "desc": "Egg shop",
+    "access": "all"
+  },
+  "stock.cosmetics": {
+    "category": "🛒 Shop",
+    "usage": "",
+    "desc": "Cosmetic shop",
+    "access": "all"
+  },
+  "stock.special": {
+    "category": "🛒 Shop",
+    "usage": "",
+    "desc": "Event shop",
+    "access": "all"
+  },
+  "restock": {
+    "category": "🛒 Shop",
+    "usage": "",
+    "desc": "Time until restock",
+    "access": "all"
+  },
+  "buy": {
+    "category": "🛒 Shop",
+    "usage": "<seed/gear/egg/cosmetic> <item> [qty]",
+    "desc": "Buy an item",
+    "access": "all"
+  },
+  "buy.seed": {
+    "category": "🛒 Shop",
+    "usage": "<item> [qty]",
+    "desc": "Buy a seed",
+    "access": "all"
+  },
+  "buy.gear": {
+    "category": "🛒 Shop",
+    "usage": "<item> [qty]",
+    "desc": "Buy gear",
+    "access": "all"
+  },
+  "buy.egg": {
+    "category": "🛒 Shop",
+    "usage": "<item> [qty]",
+    "desc": "Buy an egg",
+    "access": "all"
+  },
+  "buy.cosmetic": {
+    "category": "🛒 Shop",
+    "usage": "<item> [qty]",
+    "desc": "Buy a cosmetic",
+    "access": "all"
+  },
+  "buy.max": {
+    "category": "🛒 Shop",
+    "usage": "<item>",
+    "desc": "Buy as many as you can",
+    "access": "all"
+  },
+  "price": {
+    "category": "🛒 Shop",
+    "usage": "<item>",
+    "desc": "Look up an item price",
+    "access": "all"
+  },
+  "shop": {
+    "category": "🛒 Shop",
+    "usage": "",
+    "desc": "Shop overview",
+    "access": "all"
+  },
+  "inventory": {
+    "category": "🎒 Inventory",
+    "usage": "",
+    "desc": "Inventory overview",
+    "access": "all"
+  },
+  "inventory.seeds": {
+    "category": "🎒 Inventory",
+    "usage": "",
+    "desc": "Your seeds",
+    "access": "all"
+  },
+  "inventory.gear": {
+    "category": "🎒 Inventory",
+    "usage": "",
+    "desc": "Your gear",
+    "access": "all"
+  },
+  "inventory.eggs": {
+    "category": "🎒 Inventory",
+    "usage": "",
+    "desc": "Your eggs",
+    "access": "all"
+  },
+  "inventory.cosmetics": {
+    "category": "🎒 Inventory",
+    "usage": "",
+    "desc": "Your cosmetics",
+    "access": "all"
+  },
+  "inventory.produce": {
+    "category": "🎒 Inventory",
+    "usage": "[page]",
+    "desc": "Your harvested fruit",
+    "access": "all"
+  },
+  "inventory.pets": {
+    "category": "🎒 Inventory",
+    "usage": "",
+    "desc": "Your pets",
+    "access": "all"
+  },
+  "backpack": {
+    "category": "🎒 Inventory",
+    "usage": "",
+    "desc": "Backpack capacity",
+    "access": "all"
+  },
+  "backpack.upgrade": {
+    "category": "🎒 Inventory",
+    "usage": "",
+    "desc": "Upgrade your backpack",
+    "access": "all"
+  },
+  "sell": {
+    "category": "🎒 Inventory",
+    "usage": "<fruit #>",
+    "desc": "Sell a fruit",
+    "access": "all"
+  },
+  "sell.all": {
+    "category": "🎒 Inventory",
+    "usage": "",
+    "desc": "Sell all fruit",
+    "access": "all"
+  },
+  "sell.crop": {
+    "category": "🎒 Inventory",
+    "usage": "<seed>",
+    "desc": "Sell every fruit of a crop",
+    "access": "all"
+  },
+  "sell.mutated": {
+    "category": "🎒 Inventory",
+    "usage": "",
+    "desc": "Sell only mutated fruit",
+    "access": "all"
+  },
+  "sell.value": {
+    "category": "🎒 Inventory",
+    "usage": "",
+    "desc": "Estimate your fruit value",
+    "access": "all"
+  },
+  "item.favorite": {
+    "category": "🎒 Inventory",
+    "usage": "<fruit #>",
+    "desc": "Protect a fruit",
+    "access": "all"
+  },
+  "item.unfavorite": {
+    "category": "🎒 Inventory",
+    "usage": "<fruit #>",
+    "desc": "Unprotect a fruit",
+    "access": "all"
+  },
+  "item.favorites": {
+    "category": "🎒 Inventory",
+    "usage": "",
+    "desc": "List protected fruit",
+    "access": "all"
+  },
+  "gear.list": {
+    "category": "🔧 Gear",
+    "usage": "",
+    "desc": "All gear",
+    "access": "all"
+  },
+  "gear.info": {
+    "category": "🔧 Gear",
+    "usage": "<gear>",
+    "desc": "Gear details",
+    "access": "all"
+  },
+  "gear.use": {
+    "category": "🔧 Gear",
+    "usage": "<gear> [plot]",
+    "desc": "Use gear",
+    "access": "all"
+  },
+  "sprinkler.place": {
+    "category": "🔧 Gear",
+    "usage": "<sprinkler>",
+    "desc": "Place a sprinkler",
+    "access": "all"
+  },
+  "sprinkler.list": {
+    "category": "🔧 Gear",
+    "usage": "",
+    "desc": "Active sprinklers",
+    "access": "all"
+  },
+  "sprinkler.remove": {
+    "category": "🔧 Gear",
+    "usage": "<#>",
+    "desc": "Remove a sprinkler",
+    "access": "all"
+  },
+  "spray": {
+    "category": "🔧 Gear",
+    "usage": "<spray> <fruit #>",
+    "desc": "Spray a fruit",
+    "access": "all"
+  },
+  "recall": {
+    "category": "🔧 Gear",
+    "usage": "",
+    "desc": "Recall equipped pets",
+    "access": "all"
+  },
+  "egg.place": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "<egg> [qty]",
+    "desc": "Place eggs to hatch",
+    "access": "all"
+  },
+  "egg.list": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "",
+    "desc": "Eggs that are hatching",
+    "access": "all"
+  },
+  "egg.hatch": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "<#>",
+    "desc": "Hatch a ready egg",
+    "access": "all"
+  },
+  "egg.hatchall": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "",
+    "desc": "Hatch every ready egg",
+    "access": "all"
+  },
+  "egg.info": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "<egg>",
+    "desc": "Egg odds",
+    "access": "all"
+  },
+  "egg.speedup": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "<#>",
+    "desc": "Speed up an egg with honey",
+    "access": "all"
+  },
+  "pet.list": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "",
+    "desc": "Your pets",
+    "access": "all"
+  },
+  "pet.info": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "<id>",
+    "desc": "Pet details",
+    "access": "all"
+  },
+  "pet.equip": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "<id>",
+    "desc": "Equip a pet",
+    "access": "all"
+  },
+  "pet.unequip": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "<id>",
+    "desc": "Unequip a pet",
+    "access": "all"
+  },
+  "pet.feed": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "<id> <treat>",
+    "desc": "Feed a pet",
+    "access": "all"
+  },
+  "pet.rename": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "<id> <name>",
+    "desc": "Rename a pet",
+    "access": "all"
+  },
+  "pet.favorite": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "<id>",
+    "desc": "Protect a pet",
+    "access": "all"
+  },
+  "pet.unfavorite": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "<id>",
+    "desc": "Unprotect a pet",
+    "access": "all"
+  },
+  "pet.sell": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "<id>",
+    "desc": "Sell a pet",
+    "access": "all"
+  },
+  "pet.collect": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "",
+    "desc": "Collect pet income",
+    "access": "all"
+  },
+  "pet.dex": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "",
+    "desc": "Pet collection",
+    "access": "all"
+  },
+  "pet.slots": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "",
+    "desc": "Pet slot info",
+    "access": "all"
+  },
+  "pet.expand": {
+    "category": "🥚 Eggs and Pets",
+    "usage": "",
+    "desc": "Buy a pet slot",
+    "access": "all"
+  },
+  "weather": {
+    "category": "🌦️ Weather",
+    "usage": "",
+    "desc": "Current weather",
+    "access": "all"
+  },
+  "weather.forecast": {
+    "category": "🌦️ Weather",
+    "usage": "",
+    "desc": "Upcoming weather",
+    "access": "all"
+  },
+  "weather.list": {
+    "category": "🌦️ Weather",
+    "usage": "",
+    "desc": "All weather types",
+    "access": "all"
+  },
+  "weather.info": {
+    "category": "🌦️ Weather",
+    "usage": "<name>",
+    "desc": "Weather details",
+    "access": "all"
+  },
+  "weather.next": {
+    "category": "🌦️ Weather",
+    "usage": "<name>",
+    "desc": "When a weather arrives",
+    "access": "all"
+  },
+  "weather.history": {
+    "category": "🌦️ Weather",
+    "usage": "",
+    "desc": "Recent weather",
+    "access": "all"
+  },
+  "abuse.status": {
+    "category": "🌦️ Weather",
+    "usage": "",
+    "desc": "Admin Abuse status",
+    "access": "all"
+  },
+  "mutation.list": {
+    "category": "🧬 Mutations",
+    "usage": "",
+    "desc": "All mutations",
+    "access": "all"
+  },
+  "mutation.info": {
+    "category": "🧬 Mutations",
+    "usage": "<name>",
+    "desc": "Mutation details",
+    "access": "all"
+  },
+  "mutation.collection": {
+    "category": "🧬 Mutations",
+    "usage": "",
+    "desc": "Mutations you found",
+    "access": "all"
+  },
+  "mutation.chance": {
+    "category": "🧬 Mutations",
+    "usage": "",
+    "desc": "Your current mutation chance",
+    "access": "all"
+  },
+  "variant.list": {
+    "category": "🧬 Mutations",
+    "usage": "",
+    "desc": "Fruit variants",
+    "access": "all"
+  },
+  "crop.list": {
+    "category": "📖 Crops",
+    "usage": "[rarity]",
+    "desc": "List crops",
+    "access": "all"
+  },
+  "crop.info": {
+    "category": "📖 Crops",
+    "usage": "<crop>",
+    "desc": "Crop details",
+    "access": "all"
+  },
+  "crop.search": {
+    "category": "📖 Crops",
+    "usage": "<keyword>",
+    "desc": "Search crops",
+    "access": "all"
+  },
+  "crop.rarity": {
+    "category": "📖 Crops",
+    "usage": "",
+    "desc": "Crops by rarity",
+    "access": "all"
+  },
+  "crop.compare": {
+    "category": "📖 Crops",
+    "usage": "<cropA> / <cropB>",
+    "desc": "Compare crops",
+    "access": "all"
+  },
+  "crop.calc": {
+    "category": "📖 Crops",
+    "usage": "<crop> <weight> [mutations]",
+    "desc": "Value calculator",
+    "access": "all"
+  },
+  "crop.top": {
+    "category": "📖 Crops",
+    "usage": "",
+    "desc": "Most valuable crops",
+    "access": "all"
+  },
+  "crop.dex": {
+    "category": "📖 Crops",
+    "usage": "",
+    "desc": "Your crop collection",
+    "access": "all"
+  },
+  "crop.profit": {
+    "category": "📖 Crops",
+    "usage": "<crop>",
+    "desc": "Profit estimate",
+    "access": "all"
+  },
+  "quest": {
+    "category": "📜 Progress",
+    "usage": "",
+    "desc": "Daily quests",
+    "access": "all"
+  },
+  "quest.list": {
+    "category": "📜 Progress",
+    "usage": "",
+    "desc": "Quest pool",
+    "access": "all"
+  },
+  "quest.claim": {
+    "category": "📜 Progress",
+    "usage": "<id>",
+    "desc": "Claim a quest",
+    "access": "all"
+  },
+  "quest.claimall": {
+    "category": "📜 Progress",
+    "usage": "",
+    "desc": "Claim all quests",
+    "access": "all"
+  },
+  "quest.reroll": {
+    "category": "📜 Progress",
+    "usage": "",
+    "desc": "Reroll quests",
+    "access": "all"
+  },
+  "achievements": {
+    "category": "📜 Progress",
+    "usage": "",
+    "desc": "Achievements",
+    "access": "all"
+  },
+  "achievements.claim": {
+    "category": "📜 Progress",
+    "usage": "[id]",
+    "desc": "Claim achievements",
+    "access": "all"
+  },
+  "achievements.progress": {
+    "category": "📜 Progress",
+    "usage": "",
+    "desc": "Achievement progress",
+    "access": "all"
+  },
+  "prestige": {
+    "category": "📜 Progress",
+    "usage": "",
+    "desc": "Prestige now",
+    "access": "all"
+  },
+  "prestige.info": {
+    "category": "📜 Progress",
+    "usage": "",
+    "desc": "Prestige info",
+    "access": "all"
+  },
+  "prestige.shop": {
+    "category": "📜 Progress",
+    "usage": "[id]",
+    "desc": "Prestige shop",
+    "access": "all"
+  },
+  "streak": {
+    "category": "📜 Progress",
+    "usage": "",
+    "desc": "Daily streak",
+    "access": "all"
+  },
+  "hive": {
+    "category": "🐝 Honey and Bees",
+    "usage": "",
+    "desc": "Your hive",
+    "access": "all"
+  },
+  "hive.info": {
+    "category": "🐝 Honey and Bees",
+    "usage": "",
+    "desc": "Hive production details",
+    "access": "all"
+  },
+  "hive.collect": {
+    "category": "🐝 Honey and Bees",
+    "usage": "",
+    "desc": "Collect honey",
+    "access": "all"
+  },
+  "hive.upgrade": {
+    "category": "🐝 Honey and Bees",
+    "usage": "",
+    "desc": "Upgrade your hive",
+    "access": "all"
+  },
+  "honey": {
+    "category": "🐝 Honey and Bees",
+    "usage": "",
+    "desc": "Honey balance",
+    "access": "all"
+  },
+  "honey.shop": {
+    "category": "🐝 Honey and Bees",
+    "usage": "",
+    "desc": "Honey shop",
+    "access": "all"
+  },
+  "honey.buy": {
+    "category": "🐝 Honey and Bees",
+    "usage": "<id> [qty]",
+    "desc": "Buy with honey",
+    "access": "all"
+  },
+  "honey.sell": {
+    "category": "🐝 Honey and Bees",
+    "usage": "<amount>",
+    "desc": "Sell honey for Sheckles",
+    "access": "all"
+  },
+  "pollinate": {
+    "category": "🐝 Honey and Bees",
+    "usage": "",
+    "desc": "Pollinate your crops",
+    "access": "all"
+  },
+  "bee.list": {
+    "category": "🐝 Honey and Bees",
+    "usage": "",
+    "desc": "Equipped bees",
+    "access": "all"
+  },
+  "decor.place": {
+    "category": "🏡 Decor",
+    "usage": "<decor> [qty]",
+    "desc": "Place decor",
+    "access": "all"
+  },
+  "decor.remove": {
+    "category": "🏡 Decor",
+    "usage": "<decor> [qty]",
+    "desc": "Remove decor",
+    "access": "all"
+  },
+  "decor.list": {
+    "category": "🏡 Decor",
+    "usage": "",
+    "desc": "Placed decor",
+    "access": "all"
+  },
+  "decor.clear": {
+    "category": "🏡 Decor",
+    "usage": "",
+    "desc": "Remove all decor",
+    "access": "all"
+  },
+  "crate.open": {
+    "category": "🏡 Decor",
+    "usage": "<crate> [qty]",
+    "desc": "Open a crate",
+    "access": "all"
+  },
+  "crate.list": {
+    "category": "🏡 Decor",
+    "usage": "",
+    "desc": "Crate odds",
+    "access": "all"
+  },
+  "garden.score": {
+    "category": "🏡 Decor",
+    "usage": "",
+    "desc": "Your garden score",
+    "access": "all"
+  },
+  "friend.add": {
+    "category": "🤝 Social",
+    "usage": "<name>",
+    "desc": "Send a friend request",
+    "access": "all"
+  },
+  "friend.accept": {
+    "category": "🤝 Social",
+    "usage": "<name>",
+    "desc": "Accept a request",
+    "access": "all"
+  },
+  "friend.remove": {
+    "category": "🤝 Social",
+    "usage": "<name>",
+    "desc": "Remove a friend",
+    "access": "all"
+  },
+  "friend.list": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Friends and requests",
+    "access": "all"
+  },
+  "visit": {
+    "category": "🤝 Social",
+    "usage": "<name>",
+    "desc": "Visit a garden",
+    "access": "all"
+  },
+  "pay": {
+    "category": "🤝 Social",
+    "usage": "<name> <amount>",
+    "desc": "Send Sheckles",
+    "access": "all"
+  },
+  "gift": {
+    "category": "🤝 Social",
+    "usage": "<name> <type> <qty> <item>",
+    "desc": "Gift an item",
+    "access": "all"
+  },
+  "trade.offer": {
+    "category": "🤝 Social",
+    "usage": "<name> <price> <qty> <type> <item>",
+    "desc": "Offer a trade",
+    "access": "all"
+  },
+  "trade.accept": {
+    "category": "🤝 Social",
+    "usage": "<offer id>",
+    "desc": "Accept a trade",
+    "access": "all"
+  },
+  "trade.decline": {
+    "category": "🤝 Social",
+    "usage": "<offer id>",
+    "desc": "Decline a trade",
+    "access": "all"
+  },
+  "trade.list": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Trades sent to you",
+    "access": "all"
+  },
+  "leaderboard": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Top gardeners by Sheckles",
+    "access": "all"
+  },
+  "leaderboard.sheckles": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Richest gardeners",
+    "access": "all"
+  },
+  "leaderboard.level": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Highest level",
+    "access": "all"
+  },
+  "leaderboard.harvests": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Most harvests",
+    "access": "all"
+  },
+  "leaderboard.pets": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Most pets",
+    "access": "all"
+  },
+  "leaderboard.collection": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Largest crop collection",
+    "access": "all"
+  },
+  "leaderboard.prestige": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Highest prestige",
+    "access": "all"
+  },
+  "leaderboard.score": {
+    "category": "🤝 Social",
+    "usage": "",
+    "desc": "Best garden score",
+    "access": "all"
+  },
+  "market.list": {
+    "category": "🏪 Market",
+    "usage": "[type]",
+    "desc": "Browse listings",
+    "access": "all"
+  },
+  "market.sell": {
+    "category": "🏪 Market",
+    "usage": "<type> <qty> <price> <item>",
+    "desc": "List an item",
+    "access": "all"
+  },
+  "market.buy": {
+    "category": "🏪 Market",
+    "usage": "<id>",
+    "desc": "Buy a listing",
+    "access": "all"
+  },
+  "market.cancel": {
+    "category": "🏪 Market",
+    "usage": "<id>",
+    "desc": "Cancel a listing",
+    "access": "all"
+  },
+  "market.mine": {
+    "category": "🏪 Market",
+    "usage": "",
+    "desc": "Your listings",
+    "access": "all"
+  },
+  "coinflip": {
+    "category": "🎲 Games",
+    "usage": "<amount> <heads/tails>",
+    "desc": "Flip a coin",
+    "access": "all"
+  },
+  "dice": {
+    "category": "🎲 Games",
+    "usage": "<amount>",
+    "desc": "Roll dice",
+    "access": "all"
+  },
+  "slots": {
+    "category": "🎲 Games",
+    "usage": "<amount>",
+    "desc": "Spin the slots",
+    "access": "all"
+  },
+  "wheel": {
+    "category": "🎲 Games",
+    "usage": "<amount>",
+    "desc": "Spin the wheel",
+    "access": "all"
+  },
+  "scratch": {
+    "category": "🎲 Games",
+    "usage": "",
+    "desc": "Scratch a ticket",
+    "access": "all"
+  },
+  "chore.weed": {
+    "category": "🧹 Chores",
+    "usage": "",
+    "desc": "Pull weeds",
+    "access": "all"
+  },
+  "chore.compost": {
+    "category": "🧹 Chores",
+    "usage": "",
+    "desc": "Turn the compost",
+    "access": "all"
+  },
+  "chore.forage": {
+    "category": "🧹 Chores",
+    "usage": "",
+    "desc": "Forage around",
+    "access": "all"
+  },
+  "chore.fetch": {
+    "category": "🧹 Chores",
+    "usage": "",
+    "desc": "Fetch water",
+    "access": "all"
+  },
+  "chore.scare": {
+    "category": "🧹 Chores",
+    "usage": "",
+    "desc": "Scare crows",
+    "access": "all"
+  },
+  "chore.prune": {
+    "category": "🧹 Chores",
+    "usage": "",
+    "desc": "Prune the garden",
+    "access": "all"
+  },
+  "chore.sprout": {
+    "category": "🧹 Chores",
+    "usage": "",
+    "desc": "Hunt for seeds",
+    "access": "all"
+  },
+  "chore.beekeep": {
+    "category": "🧹 Chores",
+    "usage": "",
+    "desc": "Tend the bees",
+    "access": "all"
+  },
+  "help": {
+    "category": "❓ Help",
+    "usage": "[category]",
+    "desc": "Show help",
+    "access": "all"
+  },
+  "commands": {
+    "category": "❓ Help",
+    "usage": "[page]",
+    "desc": "List every subcommand",
+    "access": "all"
+  },
+  "search": {
+    "category": "❓ Help",
+    "usage": "<keyword>",
+    "desc": "Search subcommands",
+    "access": "all"
+  },
+  "about": {
+    "category": "❓ Help",
+    "usage": "",
+    "desc": "About this command",
+    "access": "all"
+  },
+  "ping": {
+    "category": "❓ Help",
+    "usage": "",
+    "desc": "Check latency",
+    "access": "all"
+  },
+  "version": {
+    "category": "❓ Help",
+    "usage": "",
+    "desc": "Show version",
+    "access": "all"
+  },
+  "tips": {
+    "category": "❓ Help",
+    "usage": "",
+    "desc": "Random tip",
+    "access": "all"
+  },
+  "dashboard": {
+    "category": "🔐 Admin and Developer",
+    "usage": "",
+    "desc": "Open the admin dashboard",
+    "access": "dev"
+  },
+  "abuse.on": {
+    "category": "🔐 Admin and Developer",
+    "usage": "[minutes]",
+    "desc": "Start Admin Abuse",
+    "access": "dev"
+  },
+  "abuse.off": {
+    "category": "🔐 Admin and Developer",
+    "usage": "",
+    "desc": "Stop Admin Abuse",
+    "access": "dev"
+  },
+  "admin.givesheckles": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name> <amount>",
+    "desc": "Give Sheckles",
+    "access": "admin"
+  },
+  "admin.givehoney": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name> <amount>",
+    "desc": "Give honey",
+    "access": "admin"
+  },
+  "admin.giveseed": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name> <seed> <qty>",
+    "desc": "Give seeds",
+    "access": "admin"
+  },
+  "admin.givegear": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name> <gear> <qty>",
+    "desc": "Give gear",
+    "access": "admin"
+  },
+  "admin.giveegg": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name> <egg> <qty>",
+    "desc": "Give eggs",
+    "access": "admin"
+  },
+  "admin.givepet": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name> <pet>",
+    "desc": "Give a pet",
+    "access": "admin"
+  },
+  "admin.givexp": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name> <amount>",
+    "desc": "Give XP",
+    "access": "admin"
+  },
+  "admin.setlevel": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name> <level>",
+    "desc": "Set level",
+    "access": "admin"
+  },
+  "admin.ban": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name>",
+    "desc": "Ban a player",
+    "access": "admin"
+  },
+  "admin.unban": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name>",
+    "desc": "Unban a player",
+    "access": "admin"
+  },
+  "admin.wipe": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name>",
+    "desc": "Wipe a garden",
+    "access": "admin"
+  },
+  "admin.inspect": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name>",
+    "desc": "Inspect a garden",
+    "access": "admin"
+  },
+  "admin.resetcd": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<name>",
+    "desc": "Clear cooldowns",
+    "access": "admin"
+  },
+  "admin.setweather": {
+    "category": "🔐 Admin and Developer",
+    "usage": "<weather> [minutes]",
+    "desc": "Force weather",
+    "access": "admin"
+  },
+  "admin.restock": {
+    "category": "🔐 Admin and Developer",
+    "usage": "",
+    "desc": "Reroll the shop stock",
+    "access": "admin"
+  },
+  "dev.buff": {
+    "category": "🔐 Admin and Developer",
+    "usage": "",
+    "desc": "Reapply the developer buff",
+    "access": "dev"
+  },
+  "dev.unlock": {
+    "category": "🔐 Admin and Developer",
+    "usage": "",
+    "desc": "Unlock everything",
+    "access": "dev"
+  }
+}

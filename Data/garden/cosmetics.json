@@ -1,0 +1,227 @@
+{
+  "Ring Walkway": {
+    "type": "decor",
+    "price": 150,
+    "score": 3,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Large Wood Table": {
+    "type": "decor",
+    "price": 200,
+    "score": 4,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Torch": {
+    "type": "decor",
+    "price": 80,
+    "score": 2,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Shovel Grave": {
+    "type": "decor",
+    "price": 120,
+    "score": 3,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Medium Circle Tile": {
+    "type": "decor",
+    "price": 90,
+    "score": 2,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Yellow Umbrella": {
+    "type": "decor",
+    "price": 130,
+    "score": 3,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Mini TV": {
+    "type": "decor",
+    "price": 180,
+    "score": 4,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Axe Stump": {
+    "type": "decor",
+    "price": 110,
+    "score": 3,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Hay Bale": {
+    "type": "decor",
+    "price": 300,
+    "score": 4,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Picket Fence": {
+    "type": "decor",
+    "price": 250,
+    "score": 4,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Wooden Bench": {
+    "type": "decor",
+    "price": 400,
+    "score": 5,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Bird Bath": {
+    "type": "decor",
+    "price": 500,
+    "score": 6,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Stone Lantern": {
+    "type": "decor",
+    "price": 800,
+    "score": 7,
+    "stockChance": 0.5,
+    "maxStock": 5
+  },
+  "Flower Cart": {
+    "type": "decor",
+    "price": 2500,
+    "score": 10,
+    "stockChance": 0.5,
+    "maxStock": 2
+  },
+  "Scarecrow": {
+    "type": "decor",
+    "price": 3000,
+    "score": 12,
+    "stockChance": 0.5,
+    "maxStock": 2
+  },
+  "Garden Fountain": {
+    "type": "decor",
+    "price": 5000,
+    "score": 15,
+    "stockChance": 0.5,
+    "maxStock": 2
+  },
+  "Beehive Statue": {
+    "type": "decor",
+    "price": 15000,
+    "score": 25,
+    "stockChance": 0.5,
+    "maxStock": 2
+  },
+  "Wishing Well": {
+    "type": "decor",
+    "price": 20000,
+    "score": 30,
+    "stockChance": 0.5,
+    "maxStock": 2
+  },
+  "Small Gnome": {
+    "type": "decor",
+    "price": 0,
+    "score": 6,
+    "stockChance": 0,
+    "maxStock": 5
+  },
+  "Farmer Gnome": {
+    "type": "decor",
+    "price": 0,
+    "score": 12,
+    "stockChance": 0,
+    "maxStock": 5
+  },
+  "Golden Gnome": {
+    "type": "decor",
+    "price": 0,
+    "score": 40,
+    "stockChance": 0,
+    "maxStock": 5
+  },
+  "Crystal Statue": {
+    "type": "decor",
+    "price": 0,
+    "score": 60,
+    "stockChance": 0,
+    "maxStock": 5
+  },
+  "Common Gnome Crate": {
+    "type": "crate",
+    "price": 100,
+    "contents": {
+      "Torch": 30,
+      "Mini TV": 20,
+      "Axe Stump": 20,
+      "Small Gnome": 20,
+      "Farmer Gnome": 10
+    },
+    "stockChance": 1.0,
+    "maxStock": 5
+  },
+  "Fun Crate": {
+    "type": "crate",
+    "price": 5000,
+    "contents": {
+      "Yellow Umbrella": 30,
+      "Mini TV": 25,
+      "Hay Bale": 25,
+      "Scarecrow": 20
+    },
+    "stockChance": 0.4,
+    "maxStock": 5
+  },
+  "Sign Crate": {
+    "type": "crate",
+    "price": 8000,
+    "contents": {
+      "Picket Fence": 35,
+      "Wooden Bench": 35,
+      "Bird Bath": 30
+    },
+    "stockChance": 0.4,
+    "maxStock": 2
+  },
+  "Farmer Gnome Crate": {
+    "type": "crate",
+    "price": 3000,
+    "contents": {
+      "Small Gnome": 50,
+      "Farmer Gnome": 40,
+      "Golden Gnome": 10
+    },
+    "stockChance": 0.4,
+    "maxStock": 5
+  },
+  "Classic Gnome Crate": {
+    "type": "crate",
+    "price": 12000,
+    "contents": {
+      "Farmer Gnome": 50,
+      "Small Gnome": 30,
+      "Golden Gnome": 15,
+      "Crystal Statue": 5
+    },
+    "stockChance": 0.4,
+    "maxStock": 2
+  },
+  "Statue Crate": {
+    "type": "crate",
+    "price": 25000,
+    "contents": {
+      "Beehive Statue": 40,
+      "Garden Fountain": 30,
+      "Wishing Well": 20,
+      "Crystal Statue": 10
+    },
+    "stockChance": 0.4,
+    "maxStock": 2
+  }
+}

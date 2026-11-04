@@ -1,0 +1,338 @@
+{
+  "Golden Lab": {
+    "rarity": "Common",
+    "ability": {
+      "kind": "sell",
+      "value": 0.03
+    },
+    "desc": "+3.0% sell value"
+  },
+  "Dog": {
+    "rarity": "Uncommon",
+    "ability": {
+      "kind": "growth",
+      "value": 0.03
+    },
+    "desc": "+3.0% growth speed"
+  },
+  "Bunny": {
+    "rarity": "Uncommon",
+    "ability": {
+      "kind": "mutation",
+      "value": 0.045
+    },
+    "desc": "+4.5% mutation chance"
+  },
+  "Black Bunny": {
+    "rarity": "Uncommon",
+    "ability": {
+      "kind": "weight",
+      "value": 0.045
+    },
+    "desc": "+4.5% fruit weight"
+  },
+  "Chicken": {
+    "rarity": "Uncommon",
+    "ability": {
+      "kind": "income",
+      "value": 150
+    },
+    "desc": "150 Sheckles per hour"
+  },
+  "Cat": {
+    "rarity": "Rare",
+    "ability": {
+      "kind": "xp",
+      "value": 0.125
+    },
+    "desc": "+12.5% XP"
+  },
+  "Deer": {
+    "rarity": "Rare",
+    "ability": {
+      "kind": "honey",
+      "value": 0.125
+    },
+    "desc": "+12.5% honey"
+  },
+  "Orange Tabby": {
+    "rarity": "Rare",
+    "ability": {
+      "kind": "sell",
+      "value": 0.075
+    },
+    "desc": "+7.5% sell value"
+  },
+  "Spotted Deer": {
+    "rarity": "Rare",
+    "ability": {
+      "kind": "growth",
+      "value": 0.05
+    },
+    "desc": "+5.0% growth speed"
+  },
+  "Pig": {
+    "rarity": "Rare",
+    "ability": {
+      "kind": "mutation",
+      "value": 0.075
+    },
+    "desc": "+7.5% mutation chance"
+  },
+  "Rooster": {
+    "rarity": "Legendary",
+    "ability": {
+      "kind": "weight",
+      "value": 0.12
+    },
+    "desc": "+12.0% fruit weight"
+  },
+  "Monkey": {
+    "rarity": "Legendary",
+    "ability": {
+      "kind": "income",
+      "value": 400
+    },
+    "desc": "400 Sheckles per hour"
+  },
+  "Cow": {
+    "rarity": "Legendary",
+    "ability": {
+      "kind": "xp",
+      "value": 0.2
+    },
+    "desc": "+20.0% XP"
+  },
+  "Silver Monkey": {
+    "rarity": "Legendary",
+    "ability": {
+      "kind": "honey",
+      "value": 0.2
+    },
+    "desc": "+20.0% honey"
+  },
+  "Sea Otter": {
+    "rarity": "Legendary",
+    "ability": {
+      "kind": "sell",
+      "value": 0.12
+    },
+    "desc": "+12.0% sell value"
+  },
+  "Turtle": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "growth",
+      "value": 0.14
+    },
+    "desc": "+14.0% growth speed"
+  },
+  "Polar Bear": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "mutation",
+      "value": 0.21
+    },
+    "desc": "+21.0% mutation chance"
+  },
+  "Grey Mouse": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "weight",
+      "value": 0.21
+    },
+    "desc": "+21.0% fruit weight"
+  },
+  "Brown Mouse": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "income",
+      "value": 700
+    },
+    "desc": "700 Sheckles per hour"
+  },
+  "Squirrel": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "xp",
+      "value": 0.35
+    },
+    "desc": "+35.0% XP"
+  },
+  "Red Giant Ant": {
+    "rarity": "Divine",
+    "ability": {
+      "kind": "honey",
+      "value": 0.6
+    },
+    "desc": "+60.0% honey"
+  },
+  "Red Fox": {
+    "rarity": "Divine",
+    "ability": {
+      "kind": "sell",
+      "value": 0.36
+    },
+    "desc": "+36.0% sell value"
+  },
+  "Snail": {
+    "rarity": "Legendary",
+    "ability": {
+      "kind": "growth",
+      "value": 0.08
+    },
+    "desc": "+8.0% growth speed"
+  },
+  "Giant Ant": {
+    "rarity": "Legendary",
+    "ability": {
+      "kind": "mutation",
+      "value": 0.12
+    },
+    "desc": "+12.0% mutation chance"
+  },
+  "Caterpillar": {
+    "rarity": "Legendary",
+    "ability": {
+      "kind": "weight",
+      "value": 0.12
+    },
+    "desc": "+12.0% fruit weight"
+  },
+  "Praying Mantis": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "income",
+      "value": 700
+    },
+    "desc": "700 Sheckles per hour"
+  },
+  "Dragonfly": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "xp",
+      "value": 0.35
+    },
+    "desc": "+35.0% XP"
+  },
+  "Ostrich": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "honey",
+      "value": 0.35
+    },
+    "desc": "+35.0% honey"
+  },
+  "Peacock": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "sell",
+      "value": 0.21
+    },
+    "desc": "+21.0% sell value"
+  },
+  "Capybara": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "growth",
+      "value": 0.14
+    },
+    "desc": "+14.0% growth speed"
+  },
+  "Scarlet Macaw": {
+    "rarity": "Divine",
+    "ability": {
+      "kind": "mutation",
+      "value": 0.36
+    },
+    "desc": "+36.0% mutation chance"
+  },
+  "Mimic Octopus": {
+    "rarity": "Divine",
+    "ability": {
+      "kind": "weight",
+      "value": 0.36
+    },
+    "desc": "+36.0% fruit weight"
+  },
+  "Bee": {
+    "rarity": "Divine",
+    "ability": {
+      "kind": "income",
+      "value": 1200
+    },
+    "desc": "1200 Sheckles per hour"
+  },
+  "Honey Bee": {
+    "rarity": "Divine",
+    "ability": {
+      "kind": "xp",
+      "value": 0.6
+    },
+    "desc": "+60.0% XP"
+  },
+  "Bear Bee": {
+    "rarity": "Divine",
+    "ability": {
+      "kind": "honey",
+      "value": 0.6
+    },
+    "desc": "+60.0% honey"
+  },
+  "Petal Bee": {
+    "rarity": "Divine",
+    "ability": {
+      "kind": "sell",
+      "value": 0.36
+    },
+    "desc": "+36.0% sell value"
+  },
+  "Queen Bee": {
+    "rarity": "Divine",
+    "ability": {
+      "kind": "growth",
+      "value": 0.24
+    },
+    "desc": "+24.0% growth speed"
+  },
+  "Hedgehog": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "mutation",
+      "value": 0.21
+    },
+    "desc": "+21.0% mutation chance"
+  },
+  "Mole": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "weight",
+      "value": 0.21
+    },
+    "desc": "+21.0% fruit weight"
+  },
+  "Frog": {
+    "rarity": "Mythical",
+    "ability": {
+      "kind": "income",
+      "value": 700
+    },
+    "desc": "700 Sheckles per hour"
+  },
+  "Echo Frog": {
+    "rarity": "Divine",
+    "ability": {
+      "kind": "xp",
+      "value": 0.6
+    },
+    "desc": "+60.0% XP"
+  },
+  "Night Owl": {
+    "rarity": "Divine",
+    "ability": {
+      "kind": "honey",
+      "value": 0.6
+    },
+    "desc": "+60.0% honey"
+  }
+}

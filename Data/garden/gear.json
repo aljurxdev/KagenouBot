@@ -1,0 +1,236 @@
+{
+  "Favorite Tool": {
+    "rarity": "Common",
+    "type": "passive",
+    "price": 100,
+    "stockChance": 0.9,
+    "maxStock": 10,
+    "effect": {
+      "mutation": 0.05
+    },
+    "desc": "Passive: +5% mutation chance."
+  },
+  "Trowel": {
+    "rarity": "Common",
+    "type": "passive",
+    "price": 50,
+    "stockChance": 0.9,
+    "maxStock": 10,
+    "effect": {
+      "batch": 10
+    },
+    "desc": "Passive: plant up to 10 more seeds at once."
+  },
+  "Watering Can": {
+    "rarity": "Common",
+    "type": "consumable",
+    "price": 150,
+    "stockChance": 0.9,
+    "maxStock": 15,
+    "effect": {
+      "speedup": 0.15
+    },
+    "desc": "Use on a crop to cut 15% of its remaining time."
+  },
+  "Lightning Rod": {
+    "rarity": "Rare",
+    "type": "passive",
+    "price": 500,
+    "stockChance": 0.5,
+    "maxStock": 5,
+    "effect": {
+      "thunder": 2
+    },
+    "desc": "Passive: doubles Shocked chance in a Thunderstorm."
+  },
+  "Recall Wrench": {
+    "rarity": "Uncommon",
+    "type": "tool",
+    "price": 300,
+    "stockChance": 0.6,
+    "maxStock": 5,
+    "effect": {},
+    "desc": "Recalls every equipped pet back to your backpack."
+  },
+  "Basic Sprinkler": {
+    "rarity": "Rare",
+    "type": "sprinkler",
+    "price": 20000,
+    "stockChance": 0.4,
+    "maxStock": 4,
+    "effect": {
+      "growth": 0.1,
+      "mutation": 0.05,
+      "size": 0.1,
+      "large": 0.15,
+      "duration": 300
+    },
+    "desc": "Placed sprinkler: 5 minutes of faster growth and bigger fruit."
+  },
+  "Advanced Sprinkler": {
+    "rarity": "Legendary",
+    "type": "sprinkler",
+    "price": 50000,
+    "stockChance": 0.25,
+    "maxStock": 3,
+    "effect": {
+      "growth": 0.15,
+      "mutation": 0.1,
+      "size": 0.2,
+      "large": 0.2,
+      "duration": 300
+    },
+    "desc": "Stronger sprinkler for 5 minutes."
+  },
+  "Godly Sprinkler": {
+    "rarity": "Mythical",
+    "type": "sprinkler",
+    "price": 120000,
+    "stockChance": 0.12,
+    "maxStock": 2,
+    "effect": {
+      "growth": 0.2,
+      "mutation": 0.2,
+      "size": 0.35,
+      "large": 0.25,
+      "duration": 300
+    },
+    "desc": "Godly growth and mutation boosts for 5 minutes."
+  },
+  "Master Sprinkler": {
+    "rarity": "Divine",
+    "type": "sprinkler",
+    "price": 10000000,
+    "stockChance": 0.04,
+    "maxStock": 1,
+    "effect": {
+      "growth": 0.3,
+      "mutation": 0.5,
+      "size": 0.6,
+      "large": 0.4,
+      "duration": 600
+    },
+    "desc": "The best sprinkler. Lasts 10 minutes."
+  },
+  "Harvest Tool": {
+    "rarity": "Rare",
+    "type": "passive",
+    "price": 30000,
+    "stockChance": 0.3,
+    "maxStock": 2,
+    "effect": {
+      "weight": 0.1
+    },
+    "desc": "Passive: fruit weighs 10% more."
+  },
+  "Friendship Pot": {
+    "rarity": "Mythical",
+    "type": "passive",
+    "price": 800000,
+    "stockChance": 0.08,
+    "maxStock": 1,
+    "effect": {
+      "sell": 0.1
+    },
+    "desc": "Passive: +10% sell value."
+  },
+  "Choc Spray": {
+    "rarity": "Legendary",
+    "type": "spray",
+    "price": 120000,
+    "stockChance": 0.15,
+    "maxStock": 3,
+    "effect": {
+      "mutation": "Chocolate"
+    },
+    "desc": "Spray on a fruit to add the Chocolate mutation."
+  },
+  "Pollen Spray": {
+    "rarity": "Rare",
+    "type": "spray",
+    "price": 60000,
+    "stockChance": 0.2,
+    "maxStock": 3,
+    "effect": {
+      "mutation": "Pollinated"
+    },
+    "desc": "Spray on a fruit to add the Pollinated mutation."
+  },
+  "Heat Spray": {
+    "rarity": "Rare",
+    "type": "spray",
+    "price": 60000,
+    "stockChance": 0.2,
+    "maxStock": 3,
+    "effect": {
+      "mutation": "Burnt"
+    },
+    "desc": "Spray on a fruit to add the Burnt mutation."
+  },
+  "Basic Fertilizer": {
+    "rarity": "Common",
+    "type": "fertilizer",
+    "price": 800,
+    "stockChance": 0.7,
+    "maxStock": 8,
+    "effect": {
+      "weight": 0.25
+    },
+    "desc": "Use on a crop: +25% fruit weight."
+  },
+  "Rare Fertilizer": {
+    "rarity": "Rare",
+    "type": "fertilizer",
+    "price": 15000,
+    "stockChance": 0.3,
+    "maxStock": 4,
+    "effect": {
+      "weight": 0.6
+    },
+    "desc": "Use on a crop: +60% fruit weight."
+  },
+  "Mega Fertilizer": {
+    "rarity": "Legendary",
+    "type": "fertilizer",
+    "price": 150000,
+    "stockChance": 0.1,
+    "maxStock": 2,
+    "effect": {
+      "weight": 1.2
+    },
+    "desc": "Use on a crop: +120% fruit weight."
+  },
+  "Small Treat": {
+    "rarity": "Common",
+    "type": "treat",
+    "price": 500,
+    "stockChance": 0.8,
+    "maxStock": 10,
+    "effect": {
+      "xp": 50
+    },
+    "desc": "Feed a pet for 50 pet XP."
+  },
+  "Medium Treat": {
+    "rarity": "Uncommon",
+    "type": "treat",
+    "price": 5000,
+    "stockChance": 0.4,
+    "maxStock": 6,
+    "effect": {
+      "xp": 300
+    },
+    "desc": "Feed a pet for 300 pet XP."
+  },
+  "Large Treat": {
+    "rarity": "Rare",
+    "type": "treat",
+    "price": 50000,
+    "stockChance": 0.2,
+    "maxStock": 3,
+    "effect": {
+      "xp": 2000
+    },
+    "desc": "Feed a pet for 2,000 pet XP."
+  }
+}

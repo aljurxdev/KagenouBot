@@ -1,0 +1,142 @@
+[
+  {
+    "id": "a_first_plant",
+    "name": "First Sprout",
+    "desc": "Plant your first seed",
+    "metric": "plants",
+    "min": 1,
+    "sheckles": 200,
+    "coins": 100,
+    "honey": 0
+  },
+  {
+    "id": "a_harvest_100",
+    "name": "Green Thumb",
+    "desc": "Harvest 100 fruit",
+    "metric": "harvests",
+    "min": 100,
+    "sheckles": 5000,
+    "coins": 1000,
+    "honey": 0
+  },
+  {
+    "id": "a_harvest_1000",
+    "name": "Master Farmer",
+    "desc": "Harvest 1,000 fruit",
+    "metric": "harvests",
+    "min": 1000,
+    "sheckles": 100000,
+    "coins": 10000,
+    "honey": 10
+  },
+  {
+    "id": "a_level_10",
+    "name": "Budding Gardener",
+    "desc": "Reach level 10",
+    "metric": "level",
+    "min": 10,
+    "sheckles": 5000,
+    "coins": 1000,
+    "honey": 0
+  },
+  {
+    "id": "a_level_50",
+    "name": "Seasoned Gardener",
+    "desc": "Reach level 50",
+    "metric": "level",
+    "min": 50,
+    "sheckles": 100000,
+    "coins": 10000,
+    "honey": 10
+  },
+  {
+    "id": "a_dex_10",
+    "name": "Crop Collector",
+    "desc": "Discover 10 crops",
+    "metric": "cropDex",
+    "min": 10,
+    "sheckles": 10000,
+    "coins": 2000,
+    "honey": 0
+  },
+  {
+    "id": "a_dex_30",
+    "name": "Crop Master",
+    "desc": "Discover all 30 crops",
+    "metric": "cropDex",
+    "min": 30,
+    "sheckles": 2000000,
+    "coins": 50000,
+    "honey": 50
+  },
+  {
+    "id": "a_pets_10",
+    "name": "Pet Lover",
+    "desc": "Own 10 pets",
+    "metric": "pets",
+    "min": 10,
+    "sheckles": 20000,
+    "coins": 3000,
+    "honey": 0
+  },
+  {
+    "id": "a_hatch_25",
+    "name": "Egg Hatcher",
+    "desc": "Hatch 25 eggs",
+    "metric": "hatched",
+    "min": 25,
+    "sheckles": 30000,
+    "coins": 3000,
+    "honey": 0
+  },
+  {
+    "id": "a_mut_10",
+    "name": "Mutation Hunter",
+    "desc": "Discover 10 mutations",
+    "metric": "mutDex",
+    "min": 10,
+    "sheckles": 50000,
+    "coins": 5000,
+    "honey": 0
+  },
+  {
+    "id": "a_score_200",
+    "name": "Garden Designer",
+    "desc": "Reach a garden score of 200",
+    "metric": "score",
+    "min": 200,
+    "sheckles": 40000,
+    "coins": 4000,
+    "honey": 0
+  },
+  {
+    "id": "a_cash_100k",
+    "name": "Cash Cow",
+    "desc": "Cash out 100,000 coins in total",
+    "metric": "cashedCoins",
+    "min": 100000,
+    "sheckles": 0,
+    "coins": 20000,
+    "honey": 20
+  },
+  {
+    "id": "a_prestige_1",
+    "name": "Reborn",
+    "desc": "Prestige once",
+    "metric": "prestige",
+    "min": 1,
+    "sheckles": 0,
+    "coins": 10000,
+    "honey": 25
+  },
+  {
+    "id": "a_games_50",
+    "name": "Gambler",
+    "desc": "Play 50 mini games",
+    "metric": "games",
+    "min": 50,
+    "sheckles": 10000,
+    "coins": 2000,
+    "honey": 0
+  }
+]

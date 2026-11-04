@@ -1,0 +1,117 @@
+{
+  "Wet": {
+    "mult": 2,
+    "source": "weather",
+    "desc": "Soaked by rain."
+  },
+  "Chilled": {
+    "mult": 2,
+    "source": "weather",
+    "desc": "Cold to the touch."
+  },
+  "Frozen": {
+    "mult": 10,
+    "source": "weather",
+    "desc": "Frozen solid."
+  },
+  "Shocked": {
+    "mult": 100,
+    "source": "weather",
+    "desc": "Struck by lightning."
+  },
+  "Moonlit": {
+    "mult": 2,
+    "source": "weather",
+    "desc": "Bathed in moonlight."
+  },
+  "Bloodlit": {
+    "mult": 4,
+    "source": "weather",
+    "desc": "Stained by the blood moon."
+  },
+  "Burnt": {
+    "mult": 4,
+    "source": "weather",
+    "desc": "Scorched by the heat."
+  },
+  "Sundried": {
+    "mult": 85,
+    "source": "weather",
+    "desc": "Baked into something rare."
+  },
+  "Windstruck": {
+    "mult": 2,
+    "source": "weather",
+    "desc": "Battered by strong winds."
+  },
+  "Twisted": {
+    "mult": 5,
+    "source": "weather",
+    "desc": "Twisted by a tornado."
+  },
+  "Pollinated": {
+    "mult": 3,
+    "source": "weather",
+    "desc": "Visited by bees."
+  },
+  "Honeyglazed": {
+    "mult": 5,
+    "source": "weather",
+    "desc": "Coated in sweet honey."
+  },
+  "Disco": {
+    "mult": 125,
+    "source": "weather",
+    "desc": "Shimmering with disco lights."
+  },
+  "Zombified": {
+    "mult": 25,
+    "source": "weather",
+    "desc": "Touched by the undead."
+  },
+  "Meteoric": {
+    "mult": 125,
+    "source": "weather",
+    "desc": "Struck by a meteor."
+  },
+  "Celestial": {
+    "mult": 120,
+    "source": "weather",
+    "desc": "Blessed by the stars."
+  },
+  "Drenched": {
+    "mult": 5,
+    "source": "weather",
+    "desc": "Soaked by tropical rain."
+  },
+  "Plasma": {
+    "mult": 5,
+    "source": "weather",
+    "desc": "Crackling with plasma."
+  },
+  "Heavenly": {
+    "mult": 5,
+    "source": "weather",
+    "desc": "Glows with heavenly light."
+  },
+  "Chocolate": {
+    "mult": 2,
+    "source": "spray",
+    "desc": "Dipped in chocolate."
+  },
+  "Large": {
+    "mult": 2,
+    "source": "sprinkler",
+    "desc": "Grew extra big."
+  },
+  "Gold": {
+    "mult": 20,
+    "source": "variant",
+    "desc": "A rare golden variant."
+  },
+  "Rainbow": {
+    "mult": 50,
+    "source": "variant",
+    "desc": "An ultra rare rainbow variant."
+  }
+}

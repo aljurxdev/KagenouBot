@@ -1,0 +1,34 @@
+{
+  "durations": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "growthMult": 0.05,
+  "hatchMult": 0.05,
+  "mutationBonus": 0.6,
+  "sellMult": 2,
+  "xpMult": 2,
+  "stockAll": true,
+  "stockQtyMult": 2,
+  "weatherRotateSecs": 30,
+  "weathers": [
+    "Thunderstorm",
+    "Meteor Shower",
+    "Disco",
+    "Jandel Zombie",
+    "Tornado",
+    "Blood Moon",
+    "Bee Swarm",
+    "Tropical Rain",
+    "Frost",
+    "Heatwave"
+  ],
+  "dashboardPhrases": {
+    "on": "turn on admin abuse",
+    "off": "turn off admin abuse",
+    "status": "status"
+  }
+}

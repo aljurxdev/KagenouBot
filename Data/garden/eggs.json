@@ -1,0 +1,127 @@
+{
+  "Common Egg": {
+    "rarity": "Common",
+    "price": 200,
+    "hatchTime": 300,
+    "stockChance": 1.0,
+    "maxStock": 6,
+    "pets": {
+      "Golden Lab": 34,
+      "Dog": 33,
+      "Bunny": 33
+    }
+  },
+  "Uncommon Egg": {
+    "rarity": "Uncommon",
+    "price": 500,
+    "hatchTime": 600,
+    "stockChance": 0.8,
+    "maxStock": 5,
+    "pets": {
+      "Black Bunny": 25,
+      "Chicken": 25,
+      "Cat": 25,
+      "Deer": 25
+    }
+  },
+  "Rare Egg": {
+    "rarity": "Rare",
+    "price": 2500,
+    "hatchTime": 1200,
+    "stockChance": 0.5,
+    "maxStock": 4,
+    "pets": {
+      "Orange Tabby": 25,
+      "Spotted Deer": 25,
+      "Pig": 20,
+      "Rooster": 15,
+      "Monkey": 15
+    }
+  },
+  "Legendary Egg": {
+    "rarity": "Legendary",
+    "price": 50000,
+    "hatchTime": 2400,
+    "stockChance": 0.25,
+    "maxStock": 3,
+    "pets": {
+      "Cow": 30,
+      "Silver Monkey": 25,
+      "Sea Otter": 20,
+      "Turtle": 15,
+      "Polar Bear": 10
+    }
+  },
+  "Mythical Egg": {
+    "rarity": "Mythical",
+    "price": 100000,
+    "hatchTime": 3600,
+    "stockChance": 0.12,
+    "maxStock": 2,
+    "pets": {
+      "Grey Mouse": 30,
+      "Brown Mouse": 25,
+      "Squirrel": 20,
+      "Red Giant Ant": 15,
+      "Red Fox": 10
+    }
+  },
+  "Bug Egg": {
+    "rarity": "Legendary",
+    "price": 50000,
+    "hatchTime": 3000,
+    "stockChance": 0.2,
+    "maxStock": 3,
+    "pets": {
+      "Snail": 30,
+      "Giant Ant": 25,
+      "Caterpillar": 20,
+      "Praying Mantis": 15,
+      "Dragonfly": 10
+    }
+  },
+  "Paradise Egg": {
+    "rarity": "Mythical",
+    "price": 150000,
+    "hatchTime": 3600,
+    "stockChance": 0.1,
+    "maxStock": 2,
+    "pets": {
+      "Ostrich": 30,
+      "Peacock": 25,
+      "Capybara": 20,
+      "Scarlet Macaw": 15,
+      "Mimic Octopus": 10
+    }
+  },
+  "Bee Egg": {
+    "rarity": "Divine",
+    "price": 500000,
+    "hatchTime": 5400,
+    "stockChance": 0.06,
+    "maxStock": 1,
+    "pets": {
+      "Bee": 30,
+      "Honey Bee": 25,
+      "Bear Bee": 20,
+      "Petal Bee": 15,
+      "Queen Bee": 10
+    },
+    "event": "Bee Swarm"
+  },
+  "Night Egg": {
+    "rarity": "Mythical",
+    "price": 120000,
+    "hatchTime": 3600,
+    "stockChance": 1.0,
+    "maxStock": 2,
+    "pets": {
+      "Hedgehog": 30,
+      "Mole": 25,
+      "Frog": 20,
+      "Echo Frog": 15,
+      "Night Owl": 10
+    },
+    "event": "Night"
+  }
+}

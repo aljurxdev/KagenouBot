@@ -1,0 +1,142 @@
+[
+  {
+    "id": "q_plant_10",
+    "desc": "Plant 10 seeds",
+    "metric": "plants",
+    "goal": 10,
+    "sheckles": 500,
+    "coins": 100,
+    "xp": 60,
+    "honey": 0
+  },
+  {
+    "id": "q_plant_30",
+    "desc": "Plant 30 seeds",
+    "metric": "plants",
+    "goal": 30,
+    "sheckles": 2000,
+    "coins": 300,
+    "xp": 150,
+    "honey": 0
+  },
+  {
+    "id": "q_harvest_10",
+    "desc": "Harvest 10 fruit",
+    "metric": "harvests",
+    "goal": 10,
+    "sheckles": 800,
+    "coins": 150,
+    "xp": 80,
+    "honey": 0
+  },
+  {
+    "id": "q_harvest_40",
+    "desc": "Harvest 40 fruit",
+    "metric": "harvests",
+    "goal": 40,
+    "sheckles": 4000,
+    "coins": 500,
+    "xp": 250,
+    "honey": 2
+  },
+  {
+    "id": "q_buy_5",
+    "desc": "Buy 5 items from the shop",
+    "metric": "buys",
+    "goal": 5,
+    "sheckles": 600,
+    "coins": 100,
+    "xp": 60,
+    "honey": 0
+  },
+  {
+    "id": "q_sell_5000",
+    "desc": "Earn 5,000 Sheckles from selling",
+    "metric": "soldEarned",
+    "goal": 5000,
+    "sheckles": 1500,
+    "coins": 200,
+    "xp": 100,
+    "honey": 0
+  },
+  {
+    "id": "q_sell_100k",
+    "desc": "Earn 100,000 Sheckles from selling",
+    "metric": "soldEarned",
+    "goal": 100000,
+    "sheckles": 20000,
+    "coins": 1200,
+    "xp": 400,
+    "honey": 3
+  },
+  {
+    "id": "q_hatch_2",
+    "desc": "Hatch 2 eggs",
+    "metric": "hatched",
+    "goal": 2,
+    "sheckles": 1500,
+    "coins": 200,
+    "xp": 120,
+    "honey": 0
+  },
+  {
+    "id": "q_chore_5",
+    "desc": "Do 5 chores",
+    "metric": "chores",
+    "goal": 5,
+    "sheckles": 700,
+    "coins": 120,
+    "xp": 70,
+    "honey": 0
+  },
+  {
+    "id": "q_feed_3",
+    "desc": "Feed pets 3 times",
+    "metric": "feeds",
+    "goal": 3,
+    "sheckles": 900,
+    "coins": 150,
+    "xp": 90,
+    "honey": 0
+  },
+  {
+    "id": "q_games_5",
+    "desc": "Play 5 mini games",
+    "metric": "games",
+    "goal": 5,
+    "sheckles": 800,
+    "coins": 100,
+    "xp": 60,
+    "honey": 0
+  },
+  {
+    "id": "q_visit_2",
+    "desc": "Visit 2 gardens",
+    "metric": "visits",
+    "goal": 2,
+    "sheckles": 600,
+    "coins": 150,
+    "xp": 70,
+    "honey": 0
+  },
+  {
+    "id": "q_cash_1",
+    "desc": "Cash out Sheckles once",
+    "metric": "cashouts",
+    "goal": 1,
+    "sheckles": 500,
+    "coins": 300,
+    "xp": 80,
+    "honey": 0
+  },
+  {
+    "id": "q_collect_2",
+    "desc": "Collect pet income twice",
+    "metric": "petCollects",
+    "goal": 2,
+    "sheckles": 1200,
+    "coins": 200,
+    "xp": 90,
+    "honey": 0
+  }
+]

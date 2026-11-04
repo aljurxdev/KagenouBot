@@ -1,0 +1,86 @@
+[
+  {
+    "id": "sprout",
+    "label": "🌱 Sprout",
+    "metric": "plants",
+    "min": 1
+  },
+  {
+    "id": "farmer",
+    "label": "🚜 Farmer",
+    "metric": "harvests",
+    "min": 100
+  },
+  {
+    "id": "master_farmer",
+    "label": "🌾 Master Farmer",
+    "metric": "harvests",
+    "min": 1000
+  },
+  {
+    "id": "collector",
+    "label": "📚 Crop Collector",
+    "metric": "cropDex",
+    "min": 15
+  },
+  {
+    "id": "petlover",
+    "label": "🐾 Pet Lover",
+    "metric": "pets",
+    "min": 10
+  },
+  {
+    "id": "rich",
+    "label": "💰 Sheckle Baron",
+    "metric": "balance",
+    "min": 10000000
+  },
+  {
+    "id": "trader",
+    "label": "🤝 Trader",
+    "metric": "soldEarned",
+    "min": 1000000
+  },
+  {
+    "id": "designer",
+    "label": "🏡 Garden Designer",
+    "metric": "score",
+    "min": 200
+  },
+  {
+    "id": "mutant",
+    "label": "🧬 Mutation Hunter",
+    "metric": "mutDex",
+    "min": 12
+  },
+  {
+    "id": "reborn",
+    "label": "🌟 Reborn",
+    "metric": "prestige",
+    "min": 1
+  },
+  {
+    "id": "beekeeper",
+    "label": "🐝 Beekeeper",
+    "metric": "hiveLevel",
+    "min": 5
+  },
+  {
+    "id": "tycoon",
+    "label": "🏦 Tycoon",
+    "metric": "cashedCoins",
+    "min": 100000
+  },
+  {
+    "id": "hatcher",
+    "label": "🥚 Egg Hatcher",
+    "metric": "hatched",
+    "min": 25
+  },
+  {
+    "id": "gardener",
+    "label": "🌻 Gardener",
+    "metric": "level",
+    "min": 25
+  }
+]

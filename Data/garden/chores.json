@@ -1,0 +1,106 @@
+[
+  {
+    "key": "chore.weed",
+    "label": "Weeding",
+    "cd": 30,
+    "sheckles": [
+      40,
+      120
+    ],
+    "xp": 15,
+    "honeyChance": 0.02,
+    "dropChance": 0.05,
+    "text": "You pull stubborn weeds from the garden beds."
+  },
+  {
+    "key": "chore.compost",
+    "label": "Composting",
+    "cd": 60,
+    "sheckles": [
+      80,
+      220
+    ],
+    "xp": 25,
+    "honeyChance": 0.03,
+    "dropChance": 0.08,
+    "text": "You turn the compost pile and spread it around."
+  },
+  {
+    "key": "chore.forage",
+    "label": "Foraging",
+    "cd": 90,
+    "sheckles": [
+      100,
+      300
+    ],
+    "xp": 30,
+    "honeyChance": 0.05,
+    "dropChance": 0.2,
+    "text": "You wander the edge of the garden and forage for goodies."
+  },
+  {
+    "key": "chore.fetch",
+    "label": "Fetching Water",
+    "cd": 30,
+    "sheckles": [
+      30,
+      100
+    ],
+    "xp": 12,
+    "honeyChance": 0.0,
+    "dropChance": 0.03,
+    "text": "You haul buckets of water to the thirstiest plants."
+  },
+  {
+    "key": "chore.scare",
+    "label": "Scaring Crows",
+    "cd": 45,
+    "sheckles": [
+      60,
+      160
+    ],
+    "xp": 20,
+    "honeyChance": 0.01,
+    "dropChance": 0.06,
+    "text": "You chase crows away from the ripe crops."
+  },
+  {
+    "key": "chore.prune",
+    "label": "Pruning",
+    "cd": 60,
+    "sheckles": [
+      90,
+      240
+    ],
+    "xp": 28,
+    "honeyChance": 0.02,
+    "dropChance": 0.07,
+    "text": "You prune overgrown branches and tidy up."
+  },
+  {
+    "key": "chore.sprout",
+    "label": "Seed Hunting",
+    "cd": 120,
+    "sheckles": [
+      150,
+      420
+    ],
+    "xp": 40,
+    "honeyChance": 0.04,
+    "dropChance": 0.35,
+    "text": "You search the soil for stray seeds."
+  },
+  {
+    "key": "chore.beekeep",
+    "label": "Beekeeping",
+    "cd": 120,
+    "sheckles": [
+      120,
+      360
+    ],
+    "xp": 40,
+    "honeyChance": 0.25,
+    "dropChance": 0.05,
+    "text": "You tend the bees and check the hive."
+  }
+]

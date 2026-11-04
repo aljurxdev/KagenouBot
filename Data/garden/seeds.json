@@ -1,0 +1,426 @@
+{
+  "Carrot": {
+    "rarity": "Common",
+    "price": 50,
+    "growthTime": 60,
+    "value": 100,
+    "baseWeight": 0.27,
+    "regrows": false,
+    "fruits": [
+      1,
+      1
+    ],
+    "stockChance": 1.0,
+    "maxStock": 25
+  },
+  "Corn": {
+    "rarity": "Common",
+    "price": 60,
+    "growthTime": 120,
+    "value": 150,
+    "baseWeight": 3.8,
+    "regrows": false,
+    "fruits": [
+      1,
+      1
+    ],
+    "stockChance": 0.9,
+    "maxStock": 20
+  },
+  "Daffodil": {
+    "rarity": "Common",
+    "price": 70,
+    "growthTime": 90,
+    "value": 120,
+    "baseWeight": 0.16,
+    "regrows": false,
+    "fruits": [
+      1,
+      1
+    ],
+    "stockChance": 0.85,
+    "maxStock": 18
+  },
+  "Strawberry": {
+    "rarity": "Common",
+    "price": 80,
+    "growthTime": 180,
+    "value": 200,
+    "baseWeight": 0.29,
+    "regrows": true,
+    "fruits": [
+      1,
+      1
+    ],
+    "stockChance": 0.8,
+    "maxStock": 15
+  },
+  "Tomato": {
+    "rarity": "Common",
+    "price": 60,
+    "growthTime": 120,
+    "value": 140,
+    "baseWeight": 0.44,
+    "regrows": true,
+    "fruits": [
+      1,
+      1
+    ],
+    "stockChance": 0.8,
+    "maxStock": 15
+  },
+  "Blueberry": {
+    "rarity": "Uncommon",
+    "price": 90,
+    "growthTime": 240,
+    "value": 250,
+    "baseWeight": 0.17,
+    "regrows": true,
+    "fruits": [
+      1,
+      1
+    ],
+    "stockChance": 0.6,
+    "maxStock": 10
+  },
+  "Orange Tulip": {
+    "rarity": "Uncommon",
+    "price": 120,
+    "growthTime": 150,
+    "value": 260,
+    "baseWeight": 0.05,
+    "regrows": false,
+    "fruits": [
+      1,
+      1
+    ],
+    "stockChance": 0.55,
+    "maxStock": 10
+  },
+  "Watermelon": {
+    "rarity": "Rare",
+    "price": 800,
+    "growthTime": 480,
+    "value": 2400,
+    "baseWeight": 7.3,
+    "regrows": false,
+    "fruits": [
+      1,
+      1
+    ],
+    "stockChance": 0.4,
+    "maxStock": 6
+  },
+  "Pumpkin": {
+    "rarity": "Rare",
+    "price": 1500,
+    "growthTime": 600,
+    "value": 4200,
+    "baseWeight": 8.7,
+    "regrows": false,
+    "fruits": [
+      1,
+      1
+    ],
+    "stockChance": 0.35,
+    "maxStock": 5
+  },
+  "Bamboo": {
+    "rarity": "Rare",
+    "price": 2000,
+    "growthTime": 480,
+    "value": 3000,
+    "baseWeight": 1.4,
+    "regrows": true,
+    "fruits": [
+      1,
+      3
+    ],
+    "stockChance": 0.3,
+    "maxStock": 5
+  },
+  "Apple": {
+    "rarity": "Legendary",
+    "price": 6000,
+    "growthTime": 900,
+    "value": 14000,
+    "baseWeight": 2.85,
+    "regrows": true,
+    "fruits": [
+      3,
+      6
+    ],
+    "stockChance": 0.2,
+    "maxStock": 4
+  },
+  "Coconut": {
+    "rarity": "Legendary",
+    "price": 8000,
+    "growthTime": 1200,
+    "value": 22000,
+    "baseWeight": 13.5,
+    "regrows": true,
+    "fruits": [
+      2,
+      4
+    ],
+    "stockChance": 0.18,
+    "maxStock": 3
+  },
+  "Cactus": {
+    "rarity": "Legendary",
+    "price": 10000,
+    "growthTime": 1200,
+    "value": 26000,
+    "baseWeight": 6.7,
+    "regrows": true,
+    "fruits": [
+      2,
+      4
+    ],
+    "stockChance": 0.15,
+    "maxStock": 3
+  },
+  "Dragon Fruit": {
+    "rarity": "Legendary",
+    "price": 50000,
+    "growthTime": 1800,
+    "value": 130000,
+    "baseWeight": 11.3,
+    "regrows": true,
+    "fruits": [
+      2,
+      4
+    ],
+    "stockChance": 0.1,
+    "maxStock": 2
+  },
+  "Mango": {
+    "rarity": "Mythical",
+    "price": 80000,
+    "growthTime": 2400,
+    "value": 220000,
+    "baseWeight": 14.3,
+    "regrows": true,
+    "fruits": [
+      3,
+      5
+    ],
+    "stockChance": 0.08,
+    "maxStock": 2
+  },
+  "Mushroom": {
+    "rarity": "Mythical",
+    "price": 150000,
+    "growthTime": 3000,
+    "value": 520000,
+    "baseWeight": 25.9,
+    "regrows": true,
+    "fruits": [
+      2,
+      4
+    ],
+    "stockChance": 0.06,
+    "maxStock": 2
+  },
+  "Grape": {
+    "rarity": "Mythical",
+    "price": 600000,
+    "growthTime": 3600,
+    "value": 1500000,
+    "baseWeight": 2.85,
+    "regrows": true,
+    "fruits": [
+      3,
+      6
+    ],
+    "stockChance": 0.06,
+    "maxStock": 2
+  },
+  "Pepper": {
+    "rarity": "Divine",
+    "price": 1000000,
+    "growthTime": 4200,
+    "value": 2800000,
+    "baseWeight": 4.9,
+    "regrows": true,
+    "fruits": [
+      3,
+      6
+    ],
+    "stockChance": 0.04,
+    "maxStock": 1
+  },
+  "Sunflower": {
+    "rarity": "Divine",
+    "price": 1500000,
+    "growthTime": 4800,
+    "value": 4200000,
+    "baseWeight": 14.2,
+    "regrows": false,
+    "fruits": [
+      1,
+      1
+    ],
+    "stockChance": 0.03,
+    "maxStock": 1
+  },
+  "Cacao": {
+    "rarity": "Divine",
+    "price": 2500000,
+    "growthTime": 5400,
+    "value": 6500000,
+    "baseWeight": 7.6,
+    "regrows": true,
+    "fruits": [
+      3,
+      5
+    ],
+    "stockChance": 0.03,
+    "maxStock": 1
+  },
+  "Beanstalk": {
+    "rarity": "Prismatic",
+    "price": 10000000,
+    "growthTime": 7200,
+    "value": 26000000,
+    "baseWeight": 9.5,
+    "regrows": true,
+    "fruits": [
+      3,
+      5
+    ],
+    "stockChance": 0.02,
+    "maxStock": 1
+  },
+  "Ember Lily": {
+    "rarity": "Prismatic",
+    "price": 15000000,
+    "growthTime": 7800,
+    "value": 40000000,
+    "baseWeight": 11.4,
+    "regrows": true,
+    "fruits": [
+      2,
+      4
+    ],
+    "stockChance": 0.02,
+    "maxStock": 1
+  },
+  "Sugar Apple": {
+    "rarity": "Prismatic",
+    "price": 25000000,
+    "growthTime": 8400,
+    "value": 68000000,
+    "baseWeight": 8.5,
+    "regrows": true,
+    "fruits": [
+      3,
+      5
+    ],
+    "stockChance": 0.015,
+    "maxStock": 1
+  },
+  "Burning Bud": {
+    "rarity": "Prismatic",
+    "price": 40000000,
+    "growthTime": 9600,
+    "value": 110000000,
+    "baseWeight": 11,
+    "regrows": true,
+    "fruits": [
+      2,
+      4
+    ],
+    "stockChance": 0.01,
+    "maxStock": 1
+  },
+  "Giant Pinecone": {
+    "rarity": "Prismatic",
+    "price": 55000000,
+    "growthTime": 10800,
+    "value": 150000000,
+    "baseWeight": 17,
+    "regrows": true,
+    "fruits": [
+      2,
+      4
+    ],
+    "stockChance": 0.01,
+    "maxStock": 1
+  },
+  "Elder Strawberry": {
+    "rarity": "Prismatic",
+    "price": 70000000,
+    "growthTime": 12000,
+    "value": 200000000,
+    "baseWeight": 14.4,
+    "regrows": true,
+    "fruits": [
+      3,
+      5
+    ],
+    "stockChance": 0.008,
+    "maxStock": 1
+  },
+  "Moonglow": {
+    "rarity": "Legendary",
+    "price": 25000,
+    "growthTime": 1500,
+    "value": 60000,
+    "baseWeight": 3,
+    "regrows": true,
+    "fruits": [
+      2,
+      4
+    ],
+    "stockChance": 1.0,
+    "maxStock": 3,
+    "event": "Night"
+  },
+  "Moon Blossom": {
+    "rarity": "Mythical",
+    "price": 400000,
+    "growthTime": 3000,
+    "value": 1100000,
+    "baseWeight": 2,
+    "regrows": true,
+    "fruits": [
+      2,
+      4
+    ],
+    "stockChance": 1.0,
+    "maxStock": 2,
+    "event": "Night"
+  },
+  "Blood Banana": {
+    "rarity": "Legendary",
+    "price": 30000,
+    "growthTime": 1500,
+    "value": 75000,
+    "baseWeight": 1.4,
+    "regrows": true,
+    "fruits": [
+      2,
+      4
+    ],
+    "stockChance": 1.0,
+    "maxStock": 3,
+    "event": "Blood Moon"
+  },
+  "Honeysuckle": {
+    "rarity": "Rare",
+    "price": 3000,
+    "growthTime": 600,
+    "value": 8500,
+    "baseWeight": 0.4,
+    "regrows": true,
+    "fruits": [
+      2,
+      3
+    ],
+    "stockChance": 1.0,
+    "maxStock": 3,
+    "event": "Bee Swarm"
+  }
+}
