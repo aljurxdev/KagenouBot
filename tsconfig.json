@@ -53,6 +53,22 @@
       "@noblesse/subcommands": ["./Data/noblesse/subcommands.json"],
       "@noblesse/dev": ["./Data/noblesse/dev.json"],
       "@noblesse/constants": ["./Data/noblesse/constants.json"]
+      "@garden/constants": ["./Data/garden/constants.json"],
+      "@garden/seeds": ["./Data/garden/seeds.json"],
+      "@garden/gear": ["./Data/garden/gear.json"],
+      "@garden/eggs": ["./Data/garden/eggs.json"],
+      "@garden/pets": ["./Data/garden/pets.json"],
+      "@garden/cosmetics": ["./Data/garden/cosmetics.json"],
+      "@garden/mutations": ["./Data/garden/mutations.json"],
+      "@garden/weather": ["./Data/garden/weather.json"],
+      "@garden/quests": ["./Data/garden/quests.json"],
+      "@garden/achievements": ["./Data/garden/achievements.json"],
+      "@garden/titles": ["./Data/garden/titles.json"],
+      "@garden/honey": ["./Data/garden/honey.json"],
+      "@garden/chores": ["./Data/garden/chores.json"],
+      "@garden/abuse": ["./Data/garden/abuse.json"],
+      "@garden/dev": ["./Data/garden/dev.json"],
+      "@garden/subcommands": ["./Data/garden/subcommands.json"]
     }
   },
   "include": ["**/*.ts", "**/*.js", "global.ts"],
