@@ -52,7 +52,7 @@
       "@noblesse/trivia": ["./Data/noblesse/trivia.json"],
       "@noblesse/subcommands": ["./Data/noblesse/subcommands.json"],
       "@noblesse/dev": ["./Data/noblesse/dev.json"],
-      "@noblesse/constants": ["./Data/noblesse/constants.json"]
+      "@noblesse/constants": ["./Data/noblesse/constants.json"],
       "@garden/constants": ["./Data/garden/constants.json"],
       "@garden/seeds": ["./Data/garden/seeds.json"],
       "@garden/gear": ["./Data/garden/gear.json"],
