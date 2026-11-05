@@ -1,6 +1,11 @@
 import axios from 'axios';
 import AuroraBetaStyler from '@aurora/styler';
 
+const NVIDIA_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
+const NVIDIA_MODEL = 'mistralai/mistral-large-4-1t-a52b';
+const MAX_HISTORY = 10;
+const histories = new Map<string, { role: 'user' | 'assistant'; content: string }[]>();
+
 const aiCommand: ShadowBot.Command = {
   config: {
     name: 'ai',
@@ -13,37 +18,76 @@ const aiCommand: ShadowBot.Command = {
     const { threadID, messageID, senderID } = event;
     if (!threadID || !messageID) return;
 
+    const footer = 'Developed by: **Aljur Pogoy**';
+    const errorMsg = (headerText: string, bodyText: string) =>
+      AuroraBetaStyler.styleOutput({
+        headerText,
+        headerSymbol: '❌',
+        headerStyle: 'bold',
+        bodyText,
+        bodyStyle: 'sansSerif',
+        footerText: footer,
+      });
+
     const query = args.join(' ').trim();
     if (!query) {
-      return api.sendMessage(
-        AuroraBetaStyler.styleOutput({
-          headerText: 'Query',
-          headerSymbol: '❌',
-          headerStyle: 'bold',
-          bodyText: 'Please provide a message.',
-          bodyStyle: 'sansSerif',
-          footerText: 'Developed by: **Aljur Pogoy**',
-        }),
-        threadID,
-        messageID
-      );
+      return api.sendMessage(errorMsg('Query', 'Please provide a message.'), threadID, messageID);
     }
 
     const getImageUrl = (ev: any): string => {
       const attachments = ev.messageReply?.attachments || [];
-      const img = attachments.find((a: any) => a.type === 'photo' || a.type === 'sticker' || a.type === 'animated_image' || a.type === 'video');
+      const img = attachments.find(
+        (a: any) => a.type === 'photo' || a.type === 'sticker' || a.type === 'animated_image'
+      );
       return img?.url || img?.previewUrl || '';
+    };
+    const toDataUrl = async (url: string): Promise<string> => {
+      const res = await axios.get(url, { responseType: 'arraybuffer' });
+      const mime = (res.headers['content-type'] as string) || 'image/jpeg';
+      return `data:${mime};base64,${Buffer.from(res.data).toString('base64')}`;
     };
 
     const askAI = async (text: string, imageUrl: string = '') => {
-      const res = await axios.get('https://rest-api-uacv.onrender.com/api/chipp-ai', {
-        params: {
-          ask: text,
-          uid: senderID,
-          imageUrl,
+      const apiKey = process.env.NVIDIA_API_KEY;
+      if (!apiKey) throw new Error('NVIDIA_API_KEY is not set');
+
+      const history = histories.get(senderID) || [];
+
+      const content: any = imageUrl
+        ? [
+            { type: 'text', text },
+            { type: 'image_url', image_url: { url: await toDataUrl(imageUrl) } },
+          ]
+        : text;
+
+      const res = await axios.post(
+        NVIDIA_URL,
+        {
+          model: NVIDIA_MODEL,
+          messages: [...history, { role: 'user', content }],
+          max_tokens: 4096,
+          stream: false,
+          temperature: 0.5,
+          top_p: 1,
+          frequency_penalty: 0,
+          presence_penalty: 0,
+          reasoning_effort: 'high',
         },
-      });
-      return res.data?.response || res.data?.answer || res.data?.message || 'No response.';
+        {
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            Accept: 'application/json',
+          },
+          timeout: 120000,
+        }
+      );
+
+      const answer: string = res.data?.choices?.[0]?.message?.content || 'No response.';
+      history.push({ role: 'user', content: imageUrl ? `${text} [image attached]` : text });
+      history.push({ role: 'assistant', content: answer });
+      histories.set(senderID, history.slice(-MAX_HISTORY));
+
+      return answer;
     };
 
     const registerReply = (botMsgID: string) => {
@@ -59,13 +103,10 @@ const aiCommand: ShadowBot.Command = {
 
           global.Kagenou.replyListeners.delete(botMsgID);
 
-          const imageUrl = getImageUrl(event);
-
           try {
-            const nextResponse = await askAI(followUp, imageUrl);
-
+            const nextResponse = await askAI(followUp, getImageUrl(event));
             const nextStyled = AuroraBetaStyler.styleOutput({
-              headerText: 'CHIPP AI',
+              headerText: 'AI',
               headerSymbol: '🤖',
               headerStyle: 'bold',
               bodyText: nextResponse,
@@ -81,14 +122,7 @@ const aiCommand: ShadowBot.Command = {
             });
           } catch {
             await api.sendMessage(
-              AuroraBetaStyler.styleOutput({
-                headerText: 'Error',
-                headerSymbol: '❌',
-                headerStyle: 'bold',
-                bodyText: 'Failed to process your message.',
-                bodyStyle: 'sansSerif',
-                footerText: 'Developed by: **Aljur Pogoy**',
-              }),
+              errorMsg('Error', 'Failed to process your message.'),
               rThreadID,
               rMessageID
             );
@@ -97,13 +131,11 @@ const aiCommand: ShadowBot.Command = {
       });
     };
 
-    const imageUrl = getImageUrl(event);
-
     try {
-      const aiResponse = await askAI(query, imageUrl);
+      const aiResponse = await askAI(query, getImageUrl(event));
 
       const styledMessage = AuroraBetaStyler.styleOutput({
-        headerText: 'CHIPP AI',
+        headerText: 'AI',
         headerSymbol: '🤖',
         headerStyle: 'bold',
         bodyText: aiResponse,
@@ -117,19 +149,9 @@ const aiCommand: ShadowBot.Command = {
           resolve();
         }, messageID);
       });
-    } catch {
-      await api.sendMessage(
-        AuroraBetaStyler.styleOutput({
-          headerText: 'AI ERROR',
-          headerSymbol: '❌',
-          headerStyle: 'bold',
-          bodyText: 'Failed to contact AI.',
-          bodyStyle: 'sansSerif',
-          footerText: 'Developed by: **Aljur Pogoy**',
-        }),
-        threadID,
-        messageID
-      );
+    } catch (error: any) {
+      console.error('AI error:', error?.response?.status, error?.response?.data || error?.message);
+      await api.sendMessage(errorMsg('AI ERROR', 'Failed to contact AI.'), threadID, messageID);
     }
   },
 };
