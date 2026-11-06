@@ -4,6 +4,7 @@ const AuroraBetaStyler = require(path.join(__dirname, "..", "core", "plugins", "
 
 const footer = "Developed by: **Aljur pogoy**";
 const cache = new Map();
+const checked = new Set();
 
 const style = (headerText, headerSymbol, bodyText) =>
   AuroraBetaStyler.styleOutput({
@@ -71,7 +72,24 @@ module.exports = {
       const col = database.db("threadNames");
       const record = await ensure(api, col, threadID);
 
-      if (logMessageType !== "log:thread-name") return;
+      if (logMessageType !== "log:thread-name") {
+        if (record.locked && !checked.has(threadID)) {
+          checked.add(threadID);
+          const currentName = await fetchName(api, threadID);
+          if (currentName && currentName !== record.name) {
+            api.setTitle(record.name, threadID, (err) => {
+              if (err) return;
+              api.sendMessage(
+                style("Name Lock", "🔒", "The thread name was changed while the bot was offline. The locked name has been restored."),
+                threadID
+              );
+            });
+          }
+        }
+        return;
+      }
+
+      checked.add(threadID);
 
       const newName = logMessageData?.name ?? "";
       const adminList = (admins || global.admins || []).map(String);
