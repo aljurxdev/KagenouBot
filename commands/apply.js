@@ -1,343 +1,252 @@
-const fs = require("fs-extra");
+const AuroraBetaStyler = require("@aurora/styler");
 
-const path = require("path");
+const COLLECTION = "applicants";
+const MAX_SHOWN = 15;
 
-module.exports = {
+const style = (header, body, symbol) =>
+  AuroraBetaStyler.styleOutput({
+    headerText: header,
+    headerSymbol: symbol,
+    headerStyle: "bold",
+    bodyText: body,
+    bodyStyle: "sansSerif",
+    footerText: "Developed by: **Aljur Pogoy**",
+  });
 
-  name: "apply",
+const ids = (key) => ((global.config && global.config[key]) || []).map(String);
 
-  author: "Aljur pogoy",
+const isReviewer = (uid) => {
+  uid = String(uid);
+  return ids("developers").includes(uid) || ids("admins").includes(uid) || ids("vips").includes(uid);
+};
 
-  version: "3.0.0",
+const isStaff = (uid) => {
+  uid = String(uid);
+  return isReviewer(uid) || ids("moderators").includes(uid);
+};
 
-  description: "Manage applications. Usage: #apply <name> <age> <gender> | #apply view <name> | #apply list",
+const formatApplicant = (a) =>
+  `Name: ${a.name}\nAge: ${a.age}\nWhy want to become a moderator for KagenouBot?: ${a.reason}\nUID: ${a.uid}`;
 
-  category: "admin",
+const CHECK_INTERVAL = 60 * 1000;
+const PLACEHOLDER = "⟦⟧";
+let lastCheck = 0;
+let checking = false;
 
-  async run({ api, event, args, admins, usersData }) {
+const sendTo = (api, message, threadID) =>
+  new Promise((resolve, reject) => {
+    api.sendMessage(message, threadID, (err) => (err ? reject(err) : resolve()));
+  });
 
-    const { threadID, messageID, senderID } = event;
+const buildApprovalMessage = (applicant) => {
+  const mentionText = `@${applicant.name}`;
 
-    // Check if the user is an admin
+  let body = style(
+    "Application Approved",
+    `Congratulations ${PLACEHOLDER}! Your application to become a moderator for KagenouBot has been approved. Welcome to the staff team!`,
+    "🎉"
+  );
 
-    if (!admins.includes(senderID)) {
+  if (body.includes(PLACEHOLDER)) {
+    body = body.replace(PLACEHOLDER, mentionText);
+  } else {
+    body = `${mentionText}\n${body}`;
+  }
 
-      return api.sendMessage(
+  return { body, mentions: [{ tag: mentionText, id: applicant.uid }] };
+};
 
-        "════『 𝗔𝗣𝗣𝗟𝗬 』════\n\n❌ Only admins can use this command.",
+const notifyApproved = async (api, database) => {
+  const col = database.db(COLLECTION);
+  const all = await col.find({}).toArray();
+  const approved = all.filter((a) => isStaff(a.uid) && !a.notified);
 
-        threadID,
-
-        messageID
-
-      );
-
-    }
-
-    // JSON fallback file
-
-    const applyFile = path.join(__dirname, "..", "database", "apply.json");
-
-    let applyData = {};
+  for (const applicant of approved) {
+    let failed = false;
 
     try {
-
-      applyData = JSON.parse(fs.readFileSync(applyFile, "utf8"));
-
-      if (!applyData.key || !applyData.applications) {
-
-        applyData = { key: "applications", applications: applyData.applications || {} };
-
-      }
-
+      await sendTo(api, buildApprovalMessage(applicant), applicant.threadID);
     } catch (err) {
-
-      console.error(`[Apply Command] Error reading apply.json: ${err.message}`);
-
-      applyData = { key: "applications", applications: {} };
-
+      failed = true;
+      console.error(`[Apply Command] Could not notify ${applicant.uid}: ${err?.message || err}`);
     }
 
-    // Write the corrected structure to file if needed
-
-    if (!fs.existsSync(applyFile) || Object.keys(applyData).length === 0) {
-
-      fs.writeFileSync(applyFile, JSON.stringify(applyData, null, 2));
-
-    }
-
-    // Check if MongoDB is available
-
-    const config = require(path.join(__dirname, "..", "config.json"));
-
-    const useMongoDB = !!global.db && config.mongoUri && config.mongoUri.trim() !== "";
-
-    const applyCollection = useMongoDB ? global.db.db("apply") : null;
-
-    console.log(`[Apply Command] Using MongoDB: ${useMongoDB}, mongoUri: "${config.mongoUri}"`);
-
-    // If no args provided, show usage
-
-    if (!args[0]) {
-
-      return api.sendMessage(
-
-        "════『 𝗔𝗣𝗣𝗟𝗬 』════\n\n❌ Usage: #apply <name> <age> <gender> | #apply view <name> | #apply list\n\n> Thank you for using our Cid Kagenou bot",
-
-        threadID,
-
-        messageID
-
-      );
-
-    }
-
-    const subCommand = args[0].toLowerCase();
-
-    // Handle #apply <name> <age> <gender> (default action if subCommand isn't "view" or "list")
-
-    if (subCommand !== "view" && subCommand !== "list") {
-
-      const [name, age, gender] = subCommand === "apply" ? args.slice(1) : args;
-
-      if (!name || !age || !gender) {
-
-        return api.sendMessage(
-
-          "════『 𝗔𝗣𝗣𝗟𝗬 』════\n\n❌ Please provide name, age, and gender.\nExample: #apply John 25 Male\n\n> Thank you for using our Cid Kagenou bot",
-
-          threadID,
-
-          messageID
-
-        );
-
-      }
-
-      const application = { name, age: parseInt(age), gender, timestamp: new Date() };
-
-      try {
-
-        if (useMongoDB) {
-
-          const existingDoc = await applyCollection.findOne({ key: "applications" });
-
-          if (existingDoc) {
-
-            await applyCollection.updateOne(
-
-              { key: "applications" },
-
-              { $set: { [`applications.${name}`]: application, lastUpdated: new Date() } }
-
-            );
-
-          } else {
-
-            await applyCollection.insertOne({
-
-              key: "applications",
-
-              applications: { [name]: application },
-
-              lastUpdated: new Date(),
-
-            });
-
-          }
-
-        } else {
-
-          applyData.applications = applyData.applications || {};
-
-          applyData.applications[name] = application;
-
-          applyData.lastUpdated = new Date();
-
-          fs.writeFileSync(applyFile, JSON.stringify(applyData, null, 2));
-
-        }
-
-        return api.sendMessage(
-
-          `════『 𝗔𝗣𝗣𝗟𝗬 』════\n\n✔️ Application for ${name} added successfully!\nStorage: ${useMongoDB ? "MongoDB" : "JSON"}\n\n> Thank you for using our Cid Kagenou bot`,
-
-          threadID,
-
-          messageID
-
-        );
-
-      } catch (err) {
-
-        console.error(`[Apply Command] Error adding application: ${err.message}`);
-
-        return api.sendMessage(
-
-          `════『 𝗔𝗣𝗣𝗟𝗬 』════\n\n  ┏━━━━━━━┓\n  ┃ 『 𝗜𝗡𝗙𝗢 』 An error occurred while adding the application.\n  ┃ Error: ${err.message}\n  ┗━━━━━━━┛\n\n> Thank you for using our Cid Kagenou bot`,
-
-          threadID,
-
-          messageID
-
-        );
-
-      }
-
-    }
-
-    if (subCommand === "view") {
-
-      const name = args[1];
-
-      if (!name) {
-
-        return api.sendMessage(
-
-          "════『 𝗔𝗣𝗣𝗟𝗬 』════\n\n❌ Please provide a name to view.\nExample: #apply view John\n\n> Thank you for using our Cid Kagenou bot",
-
-          threadID,
-
-          messageID
-
-        );
-
-      }
-
-      try {
-
-        let application;
-
-        if (useMongoDB) {
-
-          const profileDoc = await applyCollection.findOne({ key: "applications" });
-
-          application = profileDoc && profileDoc.applications[name] ? profileDoc.applications[name] : null;
-
-        } else {
-
-          application = applyData.applications[name];
-
-        }
-
-        if (!application) {
-
-          return api.sendMessage(
-
-            `════『 𝗔𝗣𝗣𝗟𝗬 』════\n\n📋 No application found for ${name}.\n\n> Thank you for using our Cid Kagenou bot`,
-
-            threadID,
-
-            messageID
-
-          );
-
-        }
-
-        return api.sendMessage(
-
-          `════『 𝗔𝗣𝗣𝗟𝗬 』════\n\n📋 Application Details:\n` +
-
-          `Name: ${application.name}\nAge: ${application.age}\nGender: ${application.gender}\nTimestamp: ${application.timestamp}\n\n> Thank you for using our Cid Kagenou bot`,
-
-          threadID,
-
-          messageID
-
-        );
-
-      } catch (err) {
-
-        console.error(`[Apply Command] Error viewing application: ${err.message}`);
-
-        return api.sendMessage(
-
-          `════『 �_A𝗣𝗣𝗟𝗬 』════\n\n  ┏━━━━━━━┓\n  ┃ 『 𝗜𝗡𝗙𝗢 』 An error occurred while viewing the application.\n  ┃ Error: ${err.message}\n  ┗━━━━━━━┛\n\n> Thank you for using our Cid Kagenou bot`,
-
-          threadID,
-
-          messageID
-
-        );
-
-      }
-
-    }
-
-    if (subCommand === "list") {
-
-      try {
-
-        let applications;
-
-        if (useMongoDB) {
-
-          const profileDoc = await applyCollection.findOne({ key: "applications" });
-
-          applications = profileDoc ? profileDoc.applications : {};
-
-        } else {
-
-          applications = applyData.applications || {};
-
-        }
-
-        if (Object.keys(applications).length === 0) {
-
-          return api.sendMessage(
-
-            "════『 𝗔𝗣𝗣𝗟𝗬 』════\n\n📋 No applications found.\n\n> Thank you for using our Cid Kagenou bot",
-
-            threadID,
-
-            messageID
-
-          );
-
-        }
-
-        const listMessage =
-
-          "════『 𝗔𝗣𝗣𝗟𝗬 』════\n\n📋 Application List:\n" +
-
-          Object.entries(applications)
-
-            .map(([name, data]) => `Name: ${name}, Age: ${data.age}, Gender: ${data.gender}`)
-
-            .join("\n") +
-
-          "\n\n> Thank you for using our Cid Kagenou bot";
-
-        return api.sendMessage(listMessage, threadID, messageID);
-
-      } catch (err) {
-
-        console.error(`[Apply Command] Error listing applications: ${err.message}`);
-
-        return api.sendMessage(
-
-          `════『 𝗔𝗣𝗣𝗟𝗬 』════\n\n  ┏━━━━━━━┞\n  ┃ 『 𝗜𝗡𝗙𝗢 』 An error occurred while listing applications.\n  ┃ Error: ${err.message}\n  ┗━━━━━━━┛\n\n> Thank you for using our Cid Kagenou bot`,
-
-          threadID,
-
-          messageID
-
-        );
-
-      }
-
-    }
-
-    return api.sendMessage(
-
-      "════『 𝗔𝗣𝗣𝗟𝗬 』════\n\n❌ Invalid subcommand. Use: #apply <name> <age> <gender> | #apply view <name> | #apply list\n\n> Thank you for using our Cid Kagenou bot",
-
-      threadID,
-
-      messageID
-
+    await col.updateOne(
+      { uid: applicant.uid },
+      { $set: { notified: true, notifyFailed: failed, notifiedAt: new Date() } }
     );
+  }
+};
 
+module.exports = {
+  config: {
+    name: "apply",
+    description: "Apply to become a moderator for KagenouBot. VIPs, admins, and developers can view applicants.",
+    usage: "apply <yourname> <age> <why you want to become a moderator> | apply list | apply accept <uid>",
+    category: "System ⚡",
+    role: 0,
+    nonPrefix: false,
   },
 
+  run: async ({ api, event, args, db }) => {
+    const { threadID, messageID, senderID } = event;
+    const database = db || global.db;
+
+    const send = (header, body, symbol) =>
+      api.sendMessage(style(header, body, symbol), threadID, messageID);
+
+    if (!database) {
+      return send("Error", "Database not initialized. Ensure MongoDB is connected and try again.", "❌");
+    }
+
+    const col = database.db(COLLECTION);
+    const subCommand = args[0]?.toLowerCase();
+
+    try {
+      if (subCommand === "list") {
+        if (!isReviewer(senderID)) {
+          return send("Apply", "Only VIPs, admins, and developers can view applicants.", "❌");
+        }
+
+        const all = await col.find({}).toArray();
+        const pending = all
+          .filter((a) => !isStaff(a.uid))
+          .sort((a, b) => new Date(a.appliedAt) - new Date(b.appliedAt));
+
+        if (pending.length === 0) {
+          return send("Moderator Applicants", "No pending applicants.", "📋");
+        }
+
+        const shown = pending.slice(0, MAX_SHOWN);
+        const extra = pending.length - shown.length;
+
+        const bodyText =
+          shown.map(formatApplicant).join("\n\n") +
+          (extra > 0 ? `\n\n...and ${extra} more.` : "") +
+          "\n\nCopy the UID and add it to moderators in config.json, then restart the bot. The applicant is notified automatically in the group chat they applied from, or notify them right away with /apply accept <uid>.";
+
+        return send("Moderator Applicants", bodyText, "📋");
+      }
+
+      if (subCommand === "accept") {
+        if (!isReviewer(senderID)) {
+          return send("Apply", "Only VIPs, admins, and developers can accept applicants.", "❌");
+        }
+
+        const targetUID = args[1]?.trim();
+        if (!targetUID || !/^\d+$/.test(targetUID)) {
+          return send(
+            "Apply",
+            "Please provide the applicant's UID.\nExample: /apply accept 100012345678901",
+            "⚠️"
+          );
+        }
+
+        const applicant = await col.findOne({ uid: targetUID });
+        if (!applicant) {
+          return send("Apply", `No application found for UID ${targetUID}.`, "⚠️");
+        }
+
+        if (applicant.notified) {
+          return send("Apply", `${applicant.name} has already been notified.`, "⚠️");
+        }
+
+        try {
+          await sendTo(api, buildApprovalMessage(applicant), applicant.threadID);
+        } catch (err) {
+          return send(
+            "Error",
+            `Could not notify ${applicant.name} in their group chat: ${err?.message || err}`,
+            "❌"
+          );
+        }
+
+        await col.updateOne(
+          { uid: targetUID },
+          {
+            $set: {
+              notified: true,
+              notifyFailed: false,
+              notifiedAt: new Date(),
+              acceptedBy: String(senderID),
+            },
+          }
+        );
+
+        return send(
+          "Apply",
+          `${applicant.name} has been notified in their group chat.${
+            isStaff(targetUID) ? "" : "\nRemember to add their UID to moderators in config.json and restart the bot."
+          }`,
+          "✅"
+        );
+      }
+
+      const [name, ageArg, ...reasonParts] = args;
+      const reason = reasonParts.join(" ").trim();
+
+      if (!name || !ageArg || !reason) {
+        return send(
+          "Apply",
+          "Usage: /apply <yourname> <age> <why you want to become a moderator for KagenouBot>\n\nExample: /apply Juan 18 I'm active every day and I want to help keep the group safe.",
+          "⚠️"
+        );
+      }
+
+      const age = Number(ageArg);
+      if (!Number.isInteger(age) || age < 13 || age > 99) {
+        return send("Apply", "Please provide a valid age (13-99).", "❌");
+      }
+
+      if (reason.length < 10 || reason.length > 500) {
+        return send("Apply", "Your message must be between 10 and 500 characters.", "❌");
+      }
+
+      if (isStaff(senderID)) {
+        return send("Apply", "You are already part of the KagenouBot staff.", "⚠️");
+      }
+
+      const existing = await col.findOne({ uid: String(senderID) });
+      if (existing) {
+        return send("Apply", "You already have an application on file. Please wait for a review.", "⚠️");
+      }
+
+      await col.insertOne({
+        uid: String(senderID),
+        name,
+        age,
+        reason,
+        threadID: String(threadID),
+        appliedAt: new Date(),
+      });
+
+      return send(
+        "Application Submitted",
+        `Thank you ${name}! Your application to become a moderator for KagenouBot has been submitted and will be reviewed.`,
+        "✅"
+      );
+    } catch (err) {
+      console.error(`Error: ${err.message}`);
+      return send("Error", `Something went wrong: ${err.message}`, "❌");
+    }
+  },
+
+  handleEvent: async ({ api, db }) => {
+    const database = db || global.db;
+    if (!database || checking) return;
+
+    const now = Date.now();
+    if (now - lastCheck < CHECK_INTERVAL) return;
+
+    checking = true;
+    lastCheck = now;
+
+    try {
+      await notifyApproved(api, database);
+    } catch (err) {
+      console.error(`[Apply Command] Notify check error: ${err.message}`);
+    } finally {
+      checking = false;
+    }
+  },
 };
