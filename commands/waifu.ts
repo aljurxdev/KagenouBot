@@ -44,6 +44,7 @@ const waifuCommand: ShadowBot.Command = {
     name: "waifu",
     description: "Sends a random waifu image. Use '18' for 18+ images.",
     usage: "/waifu [18]",
+    role: 2,
     aliases: ["anime", "girl"],
     category: "Fun 🎉",
   },
