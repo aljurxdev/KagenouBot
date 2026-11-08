@@ -260,10 +260,24 @@ try {
   };
 }
 
+const express = require("express");
+const app = express();
+app.use(express.json());
+
+const PORT = process.env.PORT || 3000;
+const HOST = "0.0.0.0";
+const server = app.listen(PORT, HOST, () => {
+  console.log(`[SERVER] Web server running at http://${HOST}:${PORT}`);
+});
+server.on("error", (error) => {
+  console.error("[SERVER] Failed to start:", error);
+});
+
 loadAuroraCommands();
 loadCommands();
+
 const uri = process.env.MONGO_URI || global.config.mongoUri || null;
-console.log("[DB] MongoDB URI:", uri);
+console.log("[DB] MongoDB URI loaded:", !!uri);
 
 async function connectDB() {
   if (!uri) {
@@ -847,25 +861,9 @@ const startBot = async () => {
     startListeningWithAutoRestart(api);
   });
 };
-const express = require("express");
-const app = express();
-app.use(express.json());
 const dashboardHandler = require("./dashboard/handler");
 dashboardHandler(app);
-
 /**
- * Use 3000 or 4000 to reserved render hosting site.
- * @Credits: Aljur Pogoy
+ * @CreditsTo: Aljur Pogoy 
  */
-const PORT = process.env.PORT || 3000;
-const HOST = "0.0.0.0";
-
-const server = app.listen(PORT, HOST, () => {
-  console.log(`[SERVER] Web server running at http://${HOST}:${PORT}`);
-});
-
-server.on("error", (error) => {
-  console.error("[SERVER] Failed to start:", error);
-});
-
 startBot();
