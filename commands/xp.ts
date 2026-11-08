@@ -1,12 +1,10 @@
 import { createCanvas, loadImage, registerFont, Image, CanvasRenderingContext2D } from "canvas";
 import fs from "fs";
 import path from "path";
-import axios from "axios";
 import AuroraBetaStyler from "@aurora/styler";
 
 const cacheDir = path.join(__dirname, "cache");
 const FONT = "Poppins, sans-serif";
-const DEFAULT_AVATAR = "https://files.catbox.moe/gy3qy6.jpg";
 
 for (const [file, weight] of [
   ["Poppins-Regular.ttf", "normal"],
@@ -38,15 +36,21 @@ const getBackground = async (): Promise<Image> => {
   return img;
 };
 
-const loadAvatar = async (url?: string): Promise<Image> => {
-  for (const candidate of [url, DEFAULT_AVATAR]) {
-    if (!candidate) continue;
-    try {
-      const res = await axios.get(candidate, { responseType: "arraybuffer", timeout: 15000 });
-      return await loadImage(Buffer.from(res.data));
-    } catch {}
-  }
-  throw new Error("Could not load avatar image.");
+const drawDefaultAvatar = (ctx: CanvasRenderingContext2D, cx: number, cy: number, size: number) => {
+  const r = size / 2;
+  const gradient = ctx.createLinearGradient(cx - r, cy - r, cx + r, cy + r);
+  gradient.addColorStop(0, "#4b5563");
+  gradient.addColorStop(1, "#1f2937");
+  ctx.fillStyle = gradient;
+  ctx.fillRect(cx - r, cy - r, size, size);
+
+  ctx.fillStyle = "#d1d5db";
+  ctx.beginPath();
+  ctx.arc(cx, cy - r * 0.2, r * 0.32, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.ellipse(cx, cy + r * 0.85, r * 0.62, r * 0.55, 0, 0, Math.PI * 2);
+  ctx.fill();
 };
 
 const xpNeeded = (_level: number) => 100;
@@ -224,9 +228,8 @@ const xpCommand: ShadowBot.Command = {
       const info: any = userInfo[targetID];
       const userName = info?.name || "Unknown";
 
-      const [background, avatar, rankInfo] = await Promise.all([
+      const [background, rankInfo] = await Promise.all([
         getBackground(),
-        loadAvatar(info?.thumbSrc),
         getRank(db, String(targetID), xp, level),
       ]);
 
@@ -269,7 +272,7 @@ const xpCommand: ShadowBot.Command = {
       ctx.beginPath();
       ctx.arc(avatarX, avatarY, avatarSize / 2, 0, Math.PI * 2);
       ctx.clip();
-      ctx.drawImage(avatar, avatarX - avatarSize / 2, avatarY - avatarSize / 2, avatarSize, avatarSize);
+      drawDefaultAvatar(ctx, avatarX, avatarY, avatarSize);
       ctx.restore();
 
       ctx.font = `bold 26px ${FONT}`;
