@@ -858,8 +858,14 @@ dashboardHandler(app);
  * @Credits: Aljur Pogoy
  */
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`[SERVER] Web server running on port ${PORT}`);
+const HOST = "0.0.0.0";
+
+const server = app.listen(PORT, HOST, () => {
+  console.log(`[SERVER] Web server running at http://${HOST}:${PORT}`);
+});
+
+server.on("error", (error) => {
+  console.error("[SERVER] Failed to start:", error);
 });
 
 startBot();
