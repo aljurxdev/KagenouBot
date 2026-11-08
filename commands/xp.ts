@@ -49,7 +49,7 @@ const loadAvatar = async (url?: string): Promise<Image> => {
   throw new Error("Could not load avatar image.");
 };
 
-const xpNeeded = (level: number) => 100;
+const xpNeeded = (_level: number) => 100;
 
 const levelStartXP = (level: number) => {
   let total = 0;
@@ -221,7 +221,7 @@ const xpCommand: ShadowBot.Command = {
       }
 
       const userInfo = await api.getUserInfo([targetID]);
-      const info = userInfo[targetID];
+      const info: any = userInfo[targetID];
       const userName = info?.name || "Unknown";
 
       const [background, avatar, rankInfo] = await Promise.all([
