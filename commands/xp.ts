@@ -1,4 +1,4 @@
-import { createCanvas, loadImage, registerFont, CanvasRenderingContext2D } from "canvas";
+import { createCanvas, loadImage, registerFont } from "canvas";
 import fs from "fs";
 import path from "path";
 import axios from "axios";
@@ -14,61 +14,12 @@ registerFont(path.join(__dirname, "cache", "Poppins-Bold.ttf"), {
   weight: "bold",
 });
 
-const configList = (key: string): string[] =>
-  (((global as any).config && (global as any).config[key]) || []).map(String);
-
-const getRoleBadge = (uid: string) => {
-  uid = String(uid);
-  if (configList("developers").includes(uid)) return { label: "Developer", color: "#facc15" };
-  if (configList("admins").includes(uid)) return { label: "Admin", color: "#ef4444" };
-  if (configList("moderators").includes(uid)) return { label: "Moderator", color: "#22c55e" };
-  if (configList("vips").includes(uid)) return { label: "VIP", color: "#a855f7" };
-  return { label: "Member", color: "#9ca3af" };
-};
-
-const roundedRect = (
-  ctx: CanvasRenderingContext2D,
-  x: number,
-  y: number,
-  w: number,
-  h: number,
-  r: number
-) => {
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.arcTo(x + w, y, x + w, y + h, r);
-  ctx.arcTo(x + w, y + h, x, y + h, r);
-  ctx.arcTo(x, y + h, x, y, r);
-  ctx.arcTo(x, y, x + w, y, r);
-  ctx.closePath();
-};
-
-const getRank = async (db: any, userId: string, xp: number) => {
-  if (!db) return null;
-  try {
-    const docs = await db.db("users").find({}).toArray();
-    const entries = docs
-      .map((d: any) => ({ userId: String(d.userId), xp: Number(d.data?.xp) || 0 }))
-      .filter((e: any) => e.userId !== userId);
-    entries.push({ userId, xp });
-    const ranked = entries
-      .filter((e: any) => e.xp > 0 || e.userId === userId)
-      .sort((a: any, b: any) => b.xp - a.xp);
-    return {
-      rank: ranked.findIndex((e: any) => e.userId === userId) + 1,
-      total: ranked.length,
-    };
-  } catch {
-    return null;
-  }
-};
-
 const xpCommand: ShadowBot.Command = {
   config: {
     name: "xp",
     author: "Aljur Pogoy",
     aliases: ["level", "profile"],
-    description: "Check your XP and level with a profile card. Mention someone to see theirs.",
+    description: "Check your XP and level with a profile card",
     cooldown: 5,
     role: 0,
   },
@@ -78,38 +29,28 @@ const xpCommand: ShadowBot.Command = {
     const { senderID, threadID, messageID } = event;
 
     try {
-      const mentionedID = Object.keys((event as any).mentions || {})[0];
-      const targetID = mentionedID || senderID;
-      const isSelf = String(targetID) === String(senderID);
-
-      let user = usersData.get(targetID) || {
+      let user = usersData.get(senderID) || {
         balance: 0,
         bank: 0,
         xp: 0,
         level: 0,
       };
 
-      user.xp = await global.getXP(targetID);
-      user.level = await global.getLevel(targetID);
+      user.xp = await global.getXP(senderID);
+      user.level = await global.getLevel(senderID);
+      usersData.set(senderID, user);
 
-      if (isSelf) {
-        usersData.set(senderID, user);
-
-        if (db) {
-          const usersCollection = db.db("users");
-          await usersCollection.updateOne(
-            { userId: senderID },
-            { $set: { userId: senderID, data: user } },
-            { upsert: true }
-          );
-        }
+      if (db) {
+        const usersCollection = db.db("users");
+        await usersCollection.updateOne(
+          { userId: senderID },
+          { $set: { userId: senderID, data: user } },
+          { upsert: true }
+        );
       }
 
-      const userInfo = await api.getUserInfo([targetID]);
-      const userName = userInfo[targetID]?.name || "Unknown";
-
-      const rankInfo = await getRank(db, String(targetID), user.xp);
-      const role = getRoleBadge(String(targetID));
+      const userInfo = await api.getUserInfo([senderID]);
+      const userName = userInfo[senderID]?.name || "Unknown";
 
       const width = 800;
       const height = 300;
@@ -168,28 +109,9 @@ const xpCommand: ShadowBot.Command = {
       ctx.fillStyle = glowColor;
       ctx.fillText(userName, 260, 100);
 
-      ctx.font = "bold 16px Poppins";
-      const badgeWidth = ctx.measureText(role.label).width + 28;
-      const badgeX = 770 - badgeWidth;
-      ctx.fillStyle = role.color;
-      roundedRect(ctx, badgeX, 78, badgeWidth, 26, 13);
-      ctx.fill();
-      ctx.fillStyle = "#111111";
-      ctx.textBaseline = "middle";
-      ctx.fillText(role.label, badgeX + 14, 91);
-      ctx.textBaseline = "alphabetic";
-
       ctx.font = "bold 32px Poppins";
       ctx.fillStyle = "#ffffff";
       ctx.fillText(`Level: ${user.level}`, 260, 140);
-
-      if (rankInfo) {
-        ctx.font = "bold 22px Poppins";
-        ctx.fillStyle = glowColor;
-        ctx.textAlign = "right";
-        ctx.fillText(`Rank #${rankInfo.rank} / ${rankInfo.total}`, 770, 140);
-        ctx.textAlign = "left";
-      }
 
       ctx.font = "22px Poppins";
       ctx.fillStyle = "#ffffff";
@@ -234,9 +156,7 @@ const xpCommand: ShadowBot.Command = {
         headerText: "🎮 XP Profile",
         headerSymbol: "⭐",
         headerStyle: "bold",
-        bodyText: isSelf
-          ? "Here is your XP & level progress.\n XP profile updated to version 12.1.5."
-          : `Here is ${userName}'s XP & level progress.\n XP profile updated to version 12.1.5.`,
+        bodyText: "Here is your XP & level progress.\n XP profile updated to version 12.1.5.",
         footerText: "Keep chatting to gain XP!",
       });
 
