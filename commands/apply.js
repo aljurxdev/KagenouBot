@@ -9,7 +9,7 @@ const style = (header, body, symbol) =>
     headerSymbol: symbol,
     headerStyle: "bold",
     bodyText: body,
-    bodyStyle: "sansSerif",
+    bodyStyle: "bold",
     footerText: "Developed by: **Aljur Pogoy**",
   });
 
@@ -38,14 +38,10 @@ const sendTo = (api, message, threadID) =>
     api.sendMessage(message, threadID, (err) => (err ? reject(err) : resolve()));
   });
 
-const buildApprovalMessage = (applicant) => {
+const buildMentionMessage = (applicant, header, symbol, text) => {
   const mentionText = `@${applicant.name}`;
 
-  let body = style(
-    "Application Approved",
-    `Congratulations ${PLACEHOLDER}! Your application to become a moderator for KagenouBot has been approved. Welcome to the staff team!`,
-    "🎉"
-  );
+  let body = style(header, text, symbol);
 
   if (body.includes(PLACEHOLDER)) {
     body = body.replace(PLACEHOLDER, mentionText);
@@ -55,6 +51,24 @@ const buildApprovalMessage = (applicant) => {
 
   return { body, mentions: [{ tag: mentionText, id: applicant.uid }] };
 };
+
+const buildApprovalMessage = (applicant) =>
+  buildMentionMessage(
+    applicant,
+    "Application Approved",
+    "🎉",
+    `Congratulations ${PLACEHOLDER}! Your application to become a moderator for KagenouBot has been approved. Welcome to the staff team!`
+  );
+
+const buildDeclineMessage = (applicant, reason) =>
+  buildMentionMessage(
+    applicant,
+    "Application Declined",
+    "📋",
+    `Hello ${PLACEHOLDER}, your application to become a moderator for KagenouBot was not accepted this time.${
+      reason ? `\nReason: ${reason}` : ""
+    }\nYou are welcome to apply again in the future.`
+  );
 
 const notifyApproved = async (api, database) => {
   const col = database.db(COLLECTION);
@@ -82,7 +96,7 @@ module.exports = {
   config: {
     name: "apply",
     description: "Apply to become a moderator for KagenouBot. VIPs, admins, and developers can view applicants.",
-    usage: "apply <yourname> <age> <why you want to become a moderator> | apply list | apply accept <uid>",
+    usage: "apply <yourname> <age> <why you want to become a moderator> | apply list | apply accept <uid> | apply decline <uid> [reason]",
     category: "System ⚡",
     role: 0,
     nonPrefix: false,
@@ -123,7 +137,7 @@ module.exports = {
         const bodyText =
           shown.map(formatApplicant).join("\n\n") +
           (extra > 0 ? `\n\n...and ${extra} more.` : "") +
-          "\n\nCopy the UID and add it to moderators in config.json, then restart the bot. The applicant is notified automatically in the group chat they applied from, or notify them right away with /apply accept <uid>.";
+          "\n\nCopy the UID and add it to moderators in config.json, then restart the bot. The applicant is notified automatically in the group chat they applied from, or notify them right away with /apply accept <uid>. To reject someone, use /apply decline <uid> [reason].";
 
         return send("Moderator Applicants", bodyText, "📋");
       }
@@ -182,6 +196,57 @@ module.exports = {
         );
       }
 
+      if (subCommand === "decline") {
+        if (!isReviewer(senderID)) {
+          return send("Apply", "Only VIPs, admins, and developers can decline applicants.", "❌");
+        }
+
+        const targetUID = args[1]?.trim();
+        if (!targetUID || !/^\d+$/.test(targetUID)) {
+          return send(
+            "Apply",
+            "Please provide the applicant's UID.\nExample: /apply decline 100012345678901 Not enough activity",
+            "⚠️"
+          );
+        }
+
+        const declineReason = args.slice(2).join(" ").trim();
+        if (declineReason.length > 200) {
+          return send("Apply", "The reason must be 200 characters or less.", "❌");
+        }
+
+        const applicant = await col.findOne({ uid: targetUID });
+        if (!applicant) {
+          return send("Apply", `No application found for UID ${targetUID}.`, "⚠️");
+        }
+
+        if (isStaff(targetUID)) {
+          return send("Apply", `${applicant.name} is already part of the KagenouBot staff.`, "⚠️");
+        }
+
+        if (applicant.notified) {
+          return send("Apply", `${applicant.name} has already been accepted and notified.`, "⚠️");
+        }
+
+        let notified = true;
+        try {
+          await sendTo(api, buildDeclineMessage(applicant, declineReason), applicant.threadID);
+        } catch (err) {
+          notified = false;
+          console.error(`[Apply Command] Could not notify ${targetUID}: ${err?.message || err}`);
+        }
+
+        await col.deleteOne({ uid: targetUID });
+
+        return send(
+          "Apply",
+          `${applicant.name}'s application has been declined and removed.${
+            notified ? "" : "\nCould not notify the group chat they applied from."
+          }`,
+          "✅"
+        );
+      }
+
       const [name, ageArg, ...reasonParts] = args;
       const reason = reasonParts.join(" ").trim();
 
@@ -226,7 +291,7 @@ module.exports = {
         "✅"
       );
     } catch (err) {
-      console.error(`Error: ${err.message}`);
+      console.error(`[Apply Command] Error: ${err.message}`);
       return send("Error", `Something went wrong: ${err.message}`, "❌");
     }
   },
