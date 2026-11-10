@@ -1,195 +1,156 @@
+const AuroraBetaStyler = require("@aurora/styler");
+
+const MAX_SHOWN = 15;
+
+const style = (header, body, symbol) =>
+  AuroraBetaStyler.styleOutput({
+    headerText: header,
+    headerSymbol: symbol,
+    headerStyle: "bold",
+    bodyText: body,
+    bodyStyle: "bold",
+    footerText: "Developed by: **Aljur Pogoy**",
+  });
+
+const sendTo = (api, message, threadID) =>
+  new Promise((resolve, reject) => {
+    api.sendMessage(message, threadID, (err) => (err ? reject(err) : resolve()));
+  });
+
+const getThreadName = (api, threadID) =>
+  new Promise((resolve) => {
+    const timer = setTimeout(() => resolve(""), 5000);
+    try {
+      api.getThreadInfo(threadID, (err, info) => {
+        clearTimeout(timer);
+        if (err || !info) return resolve("");
+        resolve(info.threadName || info.name || "");
+      });
+    } catch {
+      clearTimeout(timer);
+      resolve("");
+    }
+  });
+
+const formatDate = (value) => {
+  const date = new Date(value);
+  if (isNaN(date.getTime())) return "Unknown";
+  return `${date.toISOString().slice(0, 16).replace("T", " ")} UTC`;
+};
+
 module.exports = {
+  config: {
+    name: "approve",
+    description: "Approve a thread so the bot can work there, or list pending threads. Admin only.",
+    usage: "approve pending | approve accept <threadID>",
+    category: "admin",
+    role: 3,
+  },
 
-  name: "approve",
-
-  author: "Aljur pogoy",
-
-  version: "4.0.0",
-
-  description: "Approve a thread by its threadID or list pending threads (Admin only). Usage: #approve <threadID> or #approve pending",
-
-  async run({ api, event, args, admins, prefix }) {
-
+  run: async ({ api, event, args, admins, prefix }) => {
     const { threadID, messageID, senderID } = event;
 
-    // Check if the user is an admin
+    const send = (header, body, symbol) =>
+      api.sendMessage(style(header, body, symbol), threadID, messageID);
 
-    if (!admins.includes(senderID)) {
+    const configPrefix = global.config && global.config.Prefix;
+    const botPrefix =
+      prefix || (Array.isArray(configPrefix) ? configPrefix[0] : configPrefix) || "#";
 
-      return api.sendMessage(
-
-        "════『 𝗔𝗣𝗣𝗥𝗢𝗩𝗘 』════\n\n❌ Only admins can use this command. Contact an admin for assistance.",
-
-        threadID,
-
-        messageID
-
-      );
-
+    if (!admins.includes(senderID.toString())) {
+      return send("Access Denied", "Only admins can use this command.", "❌");
     }
 
-    // Handle #approve pending
-
-    if (args[0] && args[0].toLowerCase() === "pending") {
-
-      const pendingThreads = Array.from(global.threadState.pending.entries()).map(([threadID, data]) => ({
-
-        threadID,
-
-        addedAt: data.addedAt
-
-      }));
-
-      if (pendingThreads.length === 0) {
-
-        return api.sendMessage(
-
-          "════『 𝗔𝗣𝗣𝗥𝗢𝗩𝗘 』════\n\n✅ No pending threads found.",
-
-          threadID,
-
-          messageID
-
-        );
-
-      }
-
-      let message = "════『 𝗔𝗣𝗣𝗥𝗢𝗩𝗘 』════\n\n📋 Pending Threads:\n\n";
-
-      pendingThreads.forEach((thread, index) => {
-
-        message += `${index + 1}. ThreadID: ${thread.threadID} (Added at: ${thread.addedAt.toISOString()})\n`;
-
-      });
-
-      message += "\n> Use #approve <threadID> to approve a thread.";
-
-      return api.sendMessage(message, threadID, messageID);
-
+    const state = global.threadState;
+    if (!state || !state.pending || !state.approved) {
+      return send("Error", "The thread approval system is not initialized.", "❌");
     }
 
-    // Handle #approve <threadID>
+    const action = args[0]?.toLowerCase();
 
-    if (args.length === 0) {
-
-      return api.sendMessage(
-
-        "════『 𝗔𝗣𝗣𝗥𝗢𝗩𝗘 』════\n\n❌ Please provide a threadID or use #approve pending.\nExample: #approve 123456789",
-
-        threadID,
-
-        messageID
-
+    if (!action) {
+      return send(
+        "Approve",
+        `Usage:\n• ${botPrefix}approve pending\n• ${botPrefix}approve accept <threadID>`,
+        "📌"
       );
-
-    }
-
-    const targetThreadID = args[0].trim();
-
-    // Validate threadID
-
-    if (!/^\d+$/.test(targetThreadID) && !/^-?\d+$/.test(targetThreadID)) {
-
-      return api.sendMessage(
-
-        "════『 𝗔𝗣𝗣𝗥𝗢𝗩𝗘 』════\n\n❌ Invalid threadID. Please provide a valid numeric threadID.",
-
-        threadID,
-
-        messageID
-
-      );
-
     }
 
     try {
-
-      // Check if the thread is already approved
-
-      if (global.threadState.approved.has(targetThreadID)) {
-
-        return api.sendMessage(
-
-          `════『 𝗔𝗣𝗣𝗥𝗢𝗩𝗘 』════\n\n✅ Thread ${targetThreadID} is already approved.`,
-
-          threadID,
-
-          messageID
-
+      if (action === "pending") {
+        const entries = Array.from(state.pending.entries()).sort(
+          (a, b) => new Date(a[1]?.addedAt) - new Date(b[1]?.addedAt)
         );
 
+        if (entries.length === 0) {
+          return send("Pending Threads", "No pending threads found.", "✅");
+        }
+
+        const shown = entries.slice(0, MAX_SHOWN);
+        const extra = entries.length - shown.length;
+        const names = await Promise.all(shown.map(([id]) => getThreadName(api, id)));
+
+        const lines = shown.map(
+          ([id, data], index) =>
+            `${index + 1}. ${names[index] || "Unknown thread"}\n    ThreadID: ${id}\n    Added: ${formatDate(data?.addedAt)}`
+        );
+
+        const bodyText =
+          lines.join("\n\n") +
+          (extra > 0 ? `\n\n...and ${extra} more.` : "") +
+          `\n\nUse ${botPrefix}approve accept <threadID> to approve a thread.`;
+
+        return send("Pending Threads", bodyText, "📋");
       }
 
-      // Check if the thread is pending
+      const targetThreadID = (action === "accept" ? args[1] : args[0])?.trim();
 
-      if (global.threadState.pending.has(targetThreadID)) {
+      if (!targetThreadID) {
+        return send(
+          "Approve",
+          `Please provide a threadID.\nExample: ${botPrefix}approve accept 123456789`,
+          "❌"
+        );
+      }
 
-        global.threadState.pending.delete(targetThreadID);
+      if (!/^-?\d+$/.test(targetThreadID)) {
+        return send("Error", "Invalid threadID. Please provide a valid numeric threadID.", "❌");
+      }
 
-        global.threadState.approved.set(targetThreadID, { approvedAt: new Date() });
+      if (state.approved.has(targetThreadID)) {
+        return send("Notice", `Thread ${targetThreadID} is already approved.`, "⚠️");
+      }
 
-        // Notify the target thread
+      const wasPending = state.pending.has(targetThreadID);
+      state.pending.delete(targetThreadID);
+      state.approved.set(targetThreadID, { approvedAt: new Date() });
 
-        api.sendMessage(
-
-          `Bot was approved by Admins to start type ${prefix}`,
-
+      let notified = true;
+      try {
+        await sendTo(
+          api,
+          style(
+            "Bot Approved",
+            `This group has been approved by the admins. The bot is now active here.\nType ${botPrefix}help to see the commands.`,
+            "✅"
+          ),
           targetThreadID
-
         );
-
-        return api.sendMessage(
-
-          `════『 𝗔𝗣𝗣𝗥𝗢𝗩𝗘 』════\n\n✅ Thread ${targetThreadID} has been approved and removed from pending.`,
-
-          threadID,
-
-          messageID
-
-        );
-
+      } catch (err) {
+        notified = false;
+        console.error(`[Approve Command] Could not notify ${targetThreadID}: ${err?.message || err}`);
       }
 
-      // If not pending, add directly to approved
-
-      global.threadState.approved.set(targetThreadID, { approvedAt: new Date() });
-
-      // Notify the target thread
-
-      api.sendMessage(
-
-        `Bot was approved by Admins to start type ${prefix}`,
-
-        targetThreadID
-
+      return send(
+        "Thread Approval",
+        `Thread ${targetThreadID} has been approved${wasPending ? " and removed from pending" : " (it was not in the pending list)"}.${
+          notified ? "" : "\nCould not send the approval notice to that thread."
+        }`,
+        "✅"
       );
-
-      return api.sendMessage(
-
-        `════『 �_A𝗣𝗣𝗥𝗢𝗩𝗘 』════\n\n✅ Thread ${targetThreadID} has been approved successfully!`,
-
-        threadID,
-
-        messageID
-
-      );
-
     } catch (error) {
-
-      console.error("❌ Error approving thread:", error.message);
-
-      return api.sendMessage(
-
-        "════『 𝗔𝗣𝗣𝗥𝗢𝗩𝗘 』════\n\n❌ An error occurred while approving the thread.",
-
-        threadID,
-
-        messageID
-
-      );
-
+      console.error("[Approve Command] Error:", error.message);
+      return send("Error", "An error occurred while processing the thread.", "❌");
     }
-
   },
-
 };
