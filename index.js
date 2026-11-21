@@ -823,12 +823,15 @@ const startListeningWithAutoRestart = (api) => {
 };
 const waitForE2EE = async (api, timeoutMs = 15000) => {
   const start = Date.now();
+
   while (Date.now() - start < timeoutMs) {
     try {
-      if (api.e2ee && api.e2ee.isConnected()) return true;
+      if (api.e2ee?.isConnected()) return true;
     } catch (_) {}
+
     await new Promise((r) => setTimeout(r, 500));
   }
+
   return false;
 };
 
@@ -868,18 +871,14 @@ const startBot = async () => {
       interval: 3 * 60 * 1000,
       debounce: 30 * 1000
     });
-    if (!(await waitForE2EE(api))) {
-      console.warn("[E2EE] Not connected after waiting, calling connectE2EE() once...");
-      try {
-        await api.connectE2EE();
-        console.log("[E2EE] connectE2EE() finished.");
-      } catch (e) {
-        console.error("[E2EE] connectE2EE() failed:", e && e.message ? e.message : e);
-      }
+    console.log("[E2EE] Waiting for automatic connection...");
+    if (await waitForE2EE(api)) {
+      console.log("[E2EE] Connected successfully.");
     } else {
-      console.log("[E2EE] Connected.");
+      console.warn("[E2EE] Connection is still initializing. Continuing...");
     }
     global.botApi = api;
+    console.log("[E2EE] Starting listener...");
     startListeningWithAutoRestart(api);
   });
 };
