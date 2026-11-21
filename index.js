@@ -834,7 +834,7 @@ const startBot = async () => {
     console.log("[BOT] Dashboard-only mode active.");
     return;
   }
-  login({ appState ), { listenEvents: true }, (err, api) => {
+  login({ appState }, { listenEvents: true }, (err, api) => {
     if (err) {
       console.error("Fatal error during Facebook login:", err);
       process.exit(1);
