@@ -845,7 +845,6 @@ const startBot = async () => {
     https.globalAgent.setMaxListeners(30);
     api.setOptions({
       forceLogin: true,
-      listenEvents: true,
       logLevel: "silent",
       updatePresence: true,
       selfListen: false,
