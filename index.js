@@ -13,7 +13,7 @@ const { initGoatBot, dispatchGoatMessage, dispatchGoatEvent, dispatchGoatReply, 
 const { MongoClient } = require("mongodb");
 const fs = require("fs-extra");
 const path = require("path");
-const login = require("fbvibex");
+const login = require("@eryxenx/fca");
 const { handleAuroraCommand, loadAuroraCommands } = require("./core/aurora");
 const chalk = require("chalk");
 /*const chokidar = require("chokidar");*/
@@ -688,7 +688,7 @@ const startListeningForMessages = (api) => {
   const sessionId = ++listenerSessionId;
   console.log(`[LISTENER] Session #${sessionId} started.`);
 
-  api.listenMqtt(async (err, event) => {
+  api.listenE2EE(async (err, event) => {
     if (sessionId !== listenerSessionId) return;
     if (err) {
       console.error("Error listening for messages:", err);
@@ -696,7 +696,7 @@ const startListeningForMessages = (api) => {
     }
     try {
       let proceed = true;
-      if (global.db) {
+      if (global.db && event.threadID) {
         const bannedThreadsCollection = global.db.db("bannedThreads");
         const result = await bannedThreadsCollection.findOne({ threadID: event.threadID.toString() });
         if (result) proceed = false;
@@ -705,7 +705,7 @@ const startListeningForMessages = (api) => {
       if (proceed) {
         await handleEvent(api, event);
 
-        if (event.type === "message_reply" && event.messageReply) {
+        if (event.messageReply) {
           const replyMessageID = event.messageReply.messageID;
           if (global.Kagenou.replies[replyMessageID]) {
             await handleReply(api, event);
@@ -796,7 +796,7 @@ const startListeningForMessages = (api) => {
             if (args[0] && args[0].toLowerCase() === "pending") return;
             if (args.length > 0) {
               const targetThreadID = args[0].trim();
-              if (/^-?\d+$/.test(targetThreadID)) {
+              if (/^[-\w.@]+$/.test(targetThreadID)) {
                 if (global.threadState.pending.has(targetThreadID)) {
                   global.threadState.pending.delete(targetThreadID);
                   global.threadState.approved.set(targetThreadID, { approvedAt: new Date() });
@@ -817,13 +817,9 @@ const startListeningForMessages = (api) => {
 };
 
 const startListeningWithAutoRestart = (api) => {
+  // @eryxenx/fca auto reconnect
   startListeningForMessages(api);
-  setInterval(() => {
-    console.log(`[LISTENER] Restarting listener (invalidating session #${listenerSessionId})...`);
-    startListeningForMessages(api);
-    console.log(`[LISTENER] New session #${listenerSessionId} is now active.`);
-  }, 3600000);
-  console.log("[LISTENER] Auto-restart scheduled every 1 hour.");
+  console.log("[LISTENER] Listening (autoReconnect handled by @eryxenx/fca).");
 };
 const startBot = async () => {
   loadBannedUsers();
@@ -835,7 +831,16 @@ const startBot = async () => {
     return;
   }
 
-  login({ appState }, (err, api) => {
+  login({ appState }, {
+    logLevel: "silent",
+    listenEvents: true,
+    updatePresence: true,
+    selfListen: false,
+    online: true,
+    autoMarkDelivery: false,
+    autoMarkRead: false,
+    humanize: { enabled: false } // leave it as empty false cuh
+  }, (err, api) => {
     if (err) {
       console.error("Fatal error during Facebook login:", err);
       process.exit(1);
@@ -844,18 +849,9 @@ const startBot = async () => {
     const https = require("https");
     http.globalAgent.setMaxListeners(30);
     https.globalAgent.setMaxListeners(30);
-    api.setOptions({
-      forceLogin: true,
-      listenEvents: true,
-      logLevel: "silent",
-      updatePresence: true,
-      selfListen: false,
-      bypassRegion: "pnb",
-      userAgent:
-        "ZmFjZWJvb2tleHRlcm5hbGhpdC8xLjEgKCtodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9leHRlcm5hbGhpdF91YXRexHQucGhpKQ==",
-      online: true,
-      autoMarkDelivery: false,
-      autoMarkRead: false,
+    api.sessionGuard(path.join(__dirname, "appstate.dev.json"), {
+      interval: 3 * 60 * 1000,
+      debounce: 30 * 1000
     });
     global.botApi = api;
     startListeningWithAutoRestart(api);
