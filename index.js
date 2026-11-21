@@ -855,6 +855,13 @@ const startBot = async () => {
       autoMarkDelivery: false,
       autoMarkRead: false,
     });
+    const _origSend = api.sendMessage.bind(api); api.sendMessage = (msg, threadID, cb, replyID, ...rest) => {
+    if (typeof cb === "string") { 
+    replyID = cb;
+    cb = null;
+  }
+  return _origSend(msg, threadID, cb || null, replyID, ...rest);
+  };
     global.botApi = api;
     startListeningWithAutoRestart(api);
   });
