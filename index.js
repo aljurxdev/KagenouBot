@@ -13,7 +13,7 @@ const { initGoatBot, dispatchGoatMessage, dispatchGoatEvent, dispatchGoatReply, 
 const { MongoClient } = require("mongodb");
 const fs = require("fs-extra");
 const path = require("path");
-const login = require("@eryxenx/fca");
+const { login } = require("fca-nx");
 const { handleAuroraCommand, loadAuroraCommands } = require("./core/aurora");
 const chalk = require("chalk");
 /*const chokidar = require("chokidar");*/
@@ -688,7 +688,7 @@ const startListeningForMessages = (api) => {
   const sessionId = ++listenerSessionId;
   console.log(`[LISTENER] Session #${sessionId} started.`);
 
-  api.listenE2EE(async (err, event) => {
+  api.listenMqtt(async (err, event) => {
     if (sessionId !== listenerSessionId) return;
     if (err) {
       console.error("Error listening for messages:", err);
@@ -696,7 +696,7 @@ const startListeningForMessages = (api) => {
     }
     try {
       let proceed = true;
-      if (global.db && event.threadID) {
+      if (global.db) {
         const bannedThreadsCollection = global.db.db("bannedThreads");
         const result = await bannedThreadsCollection.findOne({ threadID: event.threadID.toString() });
         if (result) proceed = false;
@@ -705,7 +705,7 @@ const startListeningForMessages = (api) => {
       if (proceed) {
         await handleEvent(api, event);
 
-        if (event.messageReply) {
+        if (event.type === "message_reply" && event.messageReply) {
           const replyMessageID = event.messageReply.messageID;
           if (global.Kagenou.replies[replyMessageID]) {
             await handleReply(api, event);
@@ -796,7 +796,7 @@ const startListeningForMessages = (api) => {
             if (args[0] && args[0].toLowerCase() === "pending") return;
             if (args.length > 0) {
               const targetThreadID = args[0].trim();
-              if (/^[-\w.@]+$/.test(targetThreadID)) {
+              if (/^-?\d+$/.test(targetThreadID)) {
                 if (global.threadState.pending.has(targetThreadID)) {
                   global.threadState.pending.delete(targetThreadID);
                   global.threadState.approved.set(targetThreadID, { approvedAt: new Date() });
@@ -817,24 +817,14 @@ const startListeningForMessages = (api) => {
 };
 
 const startListeningWithAutoRestart = (api) => {
-  // @eryxenx/fca Auto Reconnect 
   startListeningForMessages(api);
-  console.log("[LISTENER] Listening (autoReconnect handled by @eryxenx/fca).");
+  setInterval(() => {
+    console.log(`[LISTENER] Restarting listener (invalidating session #${listenerSessionId})...`);
+    startListeningForMessages(api);
+    console.log(`[LISTENER] New session #${listenerSessionId} is now active.`);
+  }, 3600000);
+  console.log("[LISTENER] Auto-restart scheduled every 1 hour.");
 };
-const waitForE2EE = async (api, timeoutMs = 15000) => {
-  const start = Date.now();
-
-  while (Date.now() - start < timeoutMs) {
-    try {
-      if (api.e2ee?.isConnected()) return true;
-    } catch (_) {}
-
-    await new Promise((r) => setTimeout(r, 500));
-  }
-
-  return false;
-};
-
 const startBot = async () => {
   loadBannedUsers();
   await initProfanityFilter();
@@ -844,21 +834,7 @@ const startBot = async () => {
     console.log("[BOT] Dashboard-only mode active.");
     return;
   }
-
-  login({ appState }, {
-      forceLogin: true,
-      listenEvents: true,
-      logLevel: "silent",
-      updatePresence: true,
-      selfListen: false,
-      bypassRegion: "pnb",
-      userAgent:
-        "ZmFjZWJvb2tleHRlcm5hbGhpdC8xLjEgKCtodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9leHRlcm5hbGhpdF91YXRexHQucGhpKQ==",
-      online: false,
-      autoMarkDelivery: false,
-      autoMarkRead: false,
-    humanize: { enabled: false } // leave it false cuh
-  }, async (err, api) => {
+  login({ appState ), { listenEvents: true }, (err, api) => {
     if (err) {
       console.error("Fatal error during Facebook login:", err);
       process.exit(1);
@@ -867,18 +843,24 @@ const startBot = async () => {
     const https = require("https");
     http.globalAgent.setMaxListeners(30);
     https.globalAgent.setMaxListeners(30);
-    api.sessionGuard(path.join(__dirname, "appstate.dev.json"), {
-      interval: 3 * 60 * 1000,
-      debounce: 30 * 1000
+    api.setOptions({
+      forceLogin: true,
+      listenEvents: true,
+      logLevel: "silent",
+      updatePresence: true,
+      selfListen: false,
+      bypassRegion: "pnb",
+      userAgent:
+        "ZmFjZWJvb2tleHRlcm5hbGhpdC8xLjEgKCtodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9leHRlcm5hbGhpdF91YXRexHQucGhpKQ==",
+      online: true,
+      autoMarkDelivery: false,
+      autoMarkRead: false,
     });
-    console.log("[E2EE] Waiting for automatic connection...");
-    if (await waitForE2EE(api)) {
-      console.log("[E2EE] Connected successfully.");
-    } else {
-      console.warn("[E2EE] Connection is still initializing. Continuing...");
-    }
+   api.autoSaveSession(path.join(__dirname, "appstate.dev.json"), {
+    interval: 3 * 60 * 1000,
+    backup: true
+    });
     global.botApi = api;
-    console.log("[E2EE] Starting listener...");
     startListeningWithAutoRestart(api);
   });
 };
