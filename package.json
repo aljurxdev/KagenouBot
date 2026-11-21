@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@dongdev/fca-unofficial": "^4.0.3",
+    "@eryxenx/fca": "^1.3.5",
     "@google/generative-ai": "^0.24.1",
     "@gpt4free/g4f.dev": "^1.1.2",
     "@types/axios": "^0.9.36",
