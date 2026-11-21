@@ -817,10 +817,21 @@ const startListeningForMessages = (api) => {
 };
 
 const startListeningWithAutoRestart = (api) => {
-  // @eryxenx/fca auto reconnect
+  // @eryxenx/fca Auto Reconnect 
   startListeningForMessages(api);
   console.log("[LISTENER] Listening (autoReconnect handled by @eryxenx/fca).");
 };
+const waitForE2EE = async (api, timeoutMs = 15000) => {
+  const start = Date.now();
+  while (Date.now() - start < timeoutMs) {
+    try {
+      if (api.e2ee && api.e2ee.isConnected()) return true;
+    } catch (_) {}
+    await new Promise((r) => setTimeout(r, 500));
+  }
+  return false;
+};
+
 const startBot = async () => {
   loadBannedUsers();
   await initProfanityFilter();
@@ -839,8 +850,8 @@ const startBot = async () => {
     online: true,
     autoMarkDelivery: false,
     autoMarkRead: false,
-    humanize: { enabled: false } // leave it as empty false cuh
-  }, (err, api) => {
+    humanize: { enabled: false } // leave it false cuh
+  }, async (err, api) => {
     if (err) {
       console.error("Fatal error during Facebook login:", err);
       process.exit(1);
@@ -853,6 +864,17 @@ const startBot = async () => {
       interval: 3 * 60 * 1000,
       debounce: 30 * 1000
     });
+    if (!(await waitForE2EE(api))) {
+      console.warn("[E2EE] Not connected after waiting, calling connectE2EE() once...");
+      try {
+        await api.connectE2EE();
+        console.log("[E2EE] connectE2EE() finished.");
+      } catch (e) {
+        console.error("[E2EE] connectE2EE() failed:", e && e.message ? e.message : e);
+      }
+    } else {
+      console.log("[E2EE] Connected.");
+    }
     global.botApi = api;
     startListeningWithAutoRestart(api);
   });
