@@ -843,13 +843,17 @@ const startBot = async () => {
   }
 
   login({ appState }, {
-    logLevel: "silent",
-    listenEvents: true,
-    updatePresence: true,
-    selfListen: false,
-    online: true,
-    autoMarkDelivery: false,
-    autoMarkRead: false,
+      forceLogin: true,
+      listenEvents: true,
+      logLevel: "silent",
+      updatePresence: true,
+      selfListen: false,
+      bypassRegion: "pnb",
+      userAgent:
+        "ZmFjZWJvb2tleHRlcm5hbGhpdC8xLjEgKCtodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9leHRlcm5hbGhpdF91YXRexHQucGhpKQ==",
+      online: false,
+      autoMarkDelivery: false,
+      autoMarkRead: false,
     humanize: { enabled: false } // leave it false cuh
   }, async (err, api) => {
     if (err) {
