@@ -856,10 +856,6 @@ const startBot = async () => {
       autoMarkDelivery: false,
       autoMarkRead: false,
     });
-   api.autoSaveSession(path.join(__dirname, "appstate.dev.json"), {
-    interval: 3 * 60 * 1000,
-    backup: true
-    });
     global.botApi = api;
     startListeningWithAutoRestart(api);
   });
